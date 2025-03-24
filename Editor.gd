@@ -3,6 +3,24 @@ extends Node
 @export_file("*.csv") var collision:String
 @export_tool_button("import collision") var collision_import_button = import_collision
 @export_tool_button("export collision") var collision_export_button = export_collision
+@export_tool_button("export model") var model_export_button = export_model
+func export_model():
+	
+	var out:ArrayMesh = ArrayMesh.new()
+	iterate(self,func(node):
+		if node is Exportable:
+			out=node.export_model(out)
+		)
+	
+	OBJExporter.save_mesh_to_files(out,"res://mod.mesh","level")
+func export_collision():
+	var out:String = ""
+	iterate(self,func(node):
+		if node is Exportable:
+			out=node.export_collision(out)
+		)
+		
+	TextReader.save_file("res://mod.colli.csv",out)
 func import_collision():
 	iterate(self,func(node):
 		if node is CollisionLine:
@@ -32,21 +50,6 @@ func import_collision():
 var contains:String
 func find_contains(string):
 	return contains in string
-func export_collision():
-	var out:String = ""
-	iterate(self,func(node):
-		if node is CollisionLine:
-			if not out.is_empty():
-				out+="\n"
-			out+="start\n"
-			for p in node.points.size():
-				out+= "node,"+var_to_str(-node.points[p].x)+","+var_to_str(-node.points[p].y)+"\n"
-				if p >= 1 and p < node.points.size()-1:
-					out+="seg_attr,"+node.seg_attr[p-2]+"\n"
-			out+="end"
-		)
-		
-	TextReader.save_file("res://mod.colli.csv",out)
 
 
 func iterate(node:Node,method:Callable):

@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://hpj4m8ldxplb"]
+[gd_scene load_steps=7 format=3 uid="uid://hpj4m8ldxplb"]
 
 [ext_resource type="Script" uid="uid://c4a1imlia3dob" path="res://Editor.gd" id="1_wtcfe"]
 [ext_resource type="Script" uid="uid://ce24cm1hlajge" path="res://CollisionLine.gd" id="2_0e48y"]
+[ext_resource type="Script" uid="uid://d1761hoslt10w" path="res://VisualPlatform.gd" id="3_epypp"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_0e48y"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_epypp"]
+noise = SubResource("FastNoiseLite_0e48y")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0e48y"]
+albedo_texture = SubResource("NoiseTexture2D_epypp")
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_wtcfe")
@@ -13,19 +22,29 @@ position = Vector2(-486, -238)
 [node name="Line2D" type="Line2D" parent="."]
 points = PackedVector2Array(320, -190, 260, -190, 220, -170, 180, -130, 180, 0, -30, 0, -50, -10)
 script = ExtResource("2_0e48y")
+material_3d = SubResource("StandardMaterial3D_0e48y")
 seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground"])
 
 [node name="Line2D2" type="Line2D" parent="."]
 points = PackedVector2Array(-50, -10, -120, -10, -140, 0, -200, 0, -200, -10, -440, -10, -440, 0, -640, 0, -680, -20, -710, -20, -730, -10, -1080, -10, -1080, -130, -1100, -170, -1140, -210, -1220, -210)
 script = ExtResource("2_0e48y")
+material_3d = SubResource("StandardMaterial3D_0e48y")
 seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
 
 [node name="Line2D3" type="Line2D" parent="."]
-points = PackedVector2Array(-340, -70, -400, -70, -400, -50, -340, -50, -340, -70)
+points = PackedVector2Array(-339, -70, -400, -70, -400, -50, -340, -50, -340, -70)
 script = ExtResource("2_0e48y")
+material_3d = SubResource("StandardMaterial3D_0e48y")
 seg_attr = Array[String](["ground", "ground", "ground"])
 
 [node name="Line2D4" type="Line2D" parent="."]
-points = PackedVector2Array(-530, -50, -570, -50, -570, -80, -520, -80, -520, -70, -500, -70, -500, -100, -520, -110, -550, -110, -570, -100, -590, -100, -600, -80, -600, -60, -590, -40, -590, -30, -530, -30, -530, -50)
+points = PackedVector2Array(-528, -50, -570, -50, -570, -80, -520, -80, -520, -70, -500, -70, -500, -100, -520, -110, -550, -110, -570, -100, -590, -100, -600, -80, -600, -60, -590, -40, -590, -30, -530, -30, -530, -50)
 script = ExtResource("2_0e48y")
+material_3d = SubResource("StandardMaterial3D_0e48y")
 seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-1220, -210, -1140, -210, -1100, -170, -1080, -130, -1080, -10, -730, -10, -710, -20, -680, -20, -640, 0, -440, 0, -440, -10, -200, -10, -200, 0, -140, 0, -120, -10, -50, -10, -30, 0, 180, 0, 180, -130, 220, -170, 260, -190, 320, -190, 320, 160, -1220, 160)
+uv = PackedVector2Array(-1220, -210, -1140, -210, -1100, -170, -1080, -130, -1080, -10, -730, -10, -710, -20, -680, -20, -640, 0, -440, 0, -440, -10, -200, -10, -200, 0, -140, 0, -120, -10, -50, -10, -30, 0, 180, 0, 180, -130, 220, -170, 260, -190, 320, -190, 320, 160, -1220, 160)
+script = ExtResource("3_epypp")
+material_3d = SubResource("StandardMaterial3D_0e48y")

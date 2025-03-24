@@ -18,7 +18,12 @@ config/icon="res://icon.svg"
 [autoload]
 
 Convert="*res://Converter.cs"
+OBJExporter="*res://addons/obj_exporter/OBJExporter.tscn"
 
 [dotnet]
 
 project/assembly_name="HeyPikminEditor"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/obj_exporter/plugin.cfg")
