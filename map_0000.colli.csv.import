@@ -1,0 +1,15 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dvcbj5vq72efq"
+valid=false
+
+[deps]
+
+source_file="res://map_0000.colli.csv"
+
+[params]
+
+compress=true
+delimiter=0

@@ -2,10 +2,11 @@
 extends Node
 @export_file("*.csv") var collision:String
 @export_tool_button("import collision") var collision_import_button = import_collision
+@export_tool_button("export collision") var collision_export_button = export_collision
 func import_collision():
-	for c in get_children():
-		if c is CollisionLine:
-			c.queue_free()
+	iterate(self,func(node):
+		if node is CollisionLine:
+			node.queue_free())
 	var lines_packed = TextReader.read_file(collision)
 	var lines:Array = lines_packed
 	lines.pop_back()
@@ -24,10 +25,33 @@ func import_collision():
 		for st:String in arr:
 			if "node," in st:
 				var split = st.split(",")
-				line.add_point(Vector2(str_to_var(split[1]),str_to_var(split[2])))
+				line.add_point(Vector2(-str_to_var(split[1]),-str_to_var(split[2])))
 			if "seg_attr" in st:
 				line.seg_attr.append(st.split(",")[1])
 		pass
 var contains:String
 func find_contains(string):
 	return contains in string
+func export_collision():
+	var out:String = ""
+	iterate(self,func(node):
+		if node is CollisionLine:
+			if not out.is_empty():
+				out+="\n"
+			out+="start\n"
+			for p in node.points.size():
+				out+= "node,"+var_to_str(-node.points[p].x)+","+var_to_str(-node.points[p].y)+"\n"
+				if p >= 1 and p < node.points.size()-1:
+					out+="seg_attr,"+node.seg_attr[p-2]+"\n"
+			out+="end"
+		)
+		
+	TextReader.save_file("res://mod.colli.csv",out)
+
+
+func iterate(node:Node,method:Callable):
+	method.call(node)
+	if not node.is_queued_for_deletion():
+		for c in node.get_children():
+			if not c.is_queued_for_deletion():
+				iterate(c,method)

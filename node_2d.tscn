@@ -5,24 +5,27 @@
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_wtcfe")
-collision = "uid://cogxam3u4a42s"
+collision = "uid://dvcbj5vq72efq"
 
-[node name="Line2D5" type="Line2D" parent="."]
-points = PackedVector2Array(-320, 190, -260, 190, -220, 170, -180, 130, -180, 0, 30, 0, 50, 10)
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-486, -238)
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(320, -190, 260, -190, 220, -170, 180, -130, 180, 0, -30, 0, -50, -10)
 script = ExtResource("2_0e48y")
 seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground"])
 
-[node name="Line2D6" type="Line2D" parent="."]
-points = PackedVector2Array(50, 10, 120, 10, 140, 0, 200, 0, 200, 10, 440, 10, 440, 0, 640, 0, 680, 20, 710, 20, 730, 10, 1080, 10, 1080, 130, 1100, 170, 1140, 210, 1220, 210)
+[node name="Line2D2" type="Line2D" parent="."]
+points = PackedVector2Array(-50, -10, -120, -10, -140, 0, -200, 0, -200, -10, -440, -10, -440, 0, -640, 0, -680, -20, -710, -20, -730, -10, -1080, -10, -1080, -130, -1100, -170, -1140, -210, -1220, -210)
 script = ExtResource("2_0e48y")
 seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
 
-[node name="Line2D7" type="Line2D" parent="."]
-points = PackedVector2Array(340, 70, 400, 70, 400, 50, 340, 50, 340, 70)
+[node name="Line2D3" type="Line2D" parent="."]
+points = PackedVector2Array(-340, -70, -400, -70, -400, -50, -340, -50, -340, -70)
 script = ExtResource("2_0e48y")
 seg_attr = Array[String](["ground", "ground", "ground"])
 
-[node name="Line2D8" type="Line2D" parent="."]
-points = PackedVector2Array(530, 50, 570, 50, 570, 80, 520, 80, 520, 70, 500, 70, 500, 100, 520, 110, 550, 110, 570, 100, 590, 100, 600, 80, 600, 60, 590, 40, 590, 30, 530, 30, 530, 50)
+[node name="Line2D4" type="Line2D" parent="."]
+points = PackedVector2Array(-530, -50, -570, -50, -570, -80, -520, -80, -520, -70, -500, -70, -500, -100, -520, -110, -550, -110, -570, -100, -590, -100, -600, -80, -600, -60, -590, -40, -590, -30, -530, -30, -530, -50)
 script = ExtResource("2_0e48y")
 seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
