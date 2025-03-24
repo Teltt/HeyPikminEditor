@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://hpj4m8ldxplb"]
 
-[ext_resource type="Script" uid="uid://c4a1imlia3dob" path="res://Bytes.gd" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://c4a1imlia3dob" path="res://Editor.gd" id="1_wtcfe"]
 [ext_resource type="Script" uid="uid://ce24cm1hlajge" path="res://CollisionLine.gd" id="2_0e48y"]
 
 [node name="Node2D" type="Node2D"]
