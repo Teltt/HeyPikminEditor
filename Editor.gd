@@ -1,30 +1,31 @@
 @tool
 extends Node
 @export_file("*.csv") var collision:String
+@export_file("*.csv") var objects:String
 @export_tool_button("import collision") var collision_import_button = import_collision
+@export_tool_button("import objects") var object_import_button = import_objects
 @export_tool_button("export collision") var collision_export_button = export_collision
 @export_tool_button("export model") var model_export_button = export_model
+@export_tool_button("export objects") var objec_export_button = export_objects
 func export_model():
 	
 	var out:ArrayMesh = ArrayMesh.new()
-	iterate(self,func(node):
-		if node is Exportable:
-			out=node.export_model(out)
+	iterate(self,func(node,out):
+		return node.export_model(out),out
 		)
-	
 	OBJExporter.save_mesh_to_files(out,"res://mod.mesh","level")
 func export_collision():
-	var out:String = ""
-	iterate(self,func(node):
-		if node is Exportable:
-			out=node.export_collision(out)
+	var out2:String=iterate(self,func(node,out):
+		return node.export_collision(out),""
 		)
-		
-	TextReader.save_file("res://mod.colli.csv",out)
+	print(out2.is_empty())
+	TextReader.save_file("res://mod.colli.csv",out2)
+func export_objects():
+	
+	TextReader.save_file("res://mod.csv",iterate(self,func(node,out):
+		return node.export_object(out),""
+		))
 func import_collision():
-	iterate(self,func(node):
-		if node is CollisionLine:
-			node.queue_free())
 	var lines_packed = TextReader.read_file(collision)
 	var lines:Array = lines_packed
 	lines.pop_back()
@@ -47,14 +48,41 @@ func import_collision():
 			if "seg_attr" in st:
 				line.seg_attr.append(st.split(",")[1])
 		pass
+func import_objects():
+	var lines_packed = TextReader.read_file(objects)
+	var lines:Array = lines_packed
+	lines.pop_back()
+	var l = 0
+	var cur_obj:LevelObject
+	while l < lines.size():
+		var cur:String = lines.pop_front()
+		if !cur.begins_with(','):
+			if cur_obj != null:
+				add_child(cur_obj,true)
+				cur_obj.set_owner(get_tree().edited_scene_root)
+			var s = Node2D.new()
+			s.set_script(LevelObject)
+			s.script_changed.emit()
+			cur_obj = s
+			var split = cur.split(",")
+			cur_obj.obj_class = split[0]
+			cur_obj.name = cur_obj.obj_class
+			s.global_position = Vector2(str_to_var(split[1]),str_to_var(split[2]))
+		else:
+			cur_obj.vars[cur.split(",")[1]]=cur.split(",")[2]
+	if cur_obj != null:
+		add_child(cur_obj,true)
+		cur_obj.set_owner(get_tree().edited_scene_root)
 var contains:String
 func find_contains(string):
 	return contains in string
 
 
-func iterate(node:Node,method:Callable):
-	method.call(node)
+func iterate(node:Node,method:Callable,out):
+	if is_instance_of(node,Exportable):
+		out =method.call(node,out)
 	if not node.is_queued_for_deletion():
 		for c in node.get_children():
 			if not c.is_queued_for_deletion():
-				iterate(c,method)
+				out =iterate(c,method,out)
+	return out

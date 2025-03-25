@@ -1,8 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://hpj4m8ldxplb"]
+[gd_scene load_steps=10 format=3 uid="uid://hpj4m8ldxplb"]
 
 [ext_resource type="Script" uid="uid://c4a1imlia3dob" path="res://Editor.gd" id="1_wtcfe"]
 [ext_resource type="Script" uid="uid://ce24cm1hlajge" path="res://CollisionLine.gd" id="2_0e48y"]
 [ext_resource type="Script" uid="uid://d1761hoslt10w" path="res://VisualPlatform.gd" id="3_epypp"]
+[ext_resource type="Script" uid="uid://c2hok6v3vcf60" path="res://LevelObject.gd" id="4_0hol4"]
+
+[sub_resource type="Gradient" id="Gradient_q6r6c"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kdubu"]
+gradient = SubResource("Gradient_q6r6c")
+fill_from = Vector2(0.0042735, 1)
+fill_to = Vector2(0, 0)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_0e48y"]
 
@@ -14,37 +22,334 @@ albedo_texture = SubResource("NoiseTexture2D_epypp")
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_wtcfe")
-collision = "uid://dvcbj5vq72efq"
+collision = "uid://deacvrvxwcq6f"
+objects = "uid://bi2wnb7hpv4c5"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-486, -238)
+position = Vector2(570, -110)
 
 [node name="Line2D" type="Line2D" parent="."]
+position = Vector2(1050, 10)
 points = PackedVector2Array(320, -190, 260, -190, 220, -170, 180, -130, 180, 0, -30, 0, -50, -10)
+texture = SubResource("GradientTexture2D_kdubu")
+texture_mode = 1
 script = ExtResource("2_0e48y")
 material_3d = SubResource("StandardMaterial3D_0e48y")
 seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground"])
 
 [node name="Line2D2" type="Line2D" parent="."]
+position = Vector2(1050, 10)
 points = PackedVector2Array(-50, -10, -120, -10, -140, 0, -200, 0, -200, -10, -440, -10, -440, 0, -640, 0, -680, -20, -710, -20, -730, -10, -1080, -10, -1080, -130, -1100, -170, -1140, -210, -1220, -210)
+texture = SubResource("GradientTexture2D_kdubu")
+texture_mode = 1
 script = ExtResource("2_0e48y")
 material_3d = SubResource("StandardMaterial3D_0e48y")
 seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
 
 [node name="Line2D3" type="Line2D" parent="."]
+position = Vector2(1050, 10)
 points = PackedVector2Array(-339, -70, -400, -70, -400, -50, -340, -50, -340, -70)
+texture = SubResource("GradientTexture2D_kdubu")
+texture_mode = 1
 script = ExtResource("2_0e48y")
 material_3d = SubResource("StandardMaterial3D_0e48y")
 seg_attr = Array[String](["ground", "ground", "ground"])
 
 [node name="Line2D4" type="Line2D" parent="."]
+position = Vector2(1050, 10)
 points = PackedVector2Array(-528, -50, -570, -50, -570, -80, -520, -80, -520, -70, -500, -70, -500, -100, -520, -110, -550, -110, -570, -100, -590, -100, -600, -80, -600, -60, -590, -40, -590, -30, -530, -30, -530, -50)
+texture = SubResource("GradientTexture2D_kdubu")
+texture_mode = 1
 script = ExtResource("2_0e48y")
 material_3d = SubResource("StandardMaterial3D_0e48y")
 seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(1050, 10)
 polygon = PackedVector2Array(-1220, -210, -1140, -210, -1100, -170, -1080, -130, -1080, -10, -730, -10, -710, -20, -680, -20, -640, 0, -440, 0, -440, -10, -200, -10, -200, 0, -140, 0, -120, -10, -50, -10, -30, 0, 180, 0, 180, -130, 220, -170, 260, -190, 320, -190, 320, 160, -1220, 160)
 uv = PackedVector2Array(-1220, -210, -1140, -210, -1100, -170, -1080, -130, -1080, -10, -730, -10, -710, -20, -680, -20, -640, 0, -440, 0, -440, -10, -200, -10, -200, 0, -140, 0, -120, -10, -50, -10, -30, 0, 180, 0, 180, -130, 220, -170, 260, -190, 320, -190, 320, 160, -1220, 160)
 script = ExtResource("3_epypp")
 material_3d = SubResource("StandardMaterial3D_0e48y")
+
+[node name="orima" type="Node2D" parent="."]
+script = ExtResource("4_0hol4")
+obj_class = "orima"
+
+[node name="onion" type="Node2D" parent="."]
+position = Vector2(960, 10)
+script = ExtResource("4_0hol4")
+obj_class = "onion"
+vars = Dictionary[String, Variant]({
+"id": "0",
+"カメラY補正グリッド": "-2.500000",
+"右ワープ座標オフセットX": "50.000000",
+"右ワープ座標オフセットY": "0.000000",
+"左ワープ座標オフセットX": "-50.000000",
+"左ワープ座標オフセットY": "0.000000",
+"強制ゴール方向": "non",
+"感知オフセットX": "0.000000",
+"感知オフセットY": "0.000000",
+"感知範囲幅": "38.000000",
+"感知範囲高": "50.000000"
+})
+
+[node name="bush01a" type="Node2D" parent="."]
+position = Vector2(370, 75)
+script = ExtResource("4_0hol4")
+obj_class = "bush01a"
+vars = Dictionary[String, Variant]({
+"resource": "default",
+"type": "red",
+"ピクミン生成数": "0",
+"保障": "4",
+"範囲offsetX": "0",
+"範囲offsetY": "0",
+"範囲サイズX": "10",
+"範囲サイズY": "10",
+"範囲指定": "false",
+"角度": "0"
+})
+
+[node name="kinomi01a" type="Node2D" parent="."]
+position = Vector2(535, 60)
+script = ExtResource("4_0hol4")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="kinomi01a2" type="Node2D" parent="."]
+position = Vector2(545, 70)
+script = ExtResource("4_0hol4")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="kinomi01a3" type="Node2D" parent="."]
+position = Vector2(555, 60)
+script = ExtResource("4_0hol4")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="kinomi01a4" type="Node2D" parent="."]
+position = Vector2(730, 80)
+script = ExtResource("4_0hol4")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="kinomi01a5" type="Node2D" parent="."]
+position = Vector2(720, 60)
+script = ExtResource("4_0hol4")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="kinomi01a6" type="Node2D" parent="."]
+position = Vector2(740, 40)
+script = ExtResource("4_0hol4")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="kinomi01a7" type="Node2D" parent="."]
+position = Vector2(760, 20)
+script = ExtResource("4_0hol4")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="kinomi01a8" type="Node2D" parent="."]
+position = Vector2(700, 80)
+script = ExtResource("4_0hol4")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="kinomi01a9" type="Node2D" parent="."]
+position = Vector2(750, 60)
+script = ExtResource("4_0hol4")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="kinomi01a10" type="Node2D" parent="."]
+position = Vector2(770, 40)
+script = ExtResource("4_0hol4")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="kinomi01a11" type="Node2D" parent="."]
+position = Vector2(710, 100)
+script = ExtResource("4_0hol4")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="camera_restricted" type="Node2D" parent="."]
+position = Vector2(-245, 90)
+script = ExtResource("4_0hol4")
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": "-1",
+"height": "260.000000",
+"hv": "horizontal",
+"width": "70.000000"
+})
+
+[node name="camera_y_chase" type="Node2D" parent="."]
+position = Vector2(5, 50)
+script = ExtResource("4_0hol4")
+obj_class = "camera_y_chase"
+vars = Dictionary[String, Variant]({
+"ofs": "40.000000"
+})
+
+[node name="eventobj" type="Node2D" parent="."]
+position = Vector2(370, 20)
+script = ExtResource("4_0hol4")
+obj_class = "eventobj"
+vars = Dictionary[String, Variant]({
+"bgm_stop": "false",
+"endflag": "31",
+"event": "ev_course0_hokyu01",
+"event_set": "-1",
+"fadeout": "0.000000",
+"group": "0",
+"minimum": "-1",
+"pan": "0.000000",
+"reaction": "false",
+"type": "false",
+"whistle": "true"
+})
+
+[node name="area_flag" type="Node2D" parent="."]
+position = Vector2(325, 25)
+script = ExtResource("4_0hol4")
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": "0",
+"ONETIME": "false",
+"タイプ": "on",
+"トリガー": "whistle",
+"幅": "90.000000",
+"高さ": "80.000000"
+})
+
+[node name="event_step" type="Node2D" parent="."]
+position = Vector2(250, 10)
+script = ExtResource("4_0hol4")
+obj_class = "event_step"
+vars = Dictionary[String, Variant]({
+"event": "ev_course0_piku01",
+"flag_start": "30"
+})
+
+[node name="area_flag2" type="Node2D" parent="."]
+position = Vector2(60, 10)
+script = ExtResource("4_0hol4")
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": "20",
+"ONETIME": "true",
+"タイプ": "on",
+"トリガー": "orima",
+"幅": "10.000000",
+"高さ": "10.000000"
+})
+
+[node name="area_flag3" type="Node2D" parent="."]
+position = Vector2(185, 0)
+script = ExtResource("4_0hol4")
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": "10",
+"ONETIME": "false",
+"タイプ": "on",
+"トリガー": "orima",
+"幅": "10.000000",
+"高さ": "10.000000"
+})
+
+[node name="area_flag4" type="Node2D" parent="."]
+position = Vector2(300, 10)
+script = ExtResource("4_0hol4")
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": "22",
+"ONETIME": "true",
+"タイプ": "on",
+"トリガー": "orima",
+"幅": "10.000000",
+"高さ": "10.000000"
+})
+
+[node name="area_flag5" type="Node2D" parent="."]
+position = Vector2(480, 10)
+script = ExtResource("4_0hol4")
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": "27",
+"ONETIME": "true",
+"タイプ": "on",
+"トリガー": "orima",
+"幅": "10.000000",
+"高さ": "37.500000"
+})
+
+[node name="help" type="Node2D" parent="."]
+position = Vector2(545, 0)
+script = ExtResource("4_0hol4")
+obj_class = "help"
+vars = Dictionary[String, Variant]({
+"flag": "42",
+"id": "ev_course0_00_026",
+"type": "normal"
+})
+
+[node name="area_flag6" type="Node2D" parent="."]
+position = Vector2(655, 25)
+script = ExtResource("4_0hol4")
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": "42",
+"ONETIME": "true",
+"タイプ": "off",
+"トリガー": "orima",
+"幅": "50.125000",
+"高さ": "56.250000"
+})

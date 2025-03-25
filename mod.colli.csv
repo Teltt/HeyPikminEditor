@@ -45,7 +45,7 @@ seg_attr,ground
 node,1220.0,210.0
 end
 start
-node,340.0,70.0
+node,339.0,70.0
 node,400.0,70.0
 seg_attr,ground
 node,400.0,50.0
@@ -55,7 +55,7 @@ seg_attr,ground
 node,340.0,70.0
 end
 start
-node,530.0,50.0
+node,528.0,50.0
 node,570.0,50.0
 seg_attr,ground
 node,570.0,80.0

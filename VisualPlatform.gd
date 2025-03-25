@@ -23,7 +23,6 @@ func export_model(out:ArrayMesh)->Variant:
 	arr.resize(Mesh.ARRAY_MAX)
 	arr[Mesh.ARRAY_VERTEX] = vertices
 	arr[Mesh.ARRAY_TEX_UV] = uvs
-	print(verts2d)
 	var ind:PackedInt32Array = Geometry2D.triangulate_polygon(verts2d)
 	arr[Mesh.ARRAY_INDEX] = ind
 	out.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,arr)

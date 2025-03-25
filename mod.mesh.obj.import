@@ -3,12 +3,15 @@
 importer="wavefront_obj"
 importer_version=1
 type="Mesh"
-uid="uid://dts5bpkwmb3qm"
-valid=false
+uid="uid://cjkne3rxa841d"
+path="res://.godot/imported/mod.mesh.obj-052471744676a8cb86492d9dd711b4b6.mesh"
 
 [deps]
 
+files=["res://.godot/imported/mod.mesh.obj-052471744676a8cb86492d9dd711b4b6.mesh"]
+
 source_file="res://mod.mesh.obj"
+dest_files=["res://.godot/imported/mod.mesh.obj-052471744676a8cb86492d9dd711b4b6.mesh", "res://.godot/imported/mod.mesh.obj-052471744676a8cb86492d9dd711b4b6.mesh"]
 
 [params]
 

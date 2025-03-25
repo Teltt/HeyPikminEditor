@@ -19,12 +19,12 @@ func _process(delta: float) -> void:
 func export_collision(out):
 	if not out.is_empty():
 		out+="\n"
-		out+="start\n"
-		for p in s.points.size():
-			out+= "node,"+var_to_str(-s.points[p].x)+","+var_to_str(-s.points[p].y)+"\n"
-			if p >= 1 and p < s.points.size()-1:
-				out+="seg_attr,"+seg_attr[p-2]+"\n"
-		out+="end"
+	out+="start\n"
+	for p in s.points.size():
+		out+= "node,"+var_to_str(-s.points[p].x)+","+var_to_str(-s.points[p].y)+"\n"
+		if p >= 1 and p < s.points.size()-1:
+			out+="seg_attr,"+seg_attr[p-2]+"\n"
+	out+="end"
 	return out
 func export_model(out:ArrayMesh)->Variant:
 	var arr = []
