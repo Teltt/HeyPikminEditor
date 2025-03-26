@@ -1,0 +1,14 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://ddnksxlfhohi7"
+
+[deps]
+
+source_file="res://Export/mod.csv"
+
+[params]
+
+compress=true
+delimiter=0

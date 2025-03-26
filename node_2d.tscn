@@ -1,79 +1,200 @@
-[gd_scene load_steps=10 format=3 uid="uid://hpj4m8ldxplb"]
+[gd_scene load_steps=5 format=3 uid="uid://hpj4m8ldxplb"]
 
 [ext_resource type="Script" uid="uid://c4a1imlia3dob" path="res://Editor.gd" id="1_wtcfe"]
-[ext_resource type="Script" uid="uid://ce24cm1hlajge" path="res://CollisionLine.gd" id="2_0e48y"]
-[ext_resource type="Script" uid="uid://d1761hoslt10w" path="res://VisualPlatform.gd" id="3_epypp"]
-[ext_resource type="Script" uid="uid://c2hok6v3vcf60" path="res://LevelObject.gd" id="4_0hol4"]
-
-[sub_resource type="Gradient" id="Gradient_q6r6c"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_kdubu"]
-gradient = SubResource("Gradient_q6r6c")
-fill_from = Vector2(0.0042735, 1)
-fill_to = Vector2(0, 0)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_0e48y"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_epypp"]
-noise = SubResource("FastNoiseLite_0e48y")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0e48y"]
-albedo_texture = SubResource("NoiseTexture2D_epypp")
+[ext_resource type="Script" uid="uid://ce24cm1hlajge" path="res://Exportable/CollisionLine.gd" id="2_0e48y"]
+[ext_resource type="Script" uid="uid://o4blitakmdw7" path="res://Exportable/Path.gd" id="3_0hol4"]
+[ext_resource type="Script" uid="uid://c2hok6v3vcf60" path="res://Exportable/LevelObject.gd" id="3_epypp"]
 
 [node name="Node2D" type="Node2D"]
-scale = Vector2(0.1, 0.1)
 script = ExtResource("1_wtcfe")
-collision = "uid://deacvrvxwcq6f"
-objects = "uid://cbvt47lvj12hh"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(570, -110)
+collision = "uid://c2v63ojp3t8os"
+path = "uid://c8adb0geui3f2"
+objects = "uid://d24oqkjkbwocu"
 
 [node name="Line2D" type="Line2D" parent="."]
-position = Vector2(1045, 25)
-points = PackedVector2Array(320, -190, 260, -190, 220, -170, 180, -130, 180, 0, -30, 0, -50, -10)
-texture = SubResource("GradientTexture2D_kdubu")
-texture_mode = 1
+points = PackedVector2Array(-1610, -410, -1570, -410, -1550, -420, -1540, -440, -1520, -450, -1500, -450, -1480, -440, -1460, -440, -1440, -430, -1420, -430, -1400, -440, -1380, -440, -1360, -450, -1330, -450, -1320, -470, -1320, -500, -1330, -520, -1350, -530, -1370, -530)
 script = ExtResource("2_0e48y")
-material_3d = SubResource("StandardMaterial3D_0e48y")
-seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground"])
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
 
 [node name="Line2D2" type="Line2D" parent="."]
-position = Vector2(1045, 25)
-points = PackedVector2Array(-50, -10, -120, -10, -140, 0, -200, 0, -200, -10, -440, -10, -440, 0, -640, 0, -680, -20, -710, -20, -730, -10, -1080, -10, -1080, -130, -1100, -170, -1140, -210, -1220, -210)
-texture = SubResource("GradientTexture2D_kdubu")
-texture_mode = 1
+points = PackedVector2Array(-1020, -330, -970, -330, -950, -340, -930, -360, -910, -370, -890, -410, -870, -430, -860, -450, -860, -490, -870, -510, -870, -530, -880, -550, -880, -570, -890, -590, -910, -600, -930, -600, -940, -580, -940, -560, -930, -540, -930, -520, -960, -520, -960, -500, -940, -490, -930, -470, -930, -450, -950, -430, -960, -410, -960, -400, -1010, -400, -1010, -370, -1050, -370, -1050, -400, -1090, -400, -1110, -390, -1130, -390, -1150, -400, -1170, -400, -1170, -380, -1150, -360, -1110, -360, -1110, -350, -1090, -350, -1090, -330, -1020, -330)
 script = ExtResource("2_0e48y")
-material_3d = SubResource("StandardMaterial3D_0e48y")
-seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
 
 [node name="Line2D3" type="Line2D" parent="."]
-position = Vector2(1045, 25)
-points = PackedVector2Array(-339, -70, -400, -70, -400, -50, -340, -50, -340, -70)
-texture = SubResource("GradientTexture2D_kdubu")
-texture_mode = 1
+points = PackedVector2Array(-1370, -530, -1390, -540, -1420, -540, -1440, -530, -1470, -530, -1490, -540, -1500, -550, -1520, -560, -1550, -560, -1570, -550, -1580, -540, -1600, -530, -1620, -530, -1640, -520, -1690, -520, -1710, -530, -1730, -530, -1750, -520, -1770, -500, -1780, -480, -1780, -460, -1730, -460, -1720, -440, -1720, -410, -1710, -390, -1670, -390, -1660, -400, -1640, -410, -1610, -410)
 script = ExtResource("2_0e48y")
-material_3d = SubResource("StandardMaterial3D_0e48y")
-seg_attr = Array[String](["ground", "ground", "ground"])
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
 
 [node name="Line2D4" type="Line2D" parent="."]
-position = Vector2(1045, 25)
-points = PackedVector2Array(-528, -50, -570, -50, -570, -80, -520, -80, -520, -70, -500, -70, -500, -100, -520, -110, -550, -110, -570, -100, -590, -100, -600, -80, -600, -60, -590, -40, -590, -30, -530, -30, -530, -50)
-texture = SubResource("GradientTexture2D_kdubu")
-texture_mode = 1
+points = PackedVector2Array(-570, -230, -590, -230, -610, -240, -630, -240, -650, -230, -670, -230, -670, -190)
 script = ExtResource("2_0e48y")
-material_3d = SubResource("StandardMaterial3D_0e48y")
-seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground"])
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-position = Vector2(1045, 25)
-polygon = PackedVector2Array(-1220, -210, -1140, -210, -1100, -170, -1080, -130, -1080, -10, -730, -10, -710, -20, -680, -20, -640, 0, -440, 0, -440, -10, -200, -10, -200, 0, -140, 0, -120, -10, -50, -10, -30, 0, 180, 0, 180, -130, 220, -170, 260, -190, 320, -190, 320, 160, -1220, 160)
-uv = PackedVector2Array(-1220, -210, -1140, -210, -1100, -170, -1080, -130, -1080, -10, -730, -10, -710, -20, -680, -20, -640, 0, -440, 0, -440, -10, -200, -10, -200, 0, -140, 0, -120, -10, -50, -10, -30, 0, 180, 0, 180, -130, 220, -170, 260, -190, 320, -190, 320, 160, -1220, 160)
+[node name="Line2D5" type="Line2D" parent="."]
+points = PackedVector2Array(210, -180, 120, -180, 100, -170, 90, -150, 90, -40, 80, -20, 0, -20, -40, 0, -270, 0, -290, -20, -330, -20, -330, -70)
+script = ExtResource("2_0e48y")
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="Line2D6" type="Line2D" parent="."]
+points = PackedVector2Array(-330, -70, -350, -70, -370, -50, -410, -50, -430, -60, -440, -60, -480, -60, -500, -50, -600, -50, -600, -40, -650, -40, -780, -40, -800, -50, -800, -90, -780, -110, -780, -130, -800, -130, -810, -150, -810, -190)
+script = ExtResource("2_0e48y")
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="Line2D7" type="Line2D" parent="."]
+points = PackedVector2Array(-670, -190, -670, -150, -680, -130, -700, -130, -700, -110, -680, -90, -680, -80, -640, -80, -640, -170, -600, -170, -590, -150, -590, -130, -420, -130)
+script = ExtResource("2_0e48y")
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="Line2D8" type="Line2D" parent="."]
+points = PackedVector2Array(-810, -190, -810, -230, -840, -230, -860, -220, -880, -200, -1040, -200, -1060, -210, -1110, -210, -1120, -230, -1120, -260, -1130, -280, -1170, -280, -1190, -260, -1290, -260, -1300, -280, -1300, -310, -1340, -310, -1340, -340, -1320, -360, -1300, -370, -1300, -400, -1350, -400, -1370, -390, -1390, -370, -1410, -360, -1450, -360, -1470, -370, -1490, -390, -1510, -390, -1530, -370, -1550, -360, -1570, -340, -1570, -300, -1560, -280, -1510, -280, -1490, -270, -1480, -250)
+script = ExtResource("2_0e48y")
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="Line2D9" type="Line2D" parent="."]
+points = PackedVector2Array(-1480, -250, -1480, -200, -1440, -200, -1430, -190, -1430, -150, -1410, -150, -1390, -160, -1370, -160, -1350, -170, -1340, -190, -1270, -190, -1260, -170, -1260, -140, -1350, -140, -1370, -130, -1390, -130, -1410, -120, -1430, -120, -1430, -110, -1500, -110, -1570, -110, -1570, -120, -1630, -120, -1640, -120, -1640, -110, -1660, -110, -1700, -110, -1700, -90, -1760, -90, -1760, -70, -1840, -70, -1860, -50, -1900, -30, -2000, -30, -2000, -80, -2010, -100, -2090, -100, -2090, -90, -2250, -90, -2260, -110, -2260, -140, -2250, -160, -2230, -180, -2210, -190, -2130, -190, -2110, -170, -2090, -130, -2070, -130, -2070, -140, -2070, -250, -2050, -260, -2020, -260, -2000, -250, -2000, -230, -1920, -230, -1920, -190, -1860, -190, -1860, -220, -1870, -240, -1870, -260, -1910, -260, -1950, -300, -2010, -330, -2210, -330, -2365, -330, -2365, -370, -2385, -410, -2385, -520)
+script = ExtResource("2_0e48y")
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "concrete", "ground", "concrete", "ground", "concrete", "concrete", "ground", "ground", "ground", "concrete", "concrete", "concrete", "concrete", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="Line2D10" type="Line2D" parent="."]
+points = PackedVector2Array(-2010, -490, -2010, -470, -2000, -450, -2000, -430, -1990, -410, -1980, -390, -1960, -370, -1920, -350, -1870, -350, -1830, -330, -1810, -310, -1800, -290, -1800, -240, -1810, -220, -1810, -160, -1670, -160, -1570, -160, -1560, -180, -1560, -200, -1560, -220, -1630, -220, -1640, -240, -1640, -270, -1650, -290, -1650, -330, -1650, -340, -1670, -360, -1750, -360, -1750, -410, -1770, -410, -1810, -430, -1930, -430, -1940, -450, -1940, -480, -1930, -500, -1910, -510, -1890, -530, -1890, -550, -1910, -560, -1960, -560, -1980, -540, -1990, -520, -2000, -510, -2010, -490)
+script = ExtResource("2_0e48y")
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="Line2D11" type="Line2D" parent="."]
+points = PackedVector2Array(-670, -220, -810, -220)
+script = ExtResource("2_0e48y")
+
+[node name="Line2D12" type="Line2D" parent="."]
+points = PackedVector2Array(-1330, 1820, -1340, 1820, -1340, 1780, -1320, 1760, -1260, 1760, -1260, 1780, -1240, 1780, -1240, 1800, -1220, 1800, -1220, 1820, -1200, 1820, -1200, 1850, -1180, 1850, -1180, 1820, -1160, 1820, -1150, 1840, -1150, 1950, -1340, 1950, -1340, 1900, -1330, 1880, -1310, 1870, -1290, 1870, -1280, 1850, -1280, 1820, -1330, 1820)
+script = ExtResource("2_0e48y")
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="Line2D13" type="Line2D" parent="."]
+points = PackedVector2Array(-600, -90, -640, -90)
+script = ExtResource("2_0e48y")
+
+[node name="Line2D14" type="Line2D" parent="."]
+points = PackedVector2Array(-2030, -165, -2070, -165)
+script = ExtResource("2_0e48y")
+
+[node name="Line2D15" type="Line2D" parent="."]
+points = PackedVector2Array(-640, -320, -610, -320, -600, -340, -600, -360, -670, -360, -670, -340, -660, -320, -640, -320)
+script = ExtResource("2_0e48y")
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="Line2D16" type="Line2D" parent="."]
+points = PackedVector2Array(-1170, -390, -1300, -390)
+script = ExtResource("2_0e48y")
+
+[node name="Line2D17" type="Line2D" parent="."]
+points = PackedVector2Array(-1800, -250, -1870, -250)
+script = ExtResource("2_0e48y")
+
+[node name="Line2D18" type="Line2D" parent="."]
+points = PackedVector2Array(-1570, -340, -1650, -340)
+script = ExtResource("2_0e48y")
+
+[node name="Line2D19" type="Line2D" parent="."]
+points = PackedVector2Array(-700, -130, -780, -130)
+script = ExtResource("2_0e48y")
+
+[node name="Line2D20" type="Line2D" parent="."]
+points = PackedVector2Array(-1050, -660, -1070, -660, -1090, -650, -1110, -630, -1120, -610, -1120, -550, -1110, -530, -1090, -520, -1070, -520, -1070, -540, -1050, -560, -1050, -580, -1010, -580, -1000, -600, -1000, -620, -1010, -640, -1020, -650, -1030, -650, -1050, -660)
+script = ExtResource("2_0e48y")
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="Line2D21" type="Line2D" parent="."]
+points = PackedVector2Array(-1530, -220, -1560, -220)
+script = ExtResource("2_0e48y")
+
+[node name="Line2D22" type="Line2D" parent="."]
+points = PackedVector2Array(-1170, 1730, -1190, 1730, -1210, 1740, -1240, 1740, -1260, 1730, -1300, 1730, -1310, 1720, -1310, 1690, -1360, 1690, -1380, 1700, -1400, 1720, -1420, 1730, -1460, 1730, -1480, 1720, -1500, 1700, -1520, 1700, -1540, 1720, -1560, 1730, -1580, 1750, -1580, 1790, -1570, 1810, -1520, 1810, -1500, 1820, -1490, 1840, -1490, 1890, -1450, 1890, -1440, 1900, -1440, 1940, -1420, 1940, -1400, 1930, -1390, 1930, -1380, 1940, -1380, 1960, -1390, 1960, -1410, 1970, -1410, 1990, -1420, 1990, -1440, 2000, -1465, 2000)
+script = ExtResource("2_0e48y")
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="Line2D23" type="Line2D" parent="."]
+points = PackedVector2Array(-975, 1890, -1040, 1890, -1060, 1880, -1110, 1880, -1120, 1860, -1120, 1810, -1130, 1790, -1130, 1770, -1140, 1750, -1150, 1740, -1170, 1730)
+script = ExtResource("2_0e48y")
+seg_attr = Array[String](["wood", "wood", "wood", "wood", "wood", "wood", "wood", "wood", "wood"])
+
+[node name="Line2D24" type="Line2D" parent="."]
+points = PackedVector2Array(-420, -130, -400, -120, -380, -120, -360, -130, -350, -140, -310, -140, -290, -150, -280, -170, -280, -200, -320, -240, -340, -250, -360, -250, -400, -270, -420, -270, -430, -290, -430, -310, -440, -330, -440, -400, -460, -440, -470, -450, -480, -460, -490, -480, -500, -500, -510, -510, -520, -520, -540, -520, -560, -510, -580, -510, -600, -500, -640, -500, -680, -480, -680, -460, -670, -440, -630, -420, -560, -420, -550, -400, -550, -340, -560, -320, -560, -280, -540, -260, -520, -250, -520, -230, -570, -230)
+script = ExtResource("2_0e48y")
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="Line2D25" type="Line2D" parent="."]
+points = PackedVector2Array(-1550, -420)
+script = ExtResource("3_0hol4")
+id = 4
+
+[node name="Label" type="Label" parent="Line2D25"]
+modulate = Color(0, 1, 1, 1)
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line2D26" type="Line2D" parent="."]
+points = PackedVector2Array(-1160, 1840)
+script = ExtResource("3_0hol4")
+id = 6
+
+[node name="Label" type="Label" parent="Line2D26"]
+modulate = Color(0, 1, 1, 1)
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line2D27" type="Line2D" parent="."]
+points = PackedVector2Array(-1550, -460)
+script = ExtResource("3_0hol4")
+id = 7
+
+[node name="Label" type="Label" parent="Line2D27"]
+modulate = Color(0, 1, 1, 1)
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line2D28" type="Line2D" parent="."]
+points = PackedVector2Array(-350, -60, -255, -60, -210, -65, -160, -60, -150, -65, -145, -75, -150, -85, -160, -90, -190, -95, -220, -90, -230, -85, -235, -75, -230, -65, -220, -60, -165, -65, -110, -60, -100, -65, -95, -75, -100, -85, -110, -90, -145, -95, -180, -90, -190, -85, -195, -75, -190, -65, -180, -60, -120, -65, -60, -60, -50, -65, -45, -75, -50, -85, -60, -90, -110, -95, -160, -90, -210, -95, -260, -90, -270, -85, -275, -75, -270, -65, -260, -60, -215, -55, -175, -60, -165, -65, -160, -75, -160, -100, -160, -440)
+script = ExtResource("3_0hol4")
+id = 8
+
+[node name="Label" type="Label" parent="Line2D28"]
+modulate = Color(0, 1, 1, 1)
+text = "8"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line2D29" type="Line2D" parent="."]
+points = PackedVector2Array(-350, -65, -255, -65, -210, -60, -160, -65, -150, -70, -145, -80, -150, -90, -160, -95, -190, -100, -220, -95, -230, -90, -235, -80, -230, -70, -220, -65, -165, -60, -110, -65, -100, -70, -95, -80, -100, -90, -110, -95, -145, -100, -180, -95, -190, -90, -195, -80, -190, -70, -180, -65, -120, -60, -60, -65, -50, -70, -45, -80, -50, -90, -60, -95, -110, -90, -160, -95, -210, -90, -260, -95, -270, -90, -275, -80, -270, -70, -260, -65, -215, -60, -175, -65, -165, -70, -160, -80, -160, -105, -160, -445)
+script = ExtResource("3_0hol4")
+id = 9
+
+[node name="Label" type="Label" parent="Line2D29"]
+modulate = Color(0, 1, 1, 1)
+text = "9"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="bush_manager" type="Node2D" parent="."]
+position = Vector2(20, 5)
 script = ExtResource("3_epypp")
-material_3d = SubResource("StandardMaterial3D_0e48y")
+obj_class = "bush_manager"
+vars = Dictionary[String, Variant]({
+"リソース": "default"
+})
+
+[node name="Label" type="Label" parent="bush_manager"]
+modulate = Color(0, 1, 1, 1)
+text = "bush_manager"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="orima" type="Node2D" parent="."]
-script = ExtResource("4_0hol4")
+position = Vector2(40, -20)
+script = ExtResource("3_epypp")
 obj_class = "orima"
 
 [node name="Label" type="Label" parent="orima"]
@@ -82,44 +203,21 @@ text = "orima"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="onion" type="Node2D" parent="."]
-position = Vector2(960, 10)
-script = ExtResource("4_0hol4")
-obj_class = "onion"
-vars = Dictionary[String, Variant]({
-"id": "0",
-"カメラY補正グリッド": "-2.500000",
-"右ワープ座標オフセットX": "50.000000",
-"右ワープ座標オフセットY": "0.000000",
-"左ワープ座標オフセットX": "-50.000000",
-"左ワープ座標オフセットY": "0.000000",
-"強制ゴール方向": "non",
-"感知オフセットX": "0.000000",
-"感知オフセットY": "0.000000",
-"感知範囲幅": "38.000000",
-"感知範囲高": "50.000000"
-})
-
-[node name="Label" type="Label" parent="onion"]
-modulate = Color(0, 1, 1, 1)
-text = "onion"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="bush01a" type="Node2D" parent="."]
-position = Vector2(370, 75)
-script = ExtResource("4_0hol4")
+position = Vector2(-545, -235)
+script = ExtResource("3_epypp")
 obj_class = "bush01a"
 vars = Dictionary[String, Variant]({
-"resource": "default",
+"force": "false",
+"resource": "branch",
 "type": "red",
-"ピクミン生成数": "0",
-"保障": "4",
-"範囲offsetX": "0",
-"範囲offsetY": "0",
-"範囲サイズX": "10",
+"ピクミン生成数": "4",
+"保障": "0",
+"範囲offsetX": "4",
+"範囲offsetY": "3",
+"範囲サイズX": "17",
 "範囲サイズY": "10",
-"範囲指定": "false",
+"範囲指定": "true",
 "角度": "0"
 })
 
@@ -129,9 +227,527 @@ text = "bush01a"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="bush01a2" type="Node2D" parent="."]
+position = Vector2(-1320, -315)
+script = ExtResource("3_epypp")
+obj_class = "bush01a"
+vars = Dictionary[String, Variant]({
+"force": "false",
+"resource": "default",
+"type": "red",
+"ピクミン生成数": "4",
+"保障": "0",
+"範囲offsetX": "0",
+"範囲offsetY": "0",
+"範囲サイズX": "24",
+"範囲サイズY": "11",
+"範囲指定": "false",
+"角度": "0"
+})
+
+[node name="Label" type="Label" parent="bush01a2"]
+modulate = Color(0, 1, 1, 1)
+text = "bush01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="bush01a3" type="Node2D" parent="."]
+position = Vector2(-1585, -225)
+script = ExtResource("3_epypp")
+obj_class = "bush01a"
+vars = Dictionary[String, Variant]({
+"force": "false",
+"resource": "default",
+"type": "red",
+"ピクミン生成数": "0",
+"保障": "0",
+"範囲offsetX": "0",
+"範囲offsetY": "0",
+"範囲サイズX": "24",
+"範囲サイズY": "11",
+"範囲指定": "false",
+"角度": "0"
+})
+
+[node name="Label" type="Label" parent="bush01a3"]
+modulate = Color(0, 1, 1, 1)
+text = "bush01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="generator" type="Node2D" parent="."]
+position = Vector2(-730, -45)
+script = ExtResource("3_epypp")
+obj_class = "generator"
+vars = Dictionary[String, Variant]({
+"force": "false",
+"type": "red",
+"グループID": "-1"
+})
+
+[node name="Label" type="Label" parent="generator"]
+modulate = Color(0, 1, 1, 1)
+text = "generator"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="generator2" type="Node2D" parent="."]
+position = Vector2(-750, -45)
+script = ExtResource("3_epypp")
+obj_class = "generator"
+vars = Dictionary[String, Variant]({
+"force": "false",
+"type": "red",
+"グループID": "-1"
+})
+
+[node name="Label" type="Label" parent="generator2"]
+modulate = Color(0, 1, 1, 1)
+text = "generator"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="eventobj" type="Node2D" parent="."]
+position = Vector2(-200, 0)
+script = ExtResource("3_epypp")
+obj_class = "eventobj"
+vars = Dictionary[String, Variant]({
+"bgm_stop": "false",
+"endflag": "127",
+"event": "ingame_event320a",
+"event_set": "1",
+"fadeout": "0.000000",
+"group": "31",
+"height": "1.500000",
+"minimum": "-1",
+"pan": "0.000000",
+"reaction": "true",
+"se_stop": "false",
+"type": "false",
+"wait": "false",
+"whistle": "false",
+"width": "1.500000"
+})
+
+[node name="Label" type="Label" parent="eventobj"]
+modulate = Color(0, 1, 1, 1)
+text = "eventobj"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="eventobj2" type="Node2D" parent="."]
+position = Vector2(-990, -200)
+script = ExtResource("3_epypp")
+obj_class = "eventobj"
+vars = Dictionary[String, Variant]({
+"bgm_stop": "false",
+"endflag": "-1",
+"event": "ingame_event508",
+"event_set": "-1",
+"fadeout": "0.000000",
+"group": "33",
+"height": "1.500000",
+"minimum": "2",
+"pan": "0.000000",
+"reaction": "true",
+"se_stop": "false",
+"type": "false",
+"wait": "false",
+"whistle": "false",
+"width": "1.500000"
+})
+
+[node name="Label" type="Label" parent="eventobj2"]
+modulate = Color(0, 1, 1, 1)
+text = "eventobj"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="eventobj3" type="Node2D" parent="."]
+position = Vector2(-1865, -430)
+script = ExtResource("3_epypp")
+obj_class = "eventobj"
+vars = Dictionary[String, Variant]({
+"bgm_stop": "false",
+"endflag": "-1",
+"event": "ingame_event404",
+"event_set": "-1",
+"fadeout": "0.000000",
+"group": "32",
+"height": "1.500000",
+"minimum": "-1",
+"pan": "0.000000",
+"reaction": "true",
+"se_stop": "false",
+"type": "false",
+"wait": "false",
+"whistle": "false",
+"width": "1.500000"
+})
+
+[node name="Label" type="Label" parent="eventobj3"]
+modulate = Color(0, 1, 1, 1)
+text = "eventobj"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="camera_y_chase" type="Node2D" parent="."]
+position = Vector2(40, 0)
+script = ExtResource("3_epypp")
+obj_class = "camera_y_chase"
+vars = Dictionary[String, Variant]({
+"ofs": "40.000000"
+})
+
+[node name="Label" type="Label" parent="camera_y_chase"]
+modulate = Color(0, 1, 1, 1)
+text = "camera_y_chase"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy" type="Node2D" parent="."]
+position = Vector2(-740, -130)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "true",
+"dir": "none",
+"length": "9",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy2" type="Node2D" parent="."]
+position = Vector2(-760, -220)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "true",
+"dir": "none",
+"length": "9",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy2"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy3" type="Node2D" parent="."]
+position = Vector2(-780, -220)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "true",
+"dir": "none",
+"length": "9",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy3"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy4" type="Node2D" parent="."]
+position = Vector2(-740, -220)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "true",
+"dir": "none",
+"length": "9",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy4"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy5" type="Node2D" parent="."]
+position = Vector2(-720, -220)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "true",
+"dir": "none",
+"length": "9",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy5"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy6" type="Node2D" parent="."]
+position = Vector2(-700, -220)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "true",
+"dir": "none",
+"length": "9",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy6"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy7" type="Node2D" parent="."]
+position = Vector2(-1080, -330)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "false",
+"dir": "none",
+"length": "12",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy7"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy8" type="Node2D" parent="."]
+position = Vector2(-1120, -360)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "false",
+"dir": "none",
+"length": "8",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy8"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy9" type="Node2D" parent="."]
+position = Vector2(-1100, -350)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "false",
+"dir": "none",
+"length": "10",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy9"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy10" type="Node2D" parent="."]
+position = Vector2(-1610, -340)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "true",
+"dir": "none",
+"length": "12",
+"wide": "true"
+})
+
+[node name="Label" type="Label" parent="ivy10"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy11" type="Node2D" parent="."]
+position = Vector2(-1255, -390)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "true",
+"dir": "none",
+"length": "13",
+"wide": "true"
+})
+
+[node name="Label" type="Label" parent="ivy11"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy12" type="Node2D" parent="."]
+position = Vector2(-1215, -390)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "true",
+"dir": "none",
+"length": "13",
+"wide": "true"
+})
+
+[node name="Label" type="Label" parent="ivy12"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy13" type="Node2D" parent="."]
+position = Vector2(-1850, -250)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "true",
+"dir": "none",
+"length": "15",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy13"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy14" type="Node2D" parent="."]
+position = Vector2(-1870, -190)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "false",
+"dir": "none",
+"length": "9",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy14"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy15" type="Node2D" parent="."]
+position = Vector2(-1890, -190)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "false",
+"dir": "none",
+"length": "11",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy15"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy16" type="Node2D" parent="."]
+position = Vector2(-1910, -190)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "false",
+"dir": "none",
+"length": "16",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy16"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy17" type="Node2D" parent="."]
+position = Vector2(-1930, -230)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "false",
+"dir": "none",
+"length": "17",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy17"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy18" type="Node2D" parent="."]
+position = Vector2(-1950, -230)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "false",
+"dir": "none",
+"length": "15",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy18"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy19" type="Node2D" parent="."]
+position = Vector2(-1970, -230)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "false",
+"dir": "none",
+"length": "10",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy19"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy20" type="Node2D" parent="."]
+position = Vector2(-1830, -250)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "true",
+"dir": "none",
+"length": "13",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy20"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="kinomi01a" type="Node2D" parent="."]
-position = Vector2(535, 60)
-script = ExtResource("4_0hol4")
+position = Vector2(-755, -200)
+script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
 vars = Dictionary[String, Variant]({
 "グループID": "-1",
@@ -146,8 +762,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="kinomi01a2" type="Node2D" parent="."]
-position = Vector2(545, 70)
-script = ExtResource("4_0hol4")
+position = Vector2(-740, -170)
+script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
 vars = Dictionary[String, Variant]({
 "グループID": "-1",
@@ -162,8 +778,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="kinomi01a3" type="Node2D" parent="."]
-position = Vector2(555, 60)
-script = ExtResource("4_0hol4")
+position = Vector2(-785, -200)
+script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
 vars = Dictionary[String, Variant]({
 "グループID": "-1",
@@ -178,8 +794,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="kinomi01a4" type="Node2D" parent="."]
-position = Vector2(730, 80)
-script = ExtResource("4_0hol4")
+position = Vector2(-695, -200)
+script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
 vars = Dictionary[String, Variant]({
 "グループID": "-1",
@@ -194,8 +810,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="kinomi01a5" type="Node2D" parent="."]
-position = Vector2(720, 60)
-script = ExtResource("4_0hol4")
+position = Vector2(-765, -180)
+script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
 vars = Dictionary[String, Variant]({
 "グループID": "-1",
@@ -210,8 +826,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="kinomi01a6" type="Node2D" parent="."]
-position = Vector2(740, 40)
-script = ExtResource("4_0hol4")
+position = Vector2(-715, -180)
+script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
 vars = Dictionary[String, Variant]({
 "グループID": "-1",
@@ -226,8 +842,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="kinomi01a7" type="Node2D" parent="."]
-position = Vector2(760, 20)
-script = ExtResource("4_0hol4")
+position = Vector2(-725, -200)
+script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
 vars = Dictionary[String, Variant]({
 "グループID": "-1",
@@ -241,9 +857,590 @@ text = "kinomi01a"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="enemy" type="Node2D" parent="."]
+position = Vector2(-740, -220)
+script = ExtResource("3_epypp")
+obj_class = "enemy"
+vars = Dictionary[String, Variant]({
+"たからもの表示順": "0",
+"オリマーの方を向く": "false",
+"初期右向き": "false",
+"初期状態": "walk",
+"感知オフセットX": "-83.000000",
+"感知オフセットY": "30.000000",
+"感知範囲幅": "100.000000",
+"感知範囲高": "60.000000",
+"死亡時に落とすもの": "nuts",
+"死亡時のたからもの": "1_gara_denti04a",
+"運搬停止:トンネル": "true",
+"運搬停止:トンネルID": "-1",
+"運搬停止ブロック:オリマー": "100",
+"運搬停止ブロック:出現位置": "100"
+})
+
+[node name="Label" type="Label" parent="enemy"]
+modulate = Color(0, 1, 1, 1)
+text = "enemy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enemy2" type="Node2D" parent="."]
+position = Vector2(-2225, -90)
+script = ExtResource("3_epypp")
+obj_class = "enemy"
+vars = Dictionary[String, Variant]({
+"たからもの表示順": "0",
+"オリマーの方を向く": "false",
+"初期右向き": "false",
+"初期状態": "wait",
+"感知オフセットX": "-91.000000",
+"感知オフセットY": "31.000000",
+"感知範囲幅": "100.000000",
+"感知範囲高": "60.000000",
+"死亡時に落とすもの": "treasure",
+"死亡時のたからもの": "67_gara_nes_cassette01a",
+"運搬停止:トンネル": "true",
+"運搬停止:トンネルID": "-1",
+"運搬停止ブロック:オリマー": "30",
+"運搬停止ブロック:出現位置": "0"
+})
+
+[node name="Label" type="Label" parent="enemy2"]
+modulate = Color(0, 1, 1, 1)
+text = "enemy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enemy3" type="Node2D" parent="."]
+position = Vector2(-1240, -390)
+script = ExtResource("3_epypp")
+obj_class = "enemy"
+vars = Dictionary[String, Variant]({
+"たからもの表示順": "0",
+"オリマーの方を向く": "false",
+"初期右向き": "false",
+"初期状態": "walk",
+"感知オフセットX": "-83.000000",
+"感知オフセットY": "30.000000",
+"感知範囲幅": "100.000000",
+"感知範囲高": "60.000000",
+"死亡時に落とすもの": "nuts",
+"死亡時のたからもの": "1_gara_denti04a",
+"運搬停止:トンネル": "true",
+"運搬停止:トンネルID": "-1",
+"運搬停止ブロック:オリマー": "100",
+"運搬停止ブロック:出現位置": "100"
+})
+
+[node name="Label" type="Label" parent="enemy3"]
+modulate = Color(0, 1, 1, 1)
+text = "enemy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enemy4" type="Node2D" parent="."]
+position = Vector2(-1460, -110)
+script = ExtResource("3_epypp")
+obj_class = "enemy"
+vars = Dictionary[String, Variant]({
+"たからもの表示順": "0",
+"オリマーの方を向く": "false",
+"初期右向き": "true",
+"初期状態": "sleep",
+"感知オフセットX": "0.000000",
+"感知オフセットY": "10.000000",
+"感知範囲幅": "30.000000",
+"感知範囲高": "30.000000",
+"死亡時に落とすもの": "nuts",
+"死亡時のたからもの": "1_gara_denti04a",
+"運搬停止:トンネル": "true",
+"運搬停止:トンネルID": "-1",
+"運搬停止ブロック:オリマー": "100",
+"運搬停止ブロック:出現位置": "100"
+})
+
+[node name="Label" type="Label" parent="enemy4"]
+modulate = Color(0, 1, 1, 1)
+text = "enemy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy_hang2" type="Node2D" parent="."]
+position = Vector2(-2040, -260)
+script = ExtResource("3_epypp")
+obj_class = "ivy_hang2"
+vars = Dictionary[String, Variant]({
+"id": "4",
+"max_block": "13",
+"model_z": "0.000000",
+"stay": "true",
+"type": "rock6x6"
+})
+
+[node name="Label" type="Label" parent="ivy_hang2"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy_hang2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy_hang3" type="Node2D" parent="."]
+position = Vector2(-620, -170)
+script = ExtResource("3_epypp")
+obj_class = "ivy_hang2"
+vars = Dictionary[String, Variant]({
+"id": "1",
+"max_block": "11",
+"model_z": "0.000000",
+"stay": "true",
+"type": "rock4x4"
+})
+
+[node name="Label" type="Label" parent="ivy_hang3"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy_hang2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy_hang4" type="Node2D" parent="."]
+position = Vector2(-1030, -580)
+script = ExtResource("3_epypp")
+obj_class = "ivy_hang2"
+vars = Dictionary[String, Variant]({
+"id": "29",
+"max_block": "19",
+"model_z": "0.000000",
+"stay": "false",
+"type": "rock4x4"
+})
+
+[node name="Label" type="Label" parent="ivy_hang4"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy_hang2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy_extend" type="Node2D" parent="."]
+position = Vector2(-1990, -230)
+script = ExtResource("3_epypp")
+obj_class = "ivy_extend"
+vars = Dictionary[String, Variant]({
+"culling_width": "0",
+"fall_control": "false",
+"flag": "-1",
+"flag_num": "1",
+"flag_type": "hang",
+"ground": "false",
+"id": "4",
+"init": "-1",
+"marker": "false",
+"max": "13",
+"max_time": "1.000000",
+"min": "6",
+"min_time": "5.000000",
+"move_num": "16",
+"piku": "0",
+"release": "false",
+"stop_skip": "false",
+"type": "red"
+})
+
+[node name="Label" type="Label" parent="ivy_extend"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy_extend"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy_extend2" type="Node2D" parent="."]
+position = Vector2(-575, -140)
+script = ExtResource("3_epypp")
+obj_class = "ivy_extend"
+vars = Dictionary[String, Variant]({
+"culling_width": "0",
+"fall_control": "false",
+"flag": "-1",
+"flag_num": "1",
+"flag_type": "hang",
+"ground": "true",
+"id": "1",
+"init": "-1",
+"marker": "false",
+"max": "9",
+"max_time": "1.000000",
+"min": "3",
+"min_time": "5.000000",
+"move_num": "4",
+"piku": "2",
+"release": "false",
+"stop_skip": "false",
+"type": "red"
+})
+
+[node name="Label" type="Label" parent="ivy_extend2"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy_extend"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy_extend3" type="Node2D" parent="."]
+position = Vector2(-1080, -520)
+script = ExtResource("3_epypp")
+obj_class = "ivy_extend"
+vars = Dictionary[String, Variant]({
+"culling_width": "0",
+"fall_control": "false",
+"flag": "-1",
+"flag_num": "1",
+"flag_type": "hang",
+"ground": "false",
+"id": "29",
+"init": "-1",
+"marker": "false",
+"max": "10",
+"max_time": "1.000000",
+"min": "7",
+"min_time": "5.000000",
+"move_num": "4",
+"piku": "0",
+"release": "false",
+"stop_skip": "false",
+"type": "red"
+})
+
+[node name="Label" type="Label" parent="ivy_extend3"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy_extend"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="onion" type="Node2D" parent="."]
+position = Vector2(-2100, -330)
+script = ExtResource("3_epypp")
+obj_class = "onion"
+vars = Dictionary[String, Variant]({
+"id": "0",
+"カメラY補正グリッド": "-1.500000",
+"右ワープ座標オフセットX": "50.000000",
+"右ワープ座標オフセットY": "0.000000",
+"左ワープ座標オフセットX": "-145.000000",
+"左ワープ座標オフセットY": "26.000000",
+"強制ゴール方向": "non",
+"感知オフセットX": "-21.000000",
+"感知オフセットY": "-155.000000",
+"感知範囲幅": "50.000000",
+"感知範囲高": "43.000000"
+})
+
+[node name="Label" type="Label" parent="onion"]
+modulate = Color(0, 1, 1, 1)
+text = "onion"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Target" type="Node2D" parent="."]
+position = Vector2(-950, -520)
+script = ExtResource("3_epypp")
+obj_class = "Target"
+vars = Dictionary[String, Variant]({
+"event": "false",
+"prio": "2",
+"タイプ": "25_gara_sdcard01a",
+"基本速度": "2.500000",
+"壁登り": "10.000000",
+"最大速度": "10.000000",
+"止:オ:距離x10": "30",
+"止:扉ID": "-1",
+"止:条件:オリマー距離": "true",
+"止:条件:トンネルに入る": "true",
+"止:条件:生成位置距離": "false",
+"止:生:距離x10": "100"
+})
+
+[node name="Label" type="Label" parent="Target"]
+modulate = Color(0, 1, 1, 1)
+text = "Target"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Target2" type="Node2D" parent="."]
+position = Vector2(-1310, 1820)
+script = ExtResource("3_epypp")
+obj_class = "Target"
+vars = Dictionary[String, Variant]({
+"event": "false",
+"prio": "1",
+"タイプ": "7_gara_marble_spade",
+"基本速度": "2.500000",
+"壁登り": "10.000000",
+"最大速度": "10.000000",
+"止:オ:距離x10": "30",
+"止:扉ID": "-1",
+"止:条件:オリマー距離": "true",
+"止:条件:トンネルに入る": "true",
+"止:条件:生成位置距離": "false",
+"止:生:距離x10": "100"
+})
+
+[node name="Label" type="Label" parent="Target2"]
+modulate = Color(0, 1, 1, 1)
+text = "Target"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tunnel" type="Node2D" parent="."]
+position = Vector2(-1305, -145)
+script = ExtResource("3_epypp")
+obj_class = "tunnel"
+vars = Dictionary[String, Variant]({
+"dir": "right",
+"event": "00_opening_01",
+"event_type": "NONE",
+"exitWidthRateL": "1.000000",
+"exitWidthRateR": "1.000000",
+"flag": "-1",
+"flag_type": "on",
+"id": "0",
+"minimum": "4",
+"model_type": "NONE",
+"modelz": "-70.000000",
+"piku_type": "false",
+"time": "1.000000",
+"↑範囲：位置Ｘ": "0.000000",
+"↑範囲：位置Ｙ": "0.000000",
+"↑範囲：幅": "80.000000",
+"↑範囲：高さ": "80.000000",
+"隊列外ピクミンの吸い込み範囲指定": "false"
+})
+
+[node name="Label" type="Label" parent="tunnel"]
+modulate = Color(0, 1, 1, 1)
+text = "tunnel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tunnel2" type="Node2D" parent="."]
+position = Vector2(-1310, 1945)
+script = ExtResource("3_epypp")
+obj_class = "tunnel"
+vars = Dictionary[String, Variant]({
+"dir": "left",
+"event": "00_opening_01",
+"event_type": "NONE",
+"exitWidthRateL": "1.000000",
+"exitWidthRateR": "1.000000",
+"flag": "-1",
+"flag_type": "on",
+"id": "0",
+"minimum": "4",
+"model_type": "NONE",
+"modelz": "-70.000000",
+"piku_type": "false",
+"time": "1.000000",
+"↑範囲：位置Ｘ": "0.000000",
+"↑範囲：位置Ｙ": "0.000000",
+"↑範囲：幅": "80.000000",
+"↑範囲：高さ": "80.000000",
+"隊列外ピクミンの吸い込み範囲指定": "false"
+})
+
+[node name="Label" type="Label" parent="tunnel2"]
+modulate = Color(0, 1, 1, 1)
+text = "tunnel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="model" type="Node2D" parent="."]
+position = Vector2(-705, -220)
+script = ExtResource("3_epypp")
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "eda8",
+"rotY": "0",
+"rotZ": "0"
+})
+
+[node name="Label" type="Label" parent="model"]
+modulate = Color(0, 1, 1, 1)
+text = "model"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="model2" type="Node2D" parent="."]
+position = Vector2(-625, -90)
+script = ExtResource("3_epypp")
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "eda4",
+"rotY": "0",
+"rotZ": "0"
+})
+
+[node name="Label" type="Label" parent="model2"]
+modulate = Color(0, 1, 1, 1)
+text = "model"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="model3" type="Node2D" parent="."]
+position = Vector2(-1200, -390)
+script = ExtResource("3_epypp")
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "eda8",
+"rotY": "0",
+"rotZ": "0"
+})
+
+[node name="Label" type="Label" parent="model3"]
+modulate = Color(0, 1, 1, 1)
+text = "model"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="model4" type="Node2D" parent="."]
+position = Vector2(-1270, -390)
+script = ExtResource("3_epypp")
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "eda8",
+"rotY": "0",
+"rotZ": "0"
+})
+
+[node name="Label" type="Label" parent="model4"]
+modulate = Color(0, 1, 1, 1)
+text = "model"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="model5" type="Node2D" parent="."]
+position = Vector2(-1570, -340)
+script = ExtResource("3_epypp")
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "eda7",
+"rotY": "0",
+"rotZ": "0"
+})
+
+[node name="Label" type="Label" parent="model5"]
+modulate = Color(0, 1, 1, 1)
+text = "model"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="model6" type="Node2D" parent="."]
+position = Vector2(-1640, -340)
+script = ExtResource("3_epypp")
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "eda7",
+"rotY": "0",
+"rotZ": "0"
+})
+
+[node name="Label" type="Label" parent="model6"]
+modulate = Color(0, 1, 1, 1)
+text = "model"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="model7" type="Node2D" parent="."]
+position = Vector2(-700, -130)
+script = ExtResource("3_epypp")
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "eda8",
+"rotY": "0",
+"rotZ": "0"
+})
+
+[node name="Label" type="Label" parent="model7"]
+modulate = Color(0, 1, 1, 1)
+text = "model"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="model8" type="Node2D" parent="."]
+position = Vector2(-775, -130)
+script = ExtResource("3_epypp")
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "eda7",
+"rotY": "0",
+"rotZ": "0"
+})
+
+[node name="Label" type="Label" parent="model8"]
+modulate = Color(0, 1, 1, 1)
+text = "model"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="model9" type="Node2D" parent="."]
+position = Vector2(-775, -220)
+script = ExtResource("3_epypp")
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "eda8",
+"rotY": "0",
+"rotZ": "0"
+})
+
+[node name="Label" type="Label" parent="model9"]
+modulate = Color(0, 1, 1, 1)
+text = "model"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="model10" type="Node2D" parent="."]
+position = Vector2(-2055, -165)
+script = ExtResource("3_epypp")
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "eda4",
+"rotY": "0",
+"rotZ": "0"
+})
+
+[node name="Label" type="Label" parent="model10"]
+modulate = Color(0, 1, 1, 1)
+text = "model"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="model11" type="Node2D" parent="."]
+position = Vector2(-1835, -250)
+script = ExtResource("3_epypp")
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "eda8",
+"rotY": "0",
+"rotZ": "0"
+})
+
+[node name="Label" type="Label" parent="model11"]
+modulate = Color(0, 1, 1, 1)
+text = "model"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="envelope_effect" type="Node2D" parent="."]
+position = Vector2(40, 20)
+script = ExtResource("3_epypp")
+obj_class = "envelope_effect"
+vars = Dictionary[String, Variant]({
+"type": "sakura"
+})
+
+[node name="Label" type="Label" parent="envelope_effect"]
+modulate = Color(0, 1, 1, 1)
+text = "envelope_effect"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="kinomi01a8" type="Node2D" parent="."]
-position = Vector2(700, 80)
-script = ExtResource("4_0hol4")
+position = Vector2(-1505, -225)
+script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
 vars = Dictionary[String, Variant]({
 "グループID": "-1",
@@ -258,8 +1455,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="kinomi01a9" type="Node2D" parent="."]
-position = Vector2(750, 60)
-script = ExtResource("4_0hol4")
+position = Vector2(-1515, -215)
+script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
 vars = Dictionary[String, Variant]({
 "グループID": "-1",
@@ -274,8 +1471,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="kinomi01a10" type="Node2D" parent="."]
-position = Vector2(770, 40)
-script = ExtResource("4_0hol4")
+position = Vector2(-1505, -205)
+script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
 vars = Dictionary[String, Variant]({
 "グループID": "-1",
@@ -290,8 +1487,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="kinomi01a11" type="Node2D" parent="."]
-position = Vector2(710, 100)
-script = ExtResource("4_0hol4")
+position = Vector2(-1515, -235)
+script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
 vars = Dictionary[String, Variant]({
 "グループID": "-1",
@@ -305,15 +1502,351 @@ text = "kinomi01a"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="kinomi01a12" type="Node2D" parent="."]
+position = Vector2(-1595, -130)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a12"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a13" type="Node2D" parent="."]
+position = Vector2(-1620, -130)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a13"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a14" type="Node2D" parent="."]
+position = Vector2(-1720, -100)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a14"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a15" type="Node2D" parent="."]
+position = Vector2(-1745, -100)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a15"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a16" type="Node2D" parent="."]
+position = Vector2(-1795, -85)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a16"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a17" type="Node2D" parent="."]
+position = Vector2(-1775, -85)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a17"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a18" type="Node2D" parent="."]
+position = Vector2(-1815, -85)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a18"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a19" type="Node2D" parent="."]
+position = Vector2(-1660, -120)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a19"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a20" type="Node2D" parent="."]
+position = Vector2(-1685, -120)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a20"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a21" type="Node2D" parent="."]
+position = Vector2(-1870, -170)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a21"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a22" type="Node2D" parent="."]
+position = Vector2(-1850, -180)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a22"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a23" type="Node2D" parent="."]
+position = Vector2(-1830, -200)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a23"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a24" type="Node2D" parent="."]
+position = Vector2(-1825, -235)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a24"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a25" type="Node2D" parent="."]
+position = Vector2(-1835, -230)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a25"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a26" type="Node2D" parent="."]
+position = Vector2(-1890, -165)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a26"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a27" type="Node2D" parent="."]
+position = Vector2(-1910, -135)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a27"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a28" type="Node2D" parent="."]
+position = Vector2(-1910, -165)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a28"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a29" type="Node2D" parent="."]
+position = Vector2(-1910, -100)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a29"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a30" type="Node2D" parent="."]
+position = Vector2(-475, -70)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a30"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a31" type="Node2D" parent="."]
+position = Vector2(-455, -70)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a31"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a32" type="Node2D" parent="."]
+position = Vector2(-435, -70)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a32"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="camera_restricted" type="Node2D" parent="."]
-position = Vector2(-245, 90)
-script = ExtResource("4_0hol4")
+position = Vector2(130, -130)
+script = ExtResource("3_epypp")
 obj_class = "camera_restricted"
 vars = Dictionary[String, Variant]({
 "flag": "-1",
-"height": "260.000000",
+"height": "335.000000",
 "hv": "horizontal",
-"width": "70.000000"
+"width": "10.000000"
 })
 
 [node name="Label" type="Label" parent="camera_restricted"]
@@ -322,55 +1855,34 @@ text = "camera_restricted"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="camera_y_chase" type="Node2D" parent="."]
-position = Vector2(5, 50)
-script = ExtResource("4_0hol4")
-obj_class = "camera_y_chase"
+[node name="camera_restricted2" type="Node2D" parent="."]
+position = Vector2(-160, 50)
+script = ExtResource("3_epypp")
+obj_class = "camera_restricted"
 vars = Dictionary[String, Variant]({
-"ofs": "40.000000"
+"flag": "-1",
+"height": "57.500000",
+"hv": "vertical",
+"width": "520.000000"
 })
 
-[node name="Label" type="Label" parent="camera_y_chase"]
+[node name="Label" type="Label" parent="camera_restricted2"]
 modulate = Color(0, 1, 1, 1)
-text = "camera_y_chase"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="eventobj" type="Node2D" parent="."]
-position = Vector2(370, 20)
-script = ExtResource("4_0hol4")
-obj_class = "eventobj"
-vars = Dictionary[String, Variant]({
-"bgm_stop": "false",
-"endflag": "31",
-"event": "ev_course0_hokyu01",
-"event_set": "-1",
-"fadeout": "0.000000",
-"group": "0",
-"minimum": "-1",
-"pan": "0.000000",
-"reaction": "false",
-"type": "false",
-"whistle": "true"
-})
-
-[node name="Label" type="Label" parent="eventobj"]
-modulate = Color(0, 1, 1, 1)
-text = "eventobj"
+text = "camera_restricted"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="area_flag" type="Node2D" parent="."]
-position = Vector2(325, 25)
-script = ExtResource("4_0hol4")
+position = Vector2(-1515, -210)
+script = ExtResource("3_epypp")
 obj_class = "area_flag"
 vars = Dictionary[String, Variant]({
-"ID": "0",
+"ID": "6",
 "ONETIME": "false",
 "タイプ": "on",
-"トリガー": "whistle",
-"幅": "90.000000",
-"高さ": "80.000000"
+"トリガー": "orima",
+"幅": "46.500000",
+"高さ": "10.750000"
 })
 
 [node name="Label" type="Label" parent="area_flag"]
@@ -379,32 +1891,17 @@ text = "area_flag"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="event_step" type="Node2D" parent="."]
-position = Vector2(250, 10)
-script = ExtResource("4_0hol4")
-obj_class = "event_step"
-vars = Dictionary[String, Variant]({
-"event": "ev_course0_piku01",
-"flag_start": "30"
-})
-
-[node name="Label" type="Label" parent="event_step"]
-modulate = Color(0, 1, 1, 1)
-text = "event_step"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="area_flag2" type="Node2D" parent="."]
-position = Vector2(60, 10)
-script = ExtResource("4_0hol4")
+position = Vector2(-1515, -240)
+script = ExtResource("3_epypp")
 obj_class = "area_flag"
 vars = Dictionary[String, Variant]({
-"ID": "20",
-"ONETIME": "true",
-"タイプ": "on",
+"ID": "6",
+"ONETIME": "false",
+"タイプ": "off",
 "トリガー": "orima",
-"幅": "10.000000",
-"高さ": "10.000000"
+"幅": "74.625000",
+"高さ": "45.875000"
 })
 
 [node name="Label" type="Label" parent="area_flag2"]
@@ -414,16 +1911,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="area_flag3" type="Node2D" parent="."]
-position = Vector2(185, 0)
-script = ExtResource("4_0hol4")
+position = Vector2(-1530, -135)
+script = ExtResource("3_epypp")
 obj_class = "area_flag"
 vars = Dictionary[String, Variant]({
-"ID": "10",
+"ID": "6",
 "ONETIME": "false",
-"タイプ": "on",
+"タイプ": "off",
 "トリガー": "orima",
-"幅": "10.000000",
-"高さ": "10.000000"
+"幅": "191.500000",
+"高さ": "50.125000"
 })
 
 [node name="Label" type="Label" parent="area_flag3"]
@@ -432,17 +1929,46 @@ text = "area_flag"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="onionStart" type="Node2D" parent="."]
+position = Vector2(40, -20)
+script = ExtResource("3_epypp")
+obj_class = "onionStart"
+vars = Dictionary[String, Variant]({
+"オリマー左向き": "false",
+"操作フラグID": "-1"
+})
+
+[node name="Label" type="Label" parent="onionStart"]
+modulate = Color(0, 1, 1, 1)
+text = "onionStart"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tunnel_manager" type="Node2D" parent="."]
+position = Vector2(20, 20)
+script = ExtResource("3_epypp")
+obj_class = "tunnel_manager"
+vars = Dictionary[String, Variant]({
+"モデルタイプ": "NORMAL"
+})
+
+[node name="Label" type="Label" parent="tunnel_manager"]
+modulate = Color(0, 1, 1, 1)
+text = "tunnel_manager"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="area_flag4" type="Node2D" parent="."]
-position = Vector2(300, 10)
-script = ExtResource("4_0hol4")
+position = Vector2(-1780, -430)
+script = ExtResource("3_epypp")
 obj_class = "area_flag"
 vars = Dictionary[String, Variant]({
-"ID": "22",
+"ID": "32",
 "ONETIME": "true",
 "タイプ": "on",
 "トリガー": "orima",
-"幅": "10.000000",
-"高さ": "10.000000"
+"幅": "20.000000",
+"高さ": "98.750000"
 })
 
 [node name="Label" type="Label" parent="area_flag4"]
@@ -452,16 +1978,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="area_flag5" type="Node2D" parent="."]
-position = Vector2(480, 10)
-script = ExtResource("4_0hol4")
+position = Vector2(-870, -325)
+script = ExtResource("3_epypp")
 obj_class = "area_flag"
 vars = Dictionary[String, Variant]({
-"ID": "27",
+"ID": "33",
 "ONETIME": "true",
 "タイプ": "on",
 "トリガー": "orima",
-"幅": "10.000000",
-"高さ": "37.500000"
+"幅": "20.000000",
+"高さ": "250.000000"
 })
 
 [node name="Label" type="Label" parent="area_flag5"]
@@ -470,37 +1996,1730 @@ text = "area_flag"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="help" type="Node2D" parent="."]
-position = Vector2(545, 0)
-script = ExtResource("4_0hol4")
-obj_class = "help"
+[node name="kinomi01a33" type="Node2D" parent="."]
+position = Vector2(-635, -380)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
 vars = Dictionary[String, Variant]({
-"flag": "42",
-"id": "ev_course0_00_026",
-"type": "normal"
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "1"
 })
 
-[node name="Label" type="Label" parent="help"]
+[node name="Label" type="Label" parent="kinomi01a33"]
 modulate = Color(0, 1, 1, 1)
-text = "help"
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a34" type="Node2D" parent="."]
+position = Vector2(-615, -370)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a34"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a35" type="Node2D" parent="."]
+position = Vector2(-655, -370)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a35"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a36" type="Node2D" parent="."]
+position = Vector2(-1095, -330)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a36"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a37" type="Node2D" parent="."]
+position = Vector2(-1120, -340)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a37"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a38" type="Node2D" parent="."]
+position = Vector2(-1105, -315)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a38"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a39" type="Node2D" parent="."]
+position = Vector2(-1605, -325)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a39"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a40" type="Node2D" parent="."]
+position = Vector2(-1615, -315)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a40"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a41" type="Node2D" parent="."]
+position = Vector2(-1605, -300)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a41"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a42" type="Node2D" parent="."]
+position = Vector2(-1615, -290)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a42"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a43" type="Node2D" parent="."]
+position = Vector2(-1605, -275)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a43"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a44" type="Node2D" parent="."]
+position = Vector2(-1615, -265)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a44"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a45" type="Node2D" parent="."]
+position = Vector2(-1605, -250)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a45"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a46" type="Node2D" parent="."]
+position = Vector2(-1410, -370)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a46"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a47" type="Node2D" parent="."]
+position = Vector2(-1430, -370)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a47"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a48" type="Node2D" parent="."]
+position = Vector2(-1450, -370)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a48"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a49" type="Node2D" parent="."]
+position = Vector2(-1210, -380)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a49"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a50" type="Node2D" parent="."]
+position = Vector2(-1210, -340)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a50"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a51" type="Node2D" parent="."]
+position = Vector2(-1260, -340)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a51"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a52" type="Node2D" parent="."]
+position = Vector2(-1220, -365)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a52"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a53" type="Node2D" parent="."]
+position = Vector2(-1260, -380)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a53"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a54" type="Node2D" parent="."]
+position = Vector2(-1250, -365)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a54"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a55" type="Node2D" parent="."]
+position = Vector2(-1075, -320)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a55"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a56" type="Node2D" parent="."]
+position = Vector2(-1085, -305)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a56"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a57" type="Node2D" parent="."]
+position = Vector2(-645, -370)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a57"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a58" type="Node2D" parent="."]
+position = Vector2(-625, -370)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a58"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a59" type="Node2D" parent="."]
+position = Vector2(-620, -380)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a59"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a60" type="Node2D" parent="."]
+position = Vector2(-650, -380)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a60"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy_extend4" type="Node2D" parent="."]
+position = Vector2(-1210, 1820)
+script = ExtResource("3_epypp")
+obj_class = "ivy_extend"
+vars = Dictionary[String, Variant]({
+"culling_width": "0",
+"fall_control": "false",
+"flag": "-1",
+"flag_num": "1",
+"flag_type": "hang",
+"ground": "false",
+"id": "-1",
+"init": "-1",
+"marker": "false",
+"max": "11",
+"max_time": "1.000000",
+"min": "7",
+"min_time": "5.000000",
+"move_num": "1",
+"piku": "0",
+"release": "false",
+"stop_skip": "false",
+"type": "red"
+})
+
+[node name="Label" type="Label" parent="ivy_extend4"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy_extend"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy_extend5" type="Node2D" parent="."]
+position = Vector2(-1250, 1780)
+script = ExtResource("3_epypp")
+obj_class = "ivy_extend"
+vars = Dictionary[String, Variant]({
+"culling_width": "0",
+"fall_control": "false",
+"flag": "-1",
+"flag_num": "1",
+"flag_type": "hang",
+"ground": "false",
+"id": "-1",
+"init": "-1",
+"marker": "false",
+"max": "15",
+"max_time": "1.000000",
+"min": "11",
+"min_time": "5.000000",
+"move_num": "1",
+"piku": "0",
+"release": "false",
+"stop_skip": "false",
+"type": "red"
+})
+
+[node name="Label" type="Label" parent="ivy_extend5"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy_extend"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy_extend6" type="Node2D" parent="."]
+position = Vector2(-1170, 1820)
+script = ExtResource("3_epypp")
+obj_class = "ivy_extend"
+vars = Dictionary[String, Variant]({
+"culling_width": "0",
+"fall_control": "false",
+"flag": "-1",
+"flag_num": "1",
+"flag_type": "hang",
+"ground": "false",
+"id": "-1",
+"init": "-1",
+"marker": "false",
+"max": "13",
+"max_time": "1.000000",
+"min": "8",
+"min_time": "5.000000",
+"move_num": "1",
+"piku": "0",
+"release": "false",
+"stop_skip": "false",
+"type": "red"
+})
+
+[node name="Label" type="Label" parent="ivy_extend6"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy_extend"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy21" type="Node2D" parent="."]
+position = Vector2(-1190, 1850)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "false",
+"dir": "none",
+"length": "6",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy21"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy22" type="Node2D" parent="."]
+position = Vector2(-1230, 1800)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "false",
+"dir": "none",
+"length": "10",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy22"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy23" type="Node2D" parent="."]
+position = Vector2(-1270, 1760)
+script = ExtResource("3_epypp")
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": "false",
+"dir": "none",
+"length": "9",
+"wide": "false"
+})
+
+[node name="Label" type="Label" parent="ivy23"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy_extend7" type="Node2D" parent="."]
+position = Vector2(-310, -140)
+script = ExtResource("3_epypp")
+obj_class = "ivy_extend"
+vars = Dictionary[String, Variant]({
+"culling_width": "0",
+"fall_control": "false",
+"flag": "-1",
+"flag_num": "1",
+"flag_type": "hang",
+"ground": "false",
+"id": "-1",
+"init": "-1",
+"marker": "false",
+"max": "12",
+"max_time": "1.000000",
+"min": "7",
+"min_time": "5.000000",
+"move_num": "1",
+"piku": "0",
+"release": "false",
+"stop_skip": "false",
+"type": "red"
+})
+
+[node name="Label" type="Label" parent="ivy_extend7"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy_extend"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy_extend8" type="Node2D" parent="."]
+position = Vector2(-1735, -460)
+script = ExtResource("3_epypp")
+obj_class = "ivy_extend"
+vars = Dictionary[String, Variant]({
+"culling_width": "0",
+"fall_control": "false",
+"flag": "-1",
+"flag_num": "1",
+"flag_type": "hang",
+"ground": "false",
+"id": "-1",
+"init": "-1",
+"marker": "false",
+"max": "10",
+"max_time": "1.000000",
+"min": "4",
+"min_time": "5.000000",
+"move_num": "1",
+"piku": "0",
+"release": "false",
+"stop_skip": "false",
+"type": "red"
+})
+
+[node name="Label" type="Label" parent="ivy_extend8"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy_extend"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy_extend9" type="Node2D" parent="."]
+position = Vector2(-1510, -280)
+script = ExtResource("3_epypp")
+obj_class = "ivy_extend"
+vars = Dictionary[String, Variant]({
+"culling_width": "0",
+"fall_control": "false",
+"flag": "-1",
+"flag_num": "1",
+"flag_type": "hang",
+"ground": "false",
+"id": "-1",
+"init": "-1",
+"marker": "false",
+"max": "17",
+"max_time": "1.000000",
+"min": "8",
+"min_time": "5.000000",
+"move_num": "1",
+"piku": "0",
+"release": "false",
+"stop_skip": "false",
+"type": "red"
+})
+
+[node name="Label" type="Label" parent="ivy_extend9"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy_extend"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ivy_extend10" type="Node2D" parent="."]
+position = Vector2(-580, -420)
+script = ExtResource("3_epypp")
+obj_class = "ivy_extend"
+vars = Dictionary[String, Variant]({
+"culling_width": "0",
+"fall_control": "false",
+"flag": "-1",
+"flag_num": "1",
+"flag_type": "hang",
+"ground": "false",
+"id": "-1",
+"init": "-1",
+"marker": "false",
+"max": "19",
+"max_time": "1.000000",
+"min": "12",
+"min_time": "5.000000",
+"move_num": "1",
+"piku": "0",
+"release": "false",
+"stop_skip": "false",
+"type": "red"
+})
+
+[node name="Label" type="Label" parent="ivy_extend10"]
+modulate = Color(0, 1, 1, 1)
+text = "ivy_extend"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="model12" type="Node2D" parent="."]
+position = Vector2(-1555, -220)
+script = ExtResource("3_epypp")
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "eda4",
+"rotY": "0",
+"rotZ": "0"
+})
+
+[node name="Label" type="Label" parent="model12"]
+modulate = Color(0, 1, 1, 1)
+text = "model"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enemy_sticky_fall" type="Node2D" parent="."]
+position = Vector2(-460, -130)
+script = ExtResource("3_epypp")
+obj_class = "enemy_sticky_fall"
+vars = Dictionary[String, Variant]({
+"初回登場済み": "false",
+"感知オフセットX": "8.000000",
+"感知オフセットY": "-47.000000",
+"感知幅": "95.000000",
+"感知高": "110.000000",
+"時計回り": "true",
+"画面内復活回数": "0",
+"落下感知オフセットX": "0.000000",
+"落下感知オフセットY": "-40.000000",
+"落下感知幅": "40.000000",
+"落下感知高": "90.000000",
+"落下遅延時間": "0.800000",
+"貼りつき制限": "true",
+"貼りつき距離": "30.000000"
+})
+
+[node name="Label" type="Label" parent="enemy_sticky_fall"]
+modulate = Color(0, 1, 1, 1)
+text = "enemy_sticky_fall"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enemy_sticky_fall2" type="Node2D" parent="."]
+position = Vector2(-1390, -440)
+script = ExtResource("3_epypp")
+obj_class = "enemy_sticky_fall"
+vars = Dictionary[String, Variant]({
+"初回登場済み": "false",
+"感知オフセットX": "41.000000",
+"感知オフセットY": "-45.000000",
+"感知幅": "22.000000",
+"感知高": "75.000000",
+"時計回り": "false",
+"画面内復活回数": "0",
+"落下感知オフセットX": "1.000000",
+"落下感知オフセットY": "-40.000000",
+"落下感知幅": "25.000000",
+"落下感知高": "90.000000",
+"落下遅延時間": "0.800000",
+"貼りつき制限": "true",
+"貼りつき距離": "82.000000"
+})
+
+[node name="Label" type="Label" parent="enemy_sticky_fall2"]
+modulate = Color(0, 1, 1, 1)
+text = "enemy_sticky_fall"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enemy_sticky_fall3" type="Node2D" parent="."]
+position = Vector2(-1345, -450)
+script = ExtResource("3_epypp")
+obj_class = "enemy_sticky_fall"
+vars = Dictionary[String, Variant]({
+"初回登場済み": "false",
+"感知オフセットX": "87.000000",
+"感知オフセットY": "-55.000000",
+"感知幅": "22.000000",
+"感知高": "75.000000",
+"時計回り": "false",
+"画面内復活回数": "0",
+"落下感知オフセットX": "1.000000",
+"落下感知オフセットY": "-40.000000",
+"落下感知幅": "25.000000",
+"落下感知高": "90.000000",
+"落下遅延時間": "0.800000",
+"貼りつき制限": "true",
+"貼りつき距離": "85.000000"
+})
+
+[node name="Label" type="Label" parent="enemy_sticky_fall3"]
+modulate = Color(0, 1, 1, 1)
+text = "enemy_sticky_fall"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enemy_sticky_fall4" type="Node2D" parent="."]
+position = Vector2(-1510, -450)
+script = ExtResource("3_epypp")
+obj_class = "enemy_sticky_fall"
+vars = Dictionary[String, Variant]({
+"初回登場済み": "false",
+"感知オフセットX": "-80.000000",
+"感知オフセットY": "-55.000000",
+"感知幅": "26.000000",
+"感知高": "75.000000",
+"時計回り": "true",
+"画面内復活回数": "0",
+"落下感知オフセットX": "0.000000",
+"落下感知オフセットY": "-40.000000",
+"落下感知幅": "25.000000",
+"落下感知高": "90.000000",
+"落下遅延時間": "0.800000",
+"貼りつき制限": "true",
+"貼りつき距離": "83.000000"
+})
+
+[node name="Label" type="Label" parent="enemy_sticky_fall4"]
+modulate = Color(0, 1, 1, 1)
+text = "enemy_sticky_fall"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enemy_sticky_fall5" type="Node2D" parent="."]
+position = Vector2(-1470, -440)
+script = ExtResource("3_epypp")
+obj_class = "enemy_sticky_fall"
+vars = Dictionary[String, Variant]({
+"初回登場済み": "false",
+"感知オフセットX": "-39.000000",
+"感知オフセットY": "-44.000000",
+"感知幅": "26.000000",
+"感知高": "75.000000",
+"時計回り": "true",
+"画面内復活回数": "0",
+"落下感知オフセットX": "0.000000",
+"落下感知オフセットY": "-40.000000",
+"落下感知幅": "25.000000",
+"落下感知高": "90.000000",
+"落下遅延時間": "0.800000",
+"貼りつき制限": "true",
+"貼りつき距離": "82.000000"
+})
+
+[node name="Label" type="Label" parent="enemy_sticky_fall5"]
+modulate = Color(0, 1, 1, 1)
+text = "enemy_sticky_fall"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enemy_sticky_fall6" type="Node2D" parent="."]
+position = Vector2(-1690, -160)
+script = ExtResource("3_epypp")
+obj_class = "enemy_sticky_fall"
+vars = Dictionary[String, Variant]({
+"初回登場済み": "false",
+"感知オフセットX": "0.000000",
+"感知オフセットY": "-47.000000",
+"感知幅": "80.000000",
+"感知高": "90.000000",
+"時計回り": "true",
+"画面内復活回数": "0",
+"落下感知オフセットX": "0.000000",
+"落下感知オフセットY": "-40.000000",
+"落下感知幅": "28.000000",
+"落下感知高": "90.000000",
+"落下遅延時間": "0.800000",
+"貼りつき制限": "true",
+"貼りつき距離": "40.000000"
+})
+
+[node name="Label" type="Label" parent="enemy_sticky_fall6"]
+modulate = Color(0, 1, 1, 1)
+text = "enemy_sticky_fall"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enemy_sticky_fall7" type="Node2D" parent="."]
+position = Vector2(-1750, -160)
+script = ExtResource("3_epypp")
+obj_class = "enemy_sticky_fall"
+vars = Dictionary[String, Variant]({
+"初回登場済み": "false",
+"感知オフセットX": "0.000000",
+"感知オフセットY": "-46.000000",
+"感知幅": "80.000000",
+"感知高": "90.000000",
+"時計回り": "true",
+"画面内復活回数": "0",
+"落下感知オフセットX": "0.000000",
+"落下感知オフセットY": "-40.000000",
+"落下感知幅": "28.000000",
+"落下感知高": "90.000000",
+"落下遅延時間": "0.800000",
+"貼りつき制限": "true",
+"貼りつき距離": "40.000000"
+})
+
+[node name="Label" type="Label" parent="enemy_sticky_fall7"]
+modulate = Color(0, 1, 1, 1)
+text = "enemy_sticky_fall"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enemy_sticky_fall8" type="Node2D" parent="."]
+position = Vector2(-1800, -160)
+script = ExtResource("3_epypp")
+obj_class = "enemy_sticky_fall"
+vars = Dictionary[String, Variant]({
+"初回登場済み": "false",
+"感知オフセットX": "0.000000",
+"感知オフセットY": "-46.000000",
+"感知幅": "60.000000",
+"感知高": "90.000000",
+"時計回り": "true",
+"画面内復活回数": "0",
+"落下感知オフセットX": "0.000000",
+"落下感知オフセットY": "-40.000000",
+"落下感知幅": "28.000000",
+"落下感知高": "112.000000",
+"落下遅延時間": "0.800000",
+"貼りつき制限": "true",
+"貼りつき距離": "30.000000"
+})
+
+[node name="Label" type="Label" parent="enemy_sticky_fall8"]
+modulate = Color(0, 1, 1, 1)
+text = "enemy_sticky_fall"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enemy_sticky_fall9" type="Node2D" parent="."]
+position = Vector2(-1880, -190)
+script = ExtResource("3_epypp")
+obj_class = "enemy_sticky_fall"
+vars = Dictionary[String, Variant]({
+"初回登場済み": "false",
+"感知オフセットX": "30.000000",
+"感知オフセットY": "-80.000000",
+"感知幅": "26.000000",
+"感知高": "149.000000",
+"時計回り": "false",
+"画面内復活回数": "0",
+"落下感知オフセットX": "0.000000",
+"落下感知オフセットY": "-37.000000",
+"落下感知幅": "21.000000",
+"落下感知高": "159.000000",
+"落下遅延時間": "0.800000",
+"貼りつき制限": "true",
+"貼りつき距離": "28.000000"
+})
+
+[node name="Label" type="Label" parent="enemy_sticky_fall9"]
+modulate = Color(0, 1, 1, 1)
+text = "enemy_sticky_fall"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a61" type="Node2D" parent="."]
+position = Vector2(-1165, 1830)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a61"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a62" type="Node2D" parent="."]
+position = Vector2(-1175, 1830)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a62"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a63" type="Node2D" parent="."]
+position = Vector2(-1170, 1840)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a63"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a64" type="Node2D" parent="."]
+position = Vector2(-1190, 1885)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a64"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a65" type="Node2D" parent="."]
+position = Vector2(-1210, 1865)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a65"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a66" type="Node2D" parent="."]
+position = Vector2(-1250, 1865)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a66"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a67" type="Node2D" parent="."]
+position = Vector2(-1270, 1825)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a67"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a68" type="Node2D" parent="."]
+position = Vector2(-1230, 1875)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a68"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a69" type="Node2D" parent="."]
+position = Vector2(-1230, 1835)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a69"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a70" type="Node2D" parent="."]
+position = Vector2(-1235, 1825)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a70"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a71" type="Node2D" parent="."]
+position = Vector2(-1225, 1825)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a71"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a72" type="Node2D" parent="."]
+position = Vector2(-1250, 1815)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a72"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a73" type="Node2D" parent="."]
+position = Vector2(-1255, 1805)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a73"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a74" type="Node2D" parent="."]
+position = Vector2(-1245, 1805)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a74"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a75" type="Node2D" parent="."]
+position = Vector2(-1265, 1775)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a75"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a76" type="Node2D" parent="."]
+position = Vector2(-1275, 1775)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a76"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a77" type="Node2D" parent="."]
+position = Vector2(-1270, 1785)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a77"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kinomi01a78" type="Node2D" parent="."]
+position = Vector2(-1170, 1875)
+script = ExtResource("3_epypp")
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": "-1",
+"フラグ起動時間": "0.000000",
+"見た目": "0"
+})
+
+[node name="Label" type="Label" parent="kinomi01a78"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="area_flag6" type="Node2D" parent="."]
-position = Vector2(655, 25)
-script = ExtResource("4_0hol4")
+position = Vector2(-25, -50)
+script = ExtResource("3_epypp")
 obj_class = "area_flag"
 vars = Dictionary[String, Variant]({
-"ID": "42",
+"ID": "31",
 "ONETIME": "true",
-"タイプ": "off",
+"タイプ": "on",
 "トリガー": "orima",
-"幅": "50.125000",
-"高さ": "56.250000"
+"幅": "10.000000",
+"高さ": "100.000000"
 })
 
 [node name="Label" type="Label" parent="area_flag6"]
 modulate = Color(0, 1, 1, 1)
 text = "area_flag"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="area_flag7" type="Node2D" parent="."]
+position = Vector2(-65, -50)
+script = ExtResource("3_epypp")
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": "127",
+"ONETIME": "true",
+"タイプ": "on",
+"トリガー": "orima",
+"幅": "10.000000",
+"高さ": "120.000000"
+})
+
+[node name="Label" type="Label" parent="area_flag7"]
+modulate = Color(0, 1, 1, 1)
+text = "area_flag"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="model_detail" type="Node2D" parent="."]
+position = Vector2(-1655, -85)
+script = ExtResource("3_epypp")
+obj_class = "model_detail"
+vars = Dictionary[String, Variant]({
+"model": "BrickA",
+"posZ": "-29.500000",
+"rotX": "0",
+"rotY": "-11",
+"rotZ": "0",
+"scaleX": "1.000000",
+"scaleY": "1.000000",
+"scaleZ": "1.000000"
+})
+
+[node name="Label" type="Label" parent="model_detail"]
+modulate = Color(0, 1, 1, 1)
+text = "model_detail"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="model_detail2" type="Node2D" parent="."]
+position = Vector2(-1410, -95)
+script = ExtResource("3_epypp")
+obj_class = "model_detail"
+vars = Dictionary[String, Variant]({
+"model": "BrickA",
+"posZ": "-31.000000",
+"rotX": "0",
+"rotY": "-90",
+"rotZ": "0",
+"scaleX": "1.000000",
+"scaleY": "1.000000",
+"scaleZ": "1.000000"
+})
+
+[node name="Label" type="Label" parent="model_detail2"]
+modulate = Color(0, 1, 1, 1)
+text = "model_detail"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="model_detail3" type="Node2D" parent="."]
+position = Vector2(-1605, -95)
+script = ExtResource("3_epypp")
+obj_class = "model_detail"
+vars = Dictionary[String, Variant]({
+"model": "BrickC",
+"posZ": "-30.000000",
+"rotX": "0",
+"rotY": "-160",
+"rotZ": "0",
+"scaleX": "1.000000",
+"scaleY": "1.000000",
+"scaleZ": "1.000000"
+})
+
+[node name="Label" type="Label" parent="model_detail3"]
+modulate = Color(0, 1, 1, 1)
+text = "model_detail"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="model_detail4" type="Node2D" parent="."]
+position = Vector2(-1470, -85)
+script = ExtResource("3_epypp")
+obj_class = "model_detail"
+vars = Dictionary[String, Variant]({
+"model": "BrickA",
+"posZ": "-8.000000",
+"rotX": "3",
+"rotY": "7",
+"rotZ": "-1",
+"scaleX": "1.000000",
+"scaleY": "1.000000",
+"scaleZ": "1.000000"
+})
+
+[node name="Label" type="Label" parent="model_detail4"]
+modulate = Color(0, 1, 1, 1)
+text = "model_detail"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="model_detail5" type="Node2D" parent="."]
+position = Vector2(-1715, -65)
+script = ExtResource("3_epypp")
+obj_class = "model_detail"
+vars = Dictionary[String, Variant]({
+"model": "BrickA",
+"posZ": "-10.000000",
+"rotX": "3",
+"rotY": "-23",
+"rotZ": "1",
+"scaleX": "1.000000",
+"scaleY": "1.000000",
+"scaleZ": "0.875000"
+})
+
+[node name="Label" type="Label" parent="model_detail5"]
+modulate = Color(0, 1, 1, 1)
+text = "model_detail"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="heart" type="Node2D" parent="."]
+position = Vector2(-635, -400)
+script = ExtResource("3_epypp")
+obj_class = "heart"
+vars = Dictionary[String, Variant]({
+"size": "small"
+})
+
+[node name="Label" type="Label" parent="heart"]
+modulate = Color(0, 1, 1, 1)
+text = "heart"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="heart2" type="Node2D" parent="."]
+position = Vector2(-1610, -390)
+script = ExtResource("3_epypp")
+obj_class = "heart"
+vars = Dictionary[String, Variant]({
+"size": "small"
+})
+
+[node name="Label" type="Label" parent="heart2"]
+modulate = Color(0, 1, 1, 1)
+text = "heart"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="heart3" type="Node2D" parent="."]
+position = Vector2(-1975, -65)
+script = ExtResource("3_epypp")
+obj_class = "heart"
+vars = Dictionary[String, Variant]({
+"size": "small"
+})
+
+[node name="Label" type="Label" parent="heart3"]
+modulate = Color(0, 1, 1, 1)
+text = "heart"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="heart4" type="Node2D" parent="."]
+position = Vector2(-1120, -400)
+script = ExtResource("3_epypp")
+obj_class = "heart"
+vars = Dictionary[String, Variant]({
+"size": "small"
+})
+
+[node name="Label" type="Label" parent="heart4"]
+modulate = Color(0, 1, 1, 1)
+text = "heart"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="bush01a4" type="Node2D" parent="."]
+position = Vector2(-160, -5)
+script = ExtResource("3_epypp")
+obj_class = "bush01a"
+vars = Dictionary[String, Variant]({
+"force": "false",
+"resource": "default",
+"type": "red",
+"ピクミン生成数": "4",
+"保障": "0",
+"範囲offsetX": "0",
+"範囲offsetY": "6",
+"範囲サイズX": "20",
+"範囲サイズY": "17",
+"範囲指定": "true",
+"角度": "0"
+})
+
+[node name="Label" type="Label" parent="bush01a4"]
+modulate = Color(0, 1, 1, 1)
+text = "bush01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="safety_death" type="Node2D" parent="."]
+position = Vector2(40, 120)
+script = ExtResource("3_epypp")
+obj_class = "safety_death"
+vars = Dictionary[String, Variant]({
+"face": "front"
+})
+
+[node name="Label" type="Label" parent="safety_death"]
+modulate = Color(0, 1, 1, 1)
+text = "safety_death"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="safety_death2" type="Node2D" parent="."]
+position = Vector2(-1310, 2080)
+script = ExtResource("3_epypp")
+obj_class = "safety_death"
+vars = Dictionary[String, Variant]({
+"face": "back"
+})
+
+[node name="Label" type="Label" parent="safety_death2"]
+modulate = Color(0, 1, 1, 1)
+text = "safety_death"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enemy_carry_nuts" type="Node2D" parent="."]
+position = Vector2(-350, -60)
+script = ExtResource("3_epypp")
+obj_class = "enemy_carry_nuts"
+vars = Dictionary[String, Variant]({
+"スピード": "75.000000",
+"パスID": "9",
+"リバース指定": "false",
+"ループ指定": "false",
+"出現フラグ": "127",
+"木の実の種類": "normal",
+"移動オフセット": "0.000000"
+})
+
+[node name="Label" type="Label" parent="enemy_carry_nuts"]
+modulate = Color(0, 1, 1, 1)
+text = "enemy_carry_nuts"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enemy_carry_nuts2" type="Node2D" parent="."]
+position = Vector2(-320, -60)
+script = ExtResource("3_epypp")
+obj_class = "enemy_carry_nuts"
+vars = Dictionary[String, Variant]({
+"スピード": "75.000000",
+"パスID": "8",
+"リバース指定": "false",
+"ループ指定": "false",
+"出現フラグ": "127",
+"木の実の種類": "normal",
+"移動オフセット": "30.000000"
+})
+
+[node name="Label" type="Label" parent="enemy_carry_nuts2"]
+modulate = Color(0, 1, 1, 1)
+text = "enemy_carry_nuts"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enemy_carry_nuts3" type="Node2D" parent="."]
+position = Vector2(-290, -60)
+script = ExtResource("3_epypp")
+obj_class = "enemy_carry_nuts"
+vars = Dictionary[String, Variant]({
+"スピード": "75.000000",
+"パスID": "9",
+"リバース指定": "false",
+"ループ指定": "false",
+"出現フラグ": "127",
+"木の実の種類": "normal",
+"移動オフセット": "55.000000"
+})
+
+[node name="Label" type="Label" parent="enemy_carry_nuts3"]
+modulate = Color(0, 1, 1, 1)
+text = "enemy_carry_nuts"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enemy_carry_nuts4" type="Node2D" parent="."]
+position = Vector2(-260, -60)
+script = ExtResource("3_epypp")
+obj_class = "enemy_carry_nuts"
+vars = Dictionary[String, Variant]({
+"スピード": "75.000000",
+"パスID": "8",
+"リバース指定": "false",
+"ループ指定": "false",
+"出現フラグ": "127",
+"木の実の種類": "normal",
+"移動オフセット": "90.000000"
+})
+
+[node name="Label" type="Label" parent="enemy_carry_nuts4"]
+modulate = Color(0, 1, 1, 1)
+text = "enemy_carry_nuts"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="stopper_treasure" type="Node2D" parent="."]
+position = Vector2(-1160, -400)
+script = ExtResource("3_epypp")
+obj_class = "stopper_treasure"
+vars = Dictionary[String, Variant]({
+"awakeHeight": "10.000000",
+"awakeWidth": "0.000000",
+"id": "-1"
+})
+
+[node name="Label" type="Label" parent="stopper_treasure"]
+modulate = Color(0, 1, 1, 1)
+text = "stopper_treasure"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="stopper_treasure2" type="Node2D" parent="."]
+position = Vector2(-2125, -90)
+script = ExtResource("3_epypp")
+obj_class = "stopper_treasure"
+vars = Dictionary[String, Variant]({
+"awakeHeight": "10.000000",
+"awakeWidth": "0.000000",
+"id": "-1"
+})
+
+[node name="Label" type="Label" parent="stopper_treasure2"]
+modulate = Color(0, 1, 1, 1)
+text = "stopper_treasure"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="camera_restricted3" type="Node2D" parent="."]
+position = Vector2(-2320, -90)
+script = ExtResource("3_epypp")
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": "-1",
+"height": "110.000000",
+"hv": "horizontal",
+"width": "60.000000"
+})
+
+[node name="Label" type="Label" parent="camera_restricted3"]
+modulate = Color(0, 1, 1, 1)
+text = "camera_restricted"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="camera_restricted4" type="Node2D" parent="."]
+position = Vector2(-2485, -375)
+script = ExtResource("3_epypp")
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": "-1",
+"height": "110.000000",
+"hv": "horizontal",
+"width": "200.000000"
+})
+
+[node name="Label" type="Label" parent="camera_restricted4"]
+modulate = Color(0, 1, 1, 1)
+text = "camera_restricted"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="camera_restricted5" type="Node2D" parent="."]
+position = Vector2(-900, -40)
+script = ExtResource("3_epypp")
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": "-1",
+"height": "70.000000",
+"hv": "horizontal",
+"width": "60.000000"
+})
+
+[node name="Label" type="Label" parent="camera_restricted5"]
+modulate = Color(0, 1, 1, 1)
+text = "camera_restricted"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="camera_restricted6" type="Node2D" parent="."]
+position = Vector2(-1195, -140)
+script = ExtResource("3_epypp")
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": "-1",
+"height": "50.000000",
+"hv": "horizontal",
+"width": "60.000000"
+})
+
+[node name="Label" type="Label" parent="camera_restricted6"]
+modulate = Color(0, 1, 1, 1)
+text = "camera_restricted"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="camera_restricted7" type="Node2D" parent="."]
+position = Vector2(-1085, 1880)
+script = ExtResource("3_epypp")
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": "-1",
+"height": "300.000000",
+"hv": "horizontal",
+"width": "60.000000"
+})
+
+[node name="Label" type="Label" parent="camera_restricted7"]
+modulate = Color(0, 1, 1, 1)
+text = "camera_restricted"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="camera_restricted8" type="Node2D" parent="."]
+position = Vector2(-1405, 1880)
+script = ExtResource("3_epypp")
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": "-1",
+"height": "300.000000",
+"hv": "horizontal",
+"width": "60.000000"
+})
+
+[node name="Label" type="Label" parent="camera_restricted8"]
+modulate = Color(0, 1, 1, 1)
+text = "camera_restricted"
 horizontal_alignment = 1
 vertical_alignment = 1

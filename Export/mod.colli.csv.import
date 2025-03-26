@@ -2,12 +2,12 @@
 
 importer="csv_translation"
 type="Translation"
-uid="uid://cv6hqyyxm6f8l"
+uid="uid://dvgnbp1kmovnu"
 valid=false
 
 [deps]
 
-source_file="res://mod.colli.csv"
+source_file="res://Export/mod.colli.csv"
 
 [params]
 
