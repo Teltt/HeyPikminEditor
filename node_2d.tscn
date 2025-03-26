@@ -21,15 +21,16 @@ noise = SubResource("FastNoiseLite_0e48y")
 albedo_texture = SubResource("NoiseTexture2D_epypp")
 
 [node name="Node2D" type="Node2D"]
+scale = Vector2(0.1, 0.1)
 script = ExtResource("1_wtcfe")
 collision = "uid://deacvrvxwcq6f"
-objects = "uid://bi2wnb7hpv4c5"
+objects = "uid://cbvt47lvj12hh"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(570, -110)
 
 [node name="Line2D" type="Line2D" parent="."]
-position = Vector2(1050, 10)
+position = Vector2(1045, 25)
 points = PackedVector2Array(320, -190, 260, -190, 220, -170, 180, -130, 180, 0, -30, 0, -50, -10)
 texture = SubResource("GradientTexture2D_kdubu")
 texture_mode = 1
@@ -38,7 +39,7 @@ material_3d = SubResource("StandardMaterial3D_0e48y")
 seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground"])
 
 [node name="Line2D2" type="Line2D" parent="."]
-position = Vector2(1050, 10)
+position = Vector2(1045, 25)
 points = PackedVector2Array(-50, -10, -120, -10, -140, 0, -200, 0, -200, -10, -440, -10, -440, 0, -640, 0, -680, -20, -710, -20, -730, -10, -1080, -10, -1080, -130, -1100, -170, -1140, -210, -1220, -210)
 texture = SubResource("GradientTexture2D_kdubu")
 texture_mode = 1
@@ -47,7 +48,7 @@ material_3d = SubResource("StandardMaterial3D_0e48y")
 seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
 
 [node name="Line2D3" type="Line2D" parent="."]
-position = Vector2(1050, 10)
+position = Vector2(1045, 25)
 points = PackedVector2Array(-339, -70, -400, -70, -400, -50, -340, -50, -340, -70)
 texture = SubResource("GradientTexture2D_kdubu")
 texture_mode = 1
@@ -56,7 +57,7 @@ material_3d = SubResource("StandardMaterial3D_0e48y")
 seg_attr = Array[String](["ground", "ground", "ground"])
 
 [node name="Line2D4" type="Line2D" parent="."]
-position = Vector2(1050, 10)
+position = Vector2(1045, 25)
 points = PackedVector2Array(-528, -50, -570, -50, -570, -80, -520, -80, -520, -70, -500, -70, -500, -100, -520, -110, -550, -110, -570, -100, -590, -100, -600, -80, -600, -60, -590, -40, -590, -30, -530, -30, -530, -50)
 texture = SubResource("GradientTexture2D_kdubu")
 texture_mode = 1
@@ -65,7 +66,7 @@ material_3d = SubResource("StandardMaterial3D_0e48y")
 seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-position = Vector2(1050, 10)
+position = Vector2(1045, 25)
 polygon = PackedVector2Array(-1220, -210, -1140, -210, -1100, -170, -1080, -130, -1080, -10, -730, -10, -710, -20, -680, -20, -640, 0, -440, 0, -440, -10, -200, -10, -200, 0, -140, 0, -120, -10, -50, -10, -30, 0, 180, 0, 180, -130, 220, -170, 260, -190, 320, -190, 320, 160, -1220, 160)
 uv = PackedVector2Array(-1220, -210, -1140, -210, -1100, -170, -1080, -130, -1080, -10, -730, -10, -710, -20, -680, -20, -640, 0, -440, 0, -440, -10, -200, -10, -200, 0, -140, 0, -120, -10, -50, -10, -30, 0, 180, 0, 180, -130, 220, -170, 260, -190, 320, -190, 320, 160, -1220, 160)
 script = ExtResource("3_epypp")
@@ -74,6 +75,12 @@ material_3d = SubResource("StandardMaterial3D_0e48y")
 [node name="orima" type="Node2D" parent="."]
 script = ExtResource("4_0hol4")
 obj_class = "orima"
+
+[node name="Label" type="Label" parent="orima"]
+modulate = Color(0, 1, 1, 1)
+text = "orima"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="onion" type="Node2D" parent="."]
 position = Vector2(960, 10)
@@ -93,6 +100,12 @@ vars = Dictionary[String, Variant]({
 "感知範囲高": "50.000000"
 })
 
+[node name="Label" type="Label" parent="onion"]
+modulate = Color(0, 1, 1, 1)
+text = "onion"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="bush01a" type="Node2D" parent="."]
 position = Vector2(370, 75)
 script = ExtResource("4_0hol4")
@@ -110,6 +123,12 @@ vars = Dictionary[String, Variant]({
 "角度": "0"
 })
 
+[node name="Label" type="Label" parent="bush01a"]
+modulate = Color(0, 1, 1, 1)
+text = "bush01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="kinomi01a" type="Node2D" parent="."]
 position = Vector2(535, 60)
 script = ExtResource("4_0hol4")
@@ -119,6 +138,12 @@ vars = Dictionary[String, Variant]({
 "フラグ起動時間": "0.000000",
 "見た目": "0"
 })
+
+[node name="Label" type="Label" parent="kinomi01a"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="kinomi01a2" type="Node2D" parent="."]
 position = Vector2(545, 70)
@@ -130,6 +155,12 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
+[node name="Label" type="Label" parent="kinomi01a2"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="kinomi01a3" type="Node2D" parent="."]
 position = Vector2(555, 60)
 script = ExtResource("4_0hol4")
@@ -139,6 +170,12 @@ vars = Dictionary[String, Variant]({
 "フラグ起動時間": "0.000000",
 "見た目": "0"
 })
+
+[node name="Label" type="Label" parent="kinomi01a3"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="kinomi01a4" type="Node2D" parent="."]
 position = Vector2(730, 80)
@@ -150,6 +187,12 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
+[node name="Label" type="Label" parent="kinomi01a4"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="kinomi01a5" type="Node2D" parent="."]
 position = Vector2(720, 60)
 script = ExtResource("4_0hol4")
@@ -159,6 +202,12 @@ vars = Dictionary[String, Variant]({
 "フラグ起動時間": "0.000000",
 "見た目": "0"
 })
+
+[node name="Label" type="Label" parent="kinomi01a5"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="kinomi01a6" type="Node2D" parent="."]
 position = Vector2(740, 40)
@@ -170,6 +219,12 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
+[node name="Label" type="Label" parent="kinomi01a6"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="kinomi01a7" type="Node2D" parent="."]
 position = Vector2(760, 20)
 script = ExtResource("4_0hol4")
@@ -179,6 +234,12 @@ vars = Dictionary[String, Variant]({
 "フラグ起動時間": "0.000000",
 "見た目": "0"
 })
+
+[node name="Label" type="Label" parent="kinomi01a7"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="kinomi01a8" type="Node2D" parent="."]
 position = Vector2(700, 80)
@@ -190,6 +251,12 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
+[node name="Label" type="Label" parent="kinomi01a8"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="kinomi01a9" type="Node2D" parent="."]
 position = Vector2(750, 60)
 script = ExtResource("4_0hol4")
@@ -199,6 +266,12 @@ vars = Dictionary[String, Variant]({
 "フラグ起動時間": "0.000000",
 "見た目": "0"
 })
+
+[node name="Label" type="Label" parent="kinomi01a9"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="kinomi01a10" type="Node2D" parent="."]
 position = Vector2(770, 40)
@@ -210,6 +283,12 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
+[node name="Label" type="Label" parent="kinomi01a10"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="kinomi01a11" type="Node2D" parent="."]
 position = Vector2(710, 100)
 script = ExtResource("4_0hol4")
@@ -219,6 +298,12 @@ vars = Dictionary[String, Variant]({
 "フラグ起動時間": "0.000000",
 "見た目": "0"
 })
+
+[node name="Label" type="Label" parent="kinomi01a11"]
+modulate = Color(0, 1, 1, 1)
+text = "kinomi01a"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="camera_restricted" type="Node2D" parent="."]
 position = Vector2(-245, 90)
@@ -231,6 +316,12 @@ vars = Dictionary[String, Variant]({
 "width": "70.000000"
 })
 
+[node name="Label" type="Label" parent="camera_restricted"]
+modulate = Color(0, 1, 1, 1)
+text = "camera_restricted"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="camera_y_chase" type="Node2D" parent="."]
 position = Vector2(5, 50)
 script = ExtResource("4_0hol4")
@@ -238,6 +329,12 @@ obj_class = "camera_y_chase"
 vars = Dictionary[String, Variant]({
 "ofs": "40.000000"
 })
+
+[node name="Label" type="Label" parent="camera_y_chase"]
+modulate = Color(0, 1, 1, 1)
+text = "camera_y_chase"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="eventobj" type="Node2D" parent="."]
 position = Vector2(370, 20)
@@ -257,6 +354,12 @@ vars = Dictionary[String, Variant]({
 "whistle": "true"
 })
 
+[node name="Label" type="Label" parent="eventobj"]
+modulate = Color(0, 1, 1, 1)
+text = "eventobj"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="area_flag" type="Node2D" parent="."]
 position = Vector2(325, 25)
 script = ExtResource("4_0hol4")
@@ -270,6 +373,12 @@ vars = Dictionary[String, Variant]({
 "高さ": "80.000000"
 })
 
+[node name="Label" type="Label" parent="area_flag"]
+modulate = Color(0, 1, 1, 1)
+text = "area_flag"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="event_step" type="Node2D" parent="."]
 position = Vector2(250, 10)
 script = ExtResource("4_0hol4")
@@ -278,6 +387,12 @@ vars = Dictionary[String, Variant]({
 "event": "ev_course0_piku01",
 "flag_start": "30"
 })
+
+[node name="Label" type="Label" parent="event_step"]
+modulate = Color(0, 1, 1, 1)
+text = "event_step"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="area_flag2" type="Node2D" parent="."]
 position = Vector2(60, 10)
@@ -292,6 +407,12 @@ vars = Dictionary[String, Variant]({
 "高さ": "10.000000"
 })
 
+[node name="Label" type="Label" parent="area_flag2"]
+modulate = Color(0, 1, 1, 1)
+text = "area_flag"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="area_flag3" type="Node2D" parent="."]
 position = Vector2(185, 0)
 script = ExtResource("4_0hol4")
@@ -304,6 +425,12 @@ vars = Dictionary[String, Variant]({
 "幅": "10.000000",
 "高さ": "10.000000"
 })
+
+[node name="Label" type="Label" parent="area_flag3"]
+modulate = Color(0, 1, 1, 1)
+text = "area_flag"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="area_flag4" type="Node2D" parent="."]
 position = Vector2(300, 10)
@@ -318,6 +445,12 @@ vars = Dictionary[String, Variant]({
 "高さ": "10.000000"
 })
 
+[node name="Label" type="Label" parent="area_flag4"]
+modulate = Color(0, 1, 1, 1)
+text = "area_flag"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="area_flag5" type="Node2D" parent="."]
 position = Vector2(480, 10)
 script = ExtResource("4_0hol4")
@@ -331,6 +464,12 @@ vars = Dictionary[String, Variant]({
 "高さ": "37.500000"
 })
 
+[node name="Label" type="Label" parent="area_flag5"]
+modulate = Color(0, 1, 1, 1)
+text = "area_flag"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="help" type="Node2D" parent="."]
 position = Vector2(545, 0)
 script = ExtResource("4_0hol4")
@@ -340,6 +479,12 @@ vars = Dictionary[String, Variant]({
 "id": "ev_course0_00_026",
 "type": "normal"
 })
+
+[node name="Label" type="Label" parent="help"]
+modulate = Color(0, 1, 1, 1)
+text = "help"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="area_flag6" type="Node2D" parent="."]
 position = Vector2(655, 25)
@@ -353,3 +498,9 @@ vars = Dictionary[String, Variant]({
 "幅": "50.125000",
 "高さ": "56.250000"
 })
+
+[node name="Label" type="Label" parent="area_flag6"]
+modulate = Color(0, 1, 1, 1)
+text = "area_flag"
+horizontal_alignment = 1
+vertical_alignment = 1
