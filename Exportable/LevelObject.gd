@@ -4,24 +4,21 @@ class_name LevelObject
 var s:Node2D
 @export var obj_class:String
 @export var vars:Dictionary[String,Variant]
-
+@onready var label:Label = $Label
+@onready var icon:Sprite2D = $Icon
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var g = self
 	s = g
-	if not has_node("Label"):
-		var l = Label.new()
-		add_child(l,true)
-		l.owner = get_tree().edited_scene_root
-		l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		l.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-		l.name= "Label"
 
 func _process(delta: float) -> void:
-	if has_node("Label"):
-		var l:Label = get_node("Label")
-		l.text = obj_class
-		l.modulate = Color.AQUA
+	if label:
+		label.text = obj_class
+		label.modulate = Color.AQUA
+	if icon:
+		if FileAccess.file_exists("res://Icon/"+obj_class+".png"):
+			icon.texture = load("res://Icon/"+obj_class+".png")
+		label.set_visible(icon.texture == null)
 
 func export_collision(out)->Variant:
 	return out

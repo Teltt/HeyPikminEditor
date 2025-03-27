@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://hpj4m8ldxplb"]
+[gd_scene load_steps=6 format=3 uid="uid://hpj4m8ldxplb"]
 
 [ext_resource type="Script" uid="uid://c4a1imlia3dob" path="res://Editor.gd" id="1_wtcfe"]
 [ext_resource type="Script" uid="uid://ce24cm1hlajge" path="res://Exportable/CollisionLine.gd" id="2_0e48y"]
+[ext_resource type="PackedScene" uid="uid://cuvcmf8vqmj4e" path="res://Exportable/LevelObject.tscn" id="2_epypp"]
 [ext_resource type="Script" uid="uid://o4blitakmdw7" path="res://Exportable/Path.gd" id="3_0hol4"]
 [ext_resource type="Script" uid="uid://c2hok6v3vcf60" path="res://Exportable/LevelObject.gd" id="3_epypp"]
 
@@ -178,7 +179,7 @@ text = "9"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="bush_manager" type="Node2D" parent="."]
+[node name="bush_manager" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(20, 5)
 script = ExtResource("3_epypp")
 obj_class = "bush_manager"
@@ -186,24 +187,12 @@ vars = Dictionary[String, Variant]({
 "リソース": "default"
 })
 
-[node name="Label" type="Label" parent="bush_manager"]
-modulate = Color(0, 1, 1, 1)
-text = "bush_manager"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="orima" type="Node2D" parent="."]
+[node name="orima" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(40, -20)
 script = ExtResource("3_epypp")
 obj_class = "orima"
 
-[node name="Label" type="Label" parent="orima"]
-modulate = Color(0, 1, 1, 1)
-text = "orima"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="bush01a" type="Node2D" parent="."]
+[node name="bush01a" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-545, -235)
 script = ExtResource("3_epypp")
 obj_class = "bush01a"
@@ -221,13 +210,7 @@ vars = Dictionary[String, Variant]({
 "角度": "0"
 })
 
-[node name="Label" type="Label" parent="bush01a"]
-modulate = Color(0, 1, 1, 1)
-text = "bush01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="bush01a2" type="Node2D" parent="."]
+[node name="bush01a2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1320, -315)
 script = ExtResource("3_epypp")
 obj_class = "bush01a"
@@ -245,13 +228,7 @@ vars = Dictionary[String, Variant]({
 "角度": "0"
 })
 
-[node name="Label" type="Label" parent="bush01a2"]
-modulate = Color(0, 1, 1, 1)
-text = "bush01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="bush01a3" type="Node2D" parent="."]
+[node name="bush01a3" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1585, -225)
 script = ExtResource("3_epypp")
 obj_class = "bush01a"
@@ -269,13 +246,7 @@ vars = Dictionary[String, Variant]({
 "角度": "0"
 })
 
-[node name="Label" type="Label" parent="bush01a3"]
-modulate = Color(0, 1, 1, 1)
-text = "bush01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="generator" type="Node2D" parent="."]
+[node name="generator" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-730, -45)
 script = ExtResource("3_epypp")
 obj_class = "generator"
@@ -285,13 +256,7 @@ vars = Dictionary[String, Variant]({
 "グループID": "-1"
 })
 
-[node name="Label" type="Label" parent="generator"]
-modulate = Color(0, 1, 1, 1)
-text = "generator"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="generator2" type="Node2D" parent="."]
+[node name="generator2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-750, -45)
 script = ExtResource("3_epypp")
 obj_class = "generator"
@@ -301,13 +266,7 @@ vars = Dictionary[String, Variant]({
 "グループID": "-1"
 })
 
-[node name="Label" type="Label" parent="generator2"]
-modulate = Color(0, 1, 1, 1)
-text = "generator"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="eventobj" type="Node2D" parent="."]
+[node name="eventobj" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-200, 0)
 script = ExtResource("3_epypp")
 obj_class = "eventobj"
@@ -329,13 +288,7 @@ vars = Dictionary[String, Variant]({
 "width": "1.500000"
 })
 
-[node name="Label" type="Label" parent="eventobj"]
-modulate = Color(0, 1, 1, 1)
-text = "eventobj"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="eventobj2" type="Node2D" parent="."]
+[node name="eventobj2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-990, -200)
 script = ExtResource("3_epypp")
 obj_class = "eventobj"
@@ -357,13 +310,7 @@ vars = Dictionary[String, Variant]({
 "width": "1.500000"
 })
 
-[node name="Label" type="Label" parent="eventobj2"]
-modulate = Color(0, 1, 1, 1)
-text = "eventobj"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="eventobj3" type="Node2D" parent="."]
+[node name="eventobj3" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1865, -430)
 script = ExtResource("3_epypp")
 obj_class = "eventobj"
@@ -385,13 +332,7 @@ vars = Dictionary[String, Variant]({
 "width": "1.500000"
 })
 
-[node name="Label" type="Label" parent="eventobj3"]
-modulate = Color(0, 1, 1, 1)
-text = "eventobj"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="camera_y_chase" type="Node2D" parent="."]
+[node name="camera_y_chase" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(40, 0)
 script = ExtResource("3_epypp")
 obj_class = "camera_y_chase"
@@ -399,13 +340,7 @@ vars = Dictionary[String, Variant]({
 "ofs": "40.000000"
 })
 
-[node name="Label" type="Label" parent="camera_y_chase"]
-modulate = Color(0, 1, 1, 1)
-text = "camera_y_chase"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy" type="Node2D" parent="."]
+[node name="ivy" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-740, -130)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -416,13 +351,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy2" type="Node2D" parent="."]
+[node name="ivy2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-760, -220)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -433,13 +362,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy2"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy3" type="Node2D" parent="."]
+[node name="ivy3" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-780, -220)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -450,13 +373,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy3"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy4" type="Node2D" parent="."]
+[node name="ivy4" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-740, -220)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -467,13 +384,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy4"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy5" type="Node2D" parent="."]
+[node name="ivy5" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-720, -220)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -484,13 +395,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy5"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy6" type="Node2D" parent="."]
+[node name="ivy6" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-700, -220)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -501,13 +406,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy6"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy7" type="Node2D" parent="."]
+[node name="ivy7" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1080, -330)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -518,13 +417,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy7"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy8" type="Node2D" parent="."]
+[node name="ivy8" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1120, -360)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -535,13 +428,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy8"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy9" type="Node2D" parent="."]
+[node name="ivy9" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1100, -350)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -552,13 +439,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy9"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy10" type="Node2D" parent="."]
+[node name="ivy10" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1610, -340)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -569,13 +450,7 @@ vars = Dictionary[String, Variant]({
 "wide": "true"
 })
 
-[node name="Label" type="Label" parent="ivy10"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy11" type="Node2D" parent="."]
+[node name="ivy11" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1255, -390)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -586,13 +461,7 @@ vars = Dictionary[String, Variant]({
 "wide": "true"
 })
 
-[node name="Label" type="Label" parent="ivy11"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy12" type="Node2D" parent="."]
+[node name="ivy12" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1215, -390)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -603,13 +472,7 @@ vars = Dictionary[String, Variant]({
 "wide": "true"
 })
 
-[node name="Label" type="Label" parent="ivy12"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy13" type="Node2D" parent="."]
+[node name="ivy13" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1850, -250)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -620,13 +483,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy13"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy14" type="Node2D" parent="."]
+[node name="ivy14" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1870, -190)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -637,13 +494,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy14"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy15" type="Node2D" parent="."]
+[node name="ivy15" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1890, -190)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -654,13 +505,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy15"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy16" type="Node2D" parent="."]
+[node name="ivy16" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1910, -190)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -671,13 +516,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy16"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy17" type="Node2D" parent="."]
+[node name="ivy17" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1930, -230)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -688,13 +527,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy17"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy18" type="Node2D" parent="."]
+[node name="ivy18" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1950, -230)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -705,13 +538,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy18"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy19" type="Node2D" parent="."]
+[node name="ivy19" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1970, -230)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -722,13 +549,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy19"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy20" type="Node2D" parent="."]
+[node name="ivy20" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1830, -250)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -739,13 +560,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy20"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a" type="Node2D" parent="."]
+[node name="kinomi01a" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-755, -200)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -755,13 +570,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a2" type="Node2D" parent="."]
+[node name="kinomi01a2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-740, -170)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -771,13 +580,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a2"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a3" type="Node2D" parent="."]
+[node name="kinomi01a3" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-785, -200)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -787,13 +590,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a3"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a4" type="Node2D" parent="."]
+[node name="kinomi01a4" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-695, -200)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -803,13 +600,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a4"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a5" type="Node2D" parent="."]
+[node name="kinomi01a5" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-765, -180)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -819,13 +610,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a5"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a6" type="Node2D" parent="."]
+[node name="kinomi01a6" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-715, -180)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -835,13 +620,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a6"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a7" type="Node2D" parent="."]
+[node name="kinomi01a7" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-725, -200)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -851,13 +630,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a7"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="enemy" type="Node2D" parent="."]
+[node name="enemy" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-740, -220)
 script = ExtResource("3_epypp")
 obj_class = "enemy"
@@ -878,13 +651,7 @@ vars = Dictionary[String, Variant]({
 "運搬停止ブロック:出現位置": "100"
 })
 
-[node name="Label" type="Label" parent="enemy"]
-modulate = Color(0, 1, 1, 1)
-text = "enemy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="enemy2" type="Node2D" parent="."]
+[node name="enemy2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-2225, -90)
 script = ExtResource("3_epypp")
 obj_class = "enemy"
@@ -905,13 +672,7 @@ vars = Dictionary[String, Variant]({
 "運搬停止ブロック:出現位置": "0"
 })
 
-[node name="Label" type="Label" parent="enemy2"]
-modulate = Color(0, 1, 1, 1)
-text = "enemy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="enemy3" type="Node2D" parent="."]
+[node name="enemy3" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1240, -390)
 script = ExtResource("3_epypp")
 obj_class = "enemy"
@@ -932,13 +693,7 @@ vars = Dictionary[String, Variant]({
 "運搬停止ブロック:出現位置": "100"
 })
 
-[node name="Label" type="Label" parent="enemy3"]
-modulate = Color(0, 1, 1, 1)
-text = "enemy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="enemy4" type="Node2D" parent="."]
+[node name="enemy4" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1460, -110)
 script = ExtResource("3_epypp")
 obj_class = "enemy"
@@ -959,13 +714,7 @@ vars = Dictionary[String, Variant]({
 "運搬停止ブロック:出現位置": "100"
 })
 
-[node name="Label" type="Label" parent="enemy4"]
-modulate = Color(0, 1, 1, 1)
-text = "enemy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy_hang2" type="Node2D" parent="."]
+[node name="ivy_hang2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-2040, -260)
 script = ExtResource("3_epypp")
 obj_class = "ivy_hang2"
@@ -977,13 +726,7 @@ vars = Dictionary[String, Variant]({
 "type": "rock6x6"
 })
 
-[node name="Label" type="Label" parent="ivy_hang2"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy_hang2"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy_hang3" type="Node2D" parent="."]
+[node name="ivy_hang3" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-620, -170)
 script = ExtResource("3_epypp")
 obj_class = "ivy_hang2"
@@ -995,13 +738,7 @@ vars = Dictionary[String, Variant]({
 "type": "rock4x4"
 })
 
-[node name="Label" type="Label" parent="ivy_hang3"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy_hang2"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy_hang4" type="Node2D" parent="."]
+[node name="ivy_hang4" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1030, -580)
 script = ExtResource("3_epypp")
 obj_class = "ivy_hang2"
@@ -1013,13 +750,7 @@ vars = Dictionary[String, Variant]({
 "type": "rock4x4"
 })
 
-[node name="Label" type="Label" parent="ivy_hang4"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy_hang2"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy_extend" type="Node2D" parent="."]
+[node name="ivy_extend" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1990, -230)
 script = ExtResource("3_epypp")
 obj_class = "ivy_extend"
@@ -1044,13 +775,7 @@ vars = Dictionary[String, Variant]({
 "type": "red"
 })
 
-[node name="Label" type="Label" parent="ivy_extend"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy_extend"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy_extend2" type="Node2D" parent="."]
+[node name="ivy_extend2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-575, -140)
 script = ExtResource("3_epypp")
 obj_class = "ivy_extend"
@@ -1075,13 +800,7 @@ vars = Dictionary[String, Variant]({
 "type": "red"
 })
 
-[node name="Label" type="Label" parent="ivy_extend2"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy_extend"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy_extend3" type="Node2D" parent="."]
+[node name="ivy_extend3" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1080, -520)
 script = ExtResource("3_epypp")
 obj_class = "ivy_extend"
@@ -1106,13 +825,7 @@ vars = Dictionary[String, Variant]({
 "type": "red"
 })
 
-[node name="Label" type="Label" parent="ivy_extend3"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy_extend"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="onion" type="Node2D" parent="."]
+[node name="onion" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-2100, -330)
 script = ExtResource("3_epypp")
 obj_class = "onion"
@@ -1130,13 +843,7 @@ vars = Dictionary[String, Variant]({
 "感知範囲高": "43.000000"
 })
 
-[node name="Label" type="Label" parent="onion"]
-modulate = Color(0, 1, 1, 1)
-text = "onion"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Target" type="Node2D" parent="."]
+[node name="Target" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-950, -520)
 script = ExtResource("3_epypp")
 obj_class = "Target"
@@ -1155,13 +862,7 @@ vars = Dictionary[String, Variant]({
 "止:生:距離x10": "100"
 })
 
-[node name="Label" type="Label" parent="Target"]
-modulate = Color(0, 1, 1, 1)
-text = "Target"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Target2" type="Node2D" parent="."]
+[node name="Target2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1310, 1820)
 script = ExtResource("3_epypp")
 obj_class = "Target"
@@ -1180,13 +881,7 @@ vars = Dictionary[String, Variant]({
 "止:生:距離x10": "100"
 })
 
-[node name="Label" type="Label" parent="Target2"]
-modulate = Color(0, 1, 1, 1)
-text = "Target"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="tunnel" type="Node2D" parent="."]
+[node name="tunnel" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1305, -145)
 script = ExtResource("3_epypp")
 obj_class = "tunnel"
@@ -1211,13 +906,7 @@ vars = Dictionary[String, Variant]({
 "隊列外ピクミンの吸い込み範囲指定": "false"
 })
 
-[node name="Label" type="Label" parent="tunnel"]
-modulate = Color(0, 1, 1, 1)
-text = "tunnel"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="tunnel2" type="Node2D" parent="."]
+[node name="tunnel2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1310, 1945)
 script = ExtResource("3_epypp")
 obj_class = "tunnel"
@@ -1242,13 +931,7 @@ vars = Dictionary[String, Variant]({
 "隊列外ピクミンの吸い込み範囲指定": "false"
 })
 
-[node name="Label" type="Label" parent="tunnel2"]
-modulate = Color(0, 1, 1, 1)
-text = "tunnel"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="model" type="Node2D" parent="."]
+[node name="model" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-705, -220)
 script = ExtResource("3_epypp")
 obj_class = "model"
@@ -1258,13 +941,7 @@ vars = Dictionary[String, Variant]({
 "rotZ": "0"
 })
 
-[node name="Label" type="Label" parent="model"]
-modulate = Color(0, 1, 1, 1)
-text = "model"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="model2" type="Node2D" parent="."]
+[node name="model2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-625, -90)
 script = ExtResource("3_epypp")
 obj_class = "model"
@@ -1274,13 +951,7 @@ vars = Dictionary[String, Variant]({
 "rotZ": "0"
 })
 
-[node name="Label" type="Label" parent="model2"]
-modulate = Color(0, 1, 1, 1)
-text = "model"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="model3" type="Node2D" parent="."]
+[node name="model3" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1200, -390)
 script = ExtResource("3_epypp")
 obj_class = "model"
@@ -1290,13 +961,7 @@ vars = Dictionary[String, Variant]({
 "rotZ": "0"
 })
 
-[node name="Label" type="Label" parent="model3"]
-modulate = Color(0, 1, 1, 1)
-text = "model"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="model4" type="Node2D" parent="."]
+[node name="model4" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1270, -390)
 script = ExtResource("3_epypp")
 obj_class = "model"
@@ -1306,13 +971,7 @@ vars = Dictionary[String, Variant]({
 "rotZ": "0"
 })
 
-[node name="Label" type="Label" parent="model4"]
-modulate = Color(0, 1, 1, 1)
-text = "model"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="model5" type="Node2D" parent="."]
+[node name="model5" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1570, -340)
 script = ExtResource("3_epypp")
 obj_class = "model"
@@ -1322,13 +981,7 @@ vars = Dictionary[String, Variant]({
 "rotZ": "0"
 })
 
-[node name="Label" type="Label" parent="model5"]
-modulate = Color(0, 1, 1, 1)
-text = "model"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="model6" type="Node2D" parent="."]
+[node name="model6" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1640, -340)
 script = ExtResource("3_epypp")
 obj_class = "model"
@@ -1338,13 +991,7 @@ vars = Dictionary[String, Variant]({
 "rotZ": "0"
 })
 
-[node name="Label" type="Label" parent="model6"]
-modulate = Color(0, 1, 1, 1)
-text = "model"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="model7" type="Node2D" parent="."]
+[node name="model7" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-700, -130)
 script = ExtResource("3_epypp")
 obj_class = "model"
@@ -1354,13 +1001,7 @@ vars = Dictionary[String, Variant]({
 "rotZ": "0"
 })
 
-[node name="Label" type="Label" parent="model7"]
-modulate = Color(0, 1, 1, 1)
-text = "model"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="model8" type="Node2D" parent="."]
+[node name="model8" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-775, -130)
 script = ExtResource("3_epypp")
 obj_class = "model"
@@ -1370,13 +1011,7 @@ vars = Dictionary[String, Variant]({
 "rotZ": "0"
 })
 
-[node name="Label" type="Label" parent="model8"]
-modulate = Color(0, 1, 1, 1)
-text = "model"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="model9" type="Node2D" parent="."]
+[node name="model9" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-775, -220)
 script = ExtResource("3_epypp")
 obj_class = "model"
@@ -1386,13 +1021,7 @@ vars = Dictionary[String, Variant]({
 "rotZ": "0"
 })
 
-[node name="Label" type="Label" parent="model9"]
-modulate = Color(0, 1, 1, 1)
-text = "model"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="model10" type="Node2D" parent="."]
+[node name="model10" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-2055, -165)
 script = ExtResource("3_epypp")
 obj_class = "model"
@@ -1402,13 +1031,7 @@ vars = Dictionary[String, Variant]({
 "rotZ": "0"
 })
 
-[node name="Label" type="Label" parent="model10"]
-modulate = Color(0, 1, 1, 1)
-text = "model"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="model11" type="Node2D" parent="."]
+[node name="model11" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1835, -250)
 script = ExtResource("3_epypp")
 obj_class = "model"
@@ -1418,13 +1041,7 @@ vars = Dictionary[String, Variant]({
 "rotZ": "0"
 })
 
-[node name="Label" type="Label" parent="model11"]
-modulate = Color(0, 1, 1, 1)
-text = "model"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="envelope_effect" type="Node2D" parent="."]
+[node name="envelope_effect" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(40, 20)
 script = ExtResource("3_epypp")
 obj_class = "envelope_effect"
@@ -1432,13 +1049,7 @@ vars = Dictionary[String, Variant]({
 "type": "sakura"
 })
 
-[node name="Label" type="Label" parent="envelope_effect"]
-modulate = Color(0, 1, 1, 1)
-text = "envelope_effect"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a8" type="Node2D" parent="."]
+[node name="kinomi01a8" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1505, -225)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1448,13 +1059,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a8"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a9" type="Node2D" parent="."]
+[node name="kinomi01a9" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1515, -215)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1464,13 +1069,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a9"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a10" type="Node2D" parent="."]
+[node name="kinomi01a10" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1505, -205)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1480,13 +1079,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a10"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a11" type="Node2D" parent="."]
+[node name="kinomi01a11" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1515, -235)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1496,13 +1089,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a11"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a12" type="Node2D" parent="."]
+[node name="kinomi01a12" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1595, -130)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1512,13 +1099,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a12"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a13" type="Node2D" parent="."]
+[node name="kinomi01a13" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1620, -130)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1528,13 +1109,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a13"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a14" type="Node2D" parent="."]
+[node name="kinomi01a14" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1720, -100)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1544,13 +1119,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a14"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a15" type="Node2D" parent="."]
+[node name="kinomi01a15" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1745, -100)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1560,13 +1129,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a15"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a16" type="Node2D" parent="."]
+[node name="kinomi01a16" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1795, -85)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1576,13 +1139,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a16"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a17" type="Node2D" parent="."]
+[node name="kinomi01a17" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1775, -85)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1592,13 +1149,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a17"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a18" type="Node2D" parent="."]
+[node name="kinomi01a18" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1815, -85)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1608,13 +1159,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a18"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a19" type="Node2D" parent="."]
+[node name="kinomi01a19" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1660, -120)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1624,13 +1169,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a19"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a20" type="Node2D" parent="."]
+[node name="kinomi01a20" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1685, -120)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1640,13 +1179,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a20"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a21" type="Node2D" parent="."]
+[node name="kinomi01a21" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1870, -170)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1656,13 +1189,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a21"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a22" type="Node2D" parent="."]
+[node name="kinomi01a22" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1850, -180)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1672,13 +1199,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a22"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a23" type="Node2D" parent="."]
+[node name="kinomi01a23" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1830, -200)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1688,13 +1209,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a23"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a24" type="Node2D" parent="."]
+[node name="kinomi01a24" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1825, -235)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1704,13 +1219,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a24"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a25" type="Node2D" parent="."]
+[node name="kinomi01a25" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1835, -230)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1720,13 +1229,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a25"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a26" type="Node2D" parent="."]
+[node name="kinomi01a26" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1890, -165)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1736,13 +1239,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a26"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a27" type="Node2D" parent="."]
+[node name="kinomi01a27" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1910, -135)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1752,13 +1249,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a27"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a28" type="Node2D" parent="."]
+[node name="kinomi01a28" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1910, -165)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1768,13 +1259,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a28"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a29" type="Node2D" parent="."]
+[node name="kinomi01a29" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1910, -100)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1784,13 +1269,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a29"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a30" type="Node2D" parent="."]
+[node name="kinomi01a30" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-475, -70)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1800,13 +1279,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a30"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a31" type="Node2D" parent="."]
+[node name="kinomi01a31" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-455, -70)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1816,13 +1289,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a31"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a32" type="Node2D" parent="."]
+[node name="kinomi01a32" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-435, -70)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -1832,13 +1299,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a32"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="camera_restricted" type="Node2D" parent="."]
+[node name="camera_restricted" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(130, -130)
 script = ExtResource("3_epypp")
 obj_class = "camera_restricted"
@@ -1849,13 +1310,7 @@ vars = Dictionary[String, Variant]({
 "width": "10.000000"
 })
 
-[node name="Label" type="Label" parent="camera_restricted"]
-modulate = Color(0, 1, 1, 1)
-text = "camera_restricted"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="camera_restricted2" type="Node2D" parent="."]
+[node name="camera_restricted2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-160, 50)
 script = ExtResource("3_epypp")
 obj_class = "camera_restricted"
@@ -1866,13 +1321,7 @@ vars = Dictionary[String, Variant]({
 "width": "520.000000"
 })
 
-[node name="Label" type="Label" parent="camera_restricted2"]
-modulate = Color(0, 1, 1, 1)
-text = "camera_restricted"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="area_flag" type="Node2D" parent="."]
+[node name="area_flag" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1515, -210)
 script = ExtResource("3_epypp")
 obj_class = "area_flag"
@@ -1885,13 +1334,7 @@ vars = Dictionary[String, Variant]({
 "高さ": "10.750000"
 })
 
-[node name="Label" type="Label" parent="area_flag"]
-modulate = Color(0, 1, 1, 1)
-text = "area_flag"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="area_flag2" type="Node2D" parent="."]
+[node name="area_flag2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1515, -240)
 script = ExtResource("3_epypp")
 obj_class = "area_flag"
@@ -1904,13 +1347,7 @@ vars = Dictionary[String, Variant]({
 "高さ": "45.875000"
 })
 
-[node name="Label" type="Label" parent="area_flag2"]
-modulate = Color(0, 1, 1, 1)
-text = "area_flag"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="area_flag3" type="Node2D" parent="."]
+[node name="area_flag3" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1530, -135)
 script = ExtResource("3_epypp")
 obj_class = "area_flag"
@@ -1923,13 +1360,7 @@ vars = Dictionary[String, Variant]({
 "高さ": "50.125000"
 })
 
-[node name="Label" type="Label" parent="area_flag3"]
-modulate = Color(0, 1, 1, 1)
-text = "area_flag"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="onionStart" type="Node2D" parent="."]
+[node name="onionStart" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(40, -20)
 script = ExtResource("3_epypp")
 obj_class = "onionStart"
@@ -1938,13 +1369,7 @@ vars = Dictionary[String, Variant]({
 "操作フラグID": "-1"
 })
 
-[node name="Label" type="Label" parent="onionStart"]
-modulate = Color(0, 1, 1, 1)
-text = "onionStart"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="tunnel_manager" type="Node2D" parent="."]
+[node name="tunnel_manager" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(20, 20)
 script = ExtResource("3_epypp")
 obj_class = "tunnel_manager"
@@ -1952,13 +1377,7 @@ vars = Dictionary[String, Variant]({
 "モデルタイプ": "NORMAL"
 })
 
-[node name="Label" type="Label" parent="tunnel_manager"]
-modulate = Color(0, 1, 1, 1)
-text = "tunnel_manager"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="area_flag4" type="Node2D" parent="."]
+[node name="area_flag4" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1780, -430)
 script = ExtResource("3_epypp")
 obj_class = "area_flag"
@@ -1971,13 +1390,7 @@ vars = Dictionary[String, Variant]({
 "高さ": "98.750000"
 })
 
-[node name="Label" type="Label" parent="area_flag4"]
-modulate = Color(0, 1, 1, 1)
-text = "area_flag"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="area_flag5" type="Node2D" parent="."]
+[node name="area_flag5" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-870, -325)
 script = ExtResource("3_epypp")
 obj_class = "area_flag"
@@ -1990,13 +1403,7 @@ vars = Dictionary[String, Variant]({
 "高さ": "250.000000"
 })
 
-[node name="Label" type="Label" parent="area_flag5"]
-modulate = Color(0, 1, 1, 1)
-text = "area_flag"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a33" type="Node2D" parent="."]
+[node name="kinomi01a33" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-635, -380)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2006,13 +1413,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "1"
 })
 
-[node name="Label" type="Label" parent="kinomi01a33"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a34" type="Node2D" parent="."]
+[node name="kinomi01a34" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-615, -370)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2022,13 +1423,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a34"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a35" type="Node2D" parent="."]
+[node name="kinomi01a35" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-655, -370)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2038,13 +1433,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a35"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a36" type="Node2D" parent="."]
+[node name="kinomi01a36" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1095, -330)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2054,13 +1443,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a36"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a37" type="Node2D" parent="."]
+[node name="kinomi01a37" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1120, -340)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2070,13 +1453,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a37"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a38" type="Node2D" parent="."]
+[node name="kinomi01a38" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1105, -315)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2086,13 +1463,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a38"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a39" type="Node2D" parent="."]
+[node name="kinomi01a39" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1605, -325)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2102,13 +1473,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a39"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a40" type="Node2D" parent="."]
+[node name="kinomi01a40" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1615, -315)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2118,13 +1483,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a40"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a41" type="Node2D" parent="."]
+[node name="kinomi01a41" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1605, -300)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2134,13 +1493,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a41"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a42" type="Node2D" parent="."]
+[node name="kinomi01a42" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1615, -290)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2150,13 +1503,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a42"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a43" type="Node2D" parent="."]
+[node name="kinomi01a43" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1605, -275)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2166,13 +1513,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a43"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a44" type="Node2D" parent="."]
+[node name="kinomi01a44" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1615, -265)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2182,13 +1523,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a44"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a45" type="Node2D" parent="."]
+[node name="kinomi01a45" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1605, -250)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2198,13 +1533,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a45"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a46" type="Node2D" parent="."]
+[node name="kinomi01a46" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1410, -370)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2214,13 +1543,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a46"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a47" type="Node2D" parent="."]
+[node name="kinomi01a47" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1430, -370)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2230,13 +1553,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a47"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a48" type="Node2D" parent="."]
+[node name="kinomi01a48" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1450, -370)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2246,13 +1563,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a48"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a49" type="Node2D" parent="."]
+[node name="kinomi01a49" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1210, -380)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2262,13 +1573,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a49"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a50" type="Node2D" parent="."]
+[node name="kinomi01a50" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1210, -340)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2278,13 +1583,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a50"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a51" type="Node2D" parent="."]
+[node name="kinomi01a51" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1260, -340)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2294,13 +1593,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a51"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a52" type="Node2D" parent="."]
+[node name="kinomi01a52" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1220, -365)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2310,13 +1603,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a52"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a53" type="Node2D" parent="."]
+[node name="kinomi01a53" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1260, -380)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2326,13 +1613,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a53"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a54" type="Node2D" parent="."]
+[node name="kinomi01a54" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1250, -365)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2342,13 +1623,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a54"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a55" type="Node2D" parent="."]
+[node name="kinomi01a55" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1075, -320)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2358,13 +1633,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a55"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a56" type="Node2D" parent="."]
+[node name="kinomi01a56" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1085, -305)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2374,13 +1643,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a56"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a57" type="Node2D" parent="."]
+[node name="kinomi01a57" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-645, -370)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2390,13 +1653,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a57"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a58" type="Node2D" parent="."]
+[node name="kinomi01a58" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-625, -370)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2406,13 +1663,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a58"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a59" type="Node2D" parent="."]
+[node name="kinomi01a59" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-620, -380)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2422,13 +1673,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a59"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a60" type="Node2D" parent="."]
+[node name="kinomi01a60" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-650, -380)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2438,13 +1683,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a60"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy_extend4" type="Node2D" parent="."]
+[node name="ivy_extend4" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1210, 1820)
 script = ExtResource("3_epypp")
 obj_class = "ivy_extend"
@@ -2469,13 +1708,7 @@ vars = Dictionary[String, Variant]({
 "type": "red"
 })
 
-[node name="Label" type="Label" parent="ivy_extend4"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy_extend"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy_extend5" type="Node2D" parent="."]
+[node name="ivy_extend5" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1250, 1780)
 script = ExtResource("3_epypp")
 obj_class = "ivy_extend"
@@ -2500,13 +1733,7 @@ vars = Dictionary[String, Variant]({
 "type": "red"
 })
 
-[node name="Label" type="Label" parent="ivy_extend5"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy_extend"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy_extend6" type="Node2D" parent="."]
+[node name="ivy_extend6" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1170, 1820)
 script = ExtResource("3_epypp")
 obj_class = "ivy_extend"
@@ -2531,13 +1758,7 @@ vars = Dictionary[String, Variant]({
 "type": "red"
 })
 
-[node name="Label" type="Label" parent="ivy_extend6"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy_extend"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy21" type="Node2D" parent="."]
+[node name="ivy21" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1190, 1850)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -2548,13 +1769,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy21"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy22" type="Node2D" parent="."]
+[node name="ivy22" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1230, 1800)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -2565,13 +1780,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy22"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy23" type="Node2D" parent="."]
+[node name="ivy23" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1270, 1760)
 script = ExtResource("3_epypp")
 obj_class = "ivy"
@@ -2582,13 +1791,7 @@ vars = Dictionary[String, Variant]({
 "wide": "false"
 })
 
-[node name="Label" type="Label" parent="ivy23"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy_extend7" type="Node2D" parent="."]
+[node name="ivy_extend7" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-310, -140)
 script = ExtResource("3_epypp")
 obj_class = "ivy_extend"
@@ -2613,13 +1816,7 @@ vars = Dictionary[String, Variant]({
 "type": "red"
 })
 
-[node name="Label" type="Label" parent="ivy_extend7"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy_extend"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy_extend8" type="Node2D" parent="."]
+[node name="ivy_extend8" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1735, -460)
 script = ExtResource("3_epypp")
 obj_class = "ivy_extend"
@@ -2644,13 +1841,7 @@ vars = Dictionary[String, Variant]({
 "type": "red"
 })
 
-[node name="Label" type="Label" parent="ivy_extend8"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy_extend"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy_extend9" type="Node2D" parent="."]
+[node name="ivy_extend9" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1510, -280)
 script = ExtResource("3_epypp")
 obj_class = "ivy_extend"
@@ -2675,13 +1866,7 @@ vars = Dictionary[String, Variant]({
 "type": "red"
 })
 
-[node name="Label" type="Label" parent="ivy_extend9"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy_extend"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ivy_extend10" type="Node2D" parent="."]
+[node name="ivy_extend10" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-580, -420)
 script = ExtResource("3_epypp")
 obj_class = "ivy_extend"
@@ -2706,13 +1891,7 @@ vars = Dictionary[String, Variant]({
 "type": "red"
 })
 
-[node name="Label" type="Label" parent="ivy_extend10"]
-modulate = Color(0, 1, 1, 1)
-text = "ivy_extend"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="model12" type="Node2D" parent="."]
+[node name="model12" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1555, -220)
 script = ExtResource("3_epypp")
 obj_class = "model"
@@ -2722,13 +1901,7 @@ vars = Dictionary[String, Variant]({
 "rotZ": "0"
 })
 
-[node name="Label" type="Label" parent="model12"]
-modulate = Color(0, 1, 1, 1)
-text = "model"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="enemy_sticky_fall" type="Node2D" parent="."]
+[node name="enemy_sticky_fall" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-460, -130)
 script = ExtResource("3_epypp")
 obj_class = "enemy_sticky_fall"
@@ -2749,13 +1922,7 @@ vars = Dictionary[String, Variant]({
 "貼りつき距離": "30.000000"
 })
 
-[node name="Label" type="Label" parent="enemy_sticky_fall"]
-modulate = Color(0, 1, 1, 1)
-text = "enemy_sticky_fall"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="enemy_sticky_fall2" type="Node2D" parent="."]
+[node name="enemy_sticky_fall2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1390, -440)
 script = ExtResource("3_epypp")
 obj_class = "enemy_sticky_fall"
@@ -2776,13 +1943,7 @@ vars = Dictionary[String, Variant]({
 "貼りつき距離": "82.000000"
 })
 
-[node name="Label" type="Label" parent="enemy_sticky_fall2"]
-modulate = Color(0, 1, 1, 1)
-text = "enemy_sticky_fall"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="enemy_sticky_fall3" type="Node2D" parent="."]
+[node name="enemy_sticky_fall3" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1345, -450)
 script = ExtResource("3_epypp")
 obj_class = "enemy_sticky_fall"
@@ -2803,13 +1964,7 @@ vars = Dictionary[String, Variant]({
 "貼りつき距離": "85.000000"
 })
 
-[node name="Label" type="Label" parent="enemy_sticky_fall3"]
-modulate = Color(0, 1, 1, 1)
-text = "enemy_sticky_fall"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="enemy_sticky_fall4" type="Node2D" parent="."]
+[node name="enemy_sticky_fall4" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1510, -450)
 script = ExtResource("3_epypp")
 obj_class = "enemy_sticky_fall"
@@ -2830,13 +1985,7 @@ vars = Dictionary[String, Variant]({
 "貼りつき距離": "83.000000"
 })
 
-[node name="Label" type="Label" parent="enemy_sticky_fall4"]
-modulate = Color(0, 1, 1, 1)
-text = "enemy_sticky_fall"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="enemy_sticky_fall5" type="Node2D" parent="."]
+[node name="enemy_sticky_fall5" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1470, -440)
 script = ExtResource("3_epypp")
 obj_class = "enemy_sticky_fall"
@@ -2857,13 +2006,7 @@ vars = Dictionary[String, Variant]({
 "貼りつき距離": "82.000000"
 })
 
-[node name="Label" type="Label" parent="enemy_sticky_fall5"]
-modulate = Color(0, 1, 1, 1)
-text = "enemy_sticky_fall"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="enemy_sticky_fall6" type="Node2D" parent="."]
+[node name="enemy_sticky_fall6" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1690, -160)
 script = ExtResource("3_epypp")
 obj_class = "enemy_sticky_fall"
@@ -2884,13 +2027,7 @@ vars = Dictionary[String, Variant]({
 "貼りつき距離": "40.000000"
 })
 
-[node name="Label" type="Label" parent="enemy_sticky_fall6"]
-modulate = Color(0, 1, 1, 1)
-text = "enemy_sticky_fall"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="enemy_sticky_fall7" type="Node2D" parent="."]
+[node name="enemy_sticky_fall7" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1750, -160)
 script = ExtResource("3_epypp")
 obj_class = "enemy_sticky_fall"
@@ -2911,13 +2048,7 @@ vars = Dictionary[String, Variant]({
 "貼りつき距離": "40.000000"
 })
 
-[node name="Label" type="Label" parent="enemy_sticky_fall7"]
-modulate = Color(0, 1, 1, 1)
-text = "enemy_sticky_fall"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="enemy_sticky_fall8" type="Node2D" parent="."]
+[node name="enemy_sticky_fall8" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1800, -160)
 script = ExtResource("3_epypp")
 obj_class = "enemy_sticky_fall"
@@ -2938,13 +2069,7 @@ vars = Dictionary[String, Variant]({
 "貼りつき距離": "30.000000"
 })
 
-[node name="Label" type="Label" parent="enemy_sticky_fall8"]
-modulate = Color(0, 1, 1, 1)
-text = "enemy_sticky_fall"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="enemy_sticky_fall9" type="Node2D" parent="."]
+[node name="enemy_sticky_fall9" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1880, -190)
 script = ExtResource("3_epypp")
 obj_class = "enemy_sticky_fall"
@@ -2965,13 +2090,7 @@ vars = Dictionary[String, Variant]({
 "貼りつき距離": "28.000000"
 })
 
-[node name="Label" type="Label" parent="enemy_sticky_fall9"]
-modulate = Color(0, 1, 1, 1)
-text = "enemy_sticky_fall"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a61" type="Node2D" parent="."]
+[node name="kinomi01a61" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1165, 1830)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2981,13 +2100,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a61"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a62" type="Node2D" parent="."]
+[node name="kinomi01a62" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1175, 1830)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -2997,13 +2110,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a62"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a63" type="Node2D" parent="."]
+[node name="kinomi01a63" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1170, 1840)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -3013,13 +2120,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a63"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a64" type="Node2D" parent="."]
+[node name="kinomi01a64" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1190, 1885)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -3029,13 +2130,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a64"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a65" type="Node2D" parent="."]
+[node name="kinomi01a65" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1210, 1865)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -3045,13 +2140,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a65"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a66" type="Node2D" parent="."]
+[node name="kinomi01a66" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1250, 1865)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -3061,13 +2150,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a66"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a67" type="Node2D" parent="."]
+[node name="kinomi01a67" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1270, 1825)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -3077,13 +2160,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a67"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a68" type="Node2D" parent="."]
+[node name="kinomi01a68" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1230, 1875)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -3093,13 +2170,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a68"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a69" type="Node2D" parent="."]
+[node name="kinomi01a69" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1230, 1835)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -3109,13 +2180,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a69"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a70" type="Node2D" parent="."]
+[node name="kinomi01a70" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1235, 1825)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -3125,13 +2190,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a70"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a71" type="Node2D" parent="."]
+[node name="kinomi01a71" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1225, 1825)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -3141,13 +2200,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a71"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a72" type="Node2D" parent="."]
+[node name="kinomi01a72" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1250, 1815)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -3157,13 +2210,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a72"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a73" type="Node2D" parent="."]
+[node name="kinomi01a73" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1255, 1805)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -3173,13 +2220,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a73"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a74" type="Node2D" parent="."]
+[node name="kinomi01a74" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1245, 1805)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -3189,13 +2230,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a74"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a75" type="Node2D" parent="."]
+[node name="kinomi01a75" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1265, 1775)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -3205,13 +2240,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a75"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a76" type="Node2D" parent="."]
+[node name="kinomi01a76" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1275, 1775)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -3221,13 +2250,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a76"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a77" type="Node2D" parent="."]
+[node name="kinomi01a77" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1270, 1785)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -3237,13 +2260,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a77"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="kinomi01a78" type="Node2D" parent="."]
+[node name="kinomi01a78" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1170, 1875)
 script = ExtResource("3_epypp")
 obj_class = "kinomi01a"
@@ -3253,13 +2270,7 @@ vars = Dictionary[String, Variant]({
 "見た目": "0"
 })
 
-[node name="Label" type="Label" parent="kinomi01a78"]
-modulate = Color(0, 1, 1, 1)
-text = "kinomi01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="area_flag6" type="Node2D" parent="."]
+[node name="area_flag6" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-25, -50)
 script = ExtResource("3_epypp")
 obj_class = "area_flag"
@@ -3272,13 +2283,7 @@ vars = Dictionary[String, Variant]({
 "高さ": "100.000000"
 })
 
-[node name="Label" type="Label" parent="area_flag6"]
-modulate = Color(0, 1, 1, 1)
-text = "area_flag"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="area_flag7" type="Node2D" parent="."]
+[node name="area_flag7" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-65, -50)
 script = ExtResource("3_epypp")
 obj_class = "area_flag"
@@ -3291,13 +2296,7 @@ vars = Dictionary[String, Variant]({
 "高さ": "120.000000"
 })
 
-[node name="Label" type="Label" parent="area_flag7"]
-modulate = Color(0, 1, 1, 1)
-text = "area_flag"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="model_detail" type="Node2D" parent="."]
+[node name="model_detail" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1655, -85)
 script = ExtResource("3_epypp")
 obj_class = "model_detail"
@@ -3312,13 +2311,7 @@ vars = Dictionary[String, Variant]({
 "scaleZ": "1.000000"
 })
 
-[node name="Label" type="Label" parent="model_detail"]
-modulate = Color(0, 1, 1, 1)
-text = "model_detail"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="model_detail2" type="Node2D" parent="."]
+[node name="model_detail2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1410, -95)
 script = ExtResource("3_epypp")
 obj_class = "model_detail"
@@ -3333,13 +2326,7 @@ vars = Dictionary[String, Variant]({
 "scaleZ": "1.000000"
 })
 
-[node name="Label" type="Label" parent="model_detail2"]
-modulate = Color(0, 1, 1, 1)
-text = "model_detail"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="model_detail3" type="Node2D" parent="."]
+[node name="model_detail3" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1605, -95)
 script = ExtResource("3_epypp")
 obj_class = "model_detail"
@@ -3354,13 +2341,7 @@ vars = Dictionary[String, Variant]({
 "scaleZ": "1.000000"
 })
 
-[node name="Label" type="Label" parent="model_detail3"]
-modulate = Color(0, 1, 1, 1)
-text = "model_detail"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="model_detail4" type="Node2D" parent="."]
+[node name="model_detail4" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1470, -85)
 script = ExtResource("3_epypp")
 obj_class = "model_detail"
@@ -3375,13 +2356,7 @@ vars = Dictionary[String, Variant]({
 "scaleZ": "1.000000"
 })
 
-[node name="Label" type="Label" parent="model_detail4"]
-modulate = Color(0, 1, 1, 1)
-text = "model_detail"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="model_detail5" type="Node2D" parent="."]
+[node name="model_detail5" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1715, -65)
 script = ExtResource("3_epypp")
 obj_class = "model_detail"
@@ -3396,13 +2371,7 @@ vars = Dictionary[String, Variant]({
 "scaleZ": "0.875000"
 })
 
-[node name="Label" type="Label" parent="model_detail5"]
-modulate = Color(0, 1, 1, 1)
-text = "model_detail"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="heart" type="Node2D" parent="."]
+[node name="heart" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-635, -400)
 script = ExtResource("3_epypp")
 obj_class = "heart"
@@ -3410,13 +2379,7 @@ vars = Dictionary[String, Variant]({
 "size": "small"
 })
 
-[node name="Label" type="Label" parent="heart"]
-modulate = Color(0, 1, 1, 1)
-text = "heart"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="heart2" type="Node2D" parent="."]
+[node name="heart2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1610, -390)
 script = ExtResource("3_epypp")
 obj_class = "heart"
@@ -3424,13 +2387,7 @@ vars = Dictionary[String, Variant]({
 "size": "small"
 })
 
-[node name="Label" type="Label" parent="heart2"]
-modulate = Color(0, 1, 1, 1)
-text = "heart"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="heart3" type="Node2D" parent="."]
+[node name="heart3" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1975, -65)
 script = ExtResource("3_epypp")
 obj_class = "heart"
@@ -3438,13 +2395,7 @@ vars = Dictionary[String, Variant]({
 "size": "small"
 })
 
-[node name="Label" type="Label" parent="heart3"]
-modulate = Color(0, 1, 1, 1)
-text = "heart"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="heart4" type="Node2D" parent="."]
+[node name="heart4" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1120, -400)
 script = ExtResource("3_epypp")
 obj_class = "heart"
@@ -3452,13 +2403,7 @@ vars = Dictionary[String, Variant]({
 "size": "small"
 })
 
-[node name="Label" type="Label" parent="heart4"]
-modulate = Color(0, 1, 1, 1)
-text = "heart"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="bush01a4" type="Node2D" parent="."]
+[node name="bush01a4" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-160, -5)
 script = ExtResource("3_epypp")
 obj_class = "bush01a"
@@ -3476,13 +2421,7 @@ vars = Dictionary[String, Variant]({
 "角度": "0"
 })
 
-[node name="Label" type="Label" parent="bush01a4"]
-modulate = Color(0, 1, 1, 1)
-text = "bush01a"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="safety_death" type="Node2D" parent="."]
+[node name="safety_death" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(40, 120)
 script = ExtResource("3_epypp")
 obj_class = "safety_death"
@@ -3490,13 +2429,7 @@ vars = Dictionary[String, Variant]({
 "face": "front"
 })
 
-[node name="Label" type="Label" parent="safety_death"]
-modulate = Color(0, 1, 1, 1)
-text = "safety_death"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="safety_death2" type="Node2D" parent="."]
+[node name="safety_death2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1310, 2080)
 script = ExtResource("3_epypp")
 obj_class = "safety_death"
@@ -3504,13 +2437,7 @@ vars = Dictionary[String, Variant]({
 "face": "back"
 })
 
-[node name="Label" type="Label" parent="safety_death2"]
-modulate = Color(0, 1, 1, 1)
-text = "safety_death"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="enemy_carry_nuts" type="Node2D" parent="."]
+[node name="enemy_carry_nuts" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-350, -60)
 script = ExtResource("3_epypp")
 obj_class = "enemy_carry_nuts"
@@ -3524,13 +2451,7 @@ vars = Dictionary[String, Variant]({
 "移動オフセット": "0.000000"
 })
 
-[node name="Label" type="Label" parent="enemy_carry_nuts"]
-modulate = Color(0, 1, 1, 1)
-text = "enemy_carry_nuts"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="enemy_carry_nuts2" type="Node2D" parent="."]
+[node name="enemy_carry_nuts2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-320, -60)
 script = ExtResource("3_epypp")
 obj_class = "enemy_carry_nuts"
@@ -3544,13 +2465,7 @@ vars = Dictionary[String, Variant]({
 "移動オフセット": "30.000000"
 })
 
-[node name="Label" type="Label" parent="enemy_carry_nuts2"]
-modulate = Color(0, 1, 1, 1)
-text = "enemy_carry_nuts"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="enemy_carry_nuts3" type="Node2D" parent="."]
+[node name="enemy_carry_nuts3" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-290, -60)
 script = ExtResource("3_epypp")
 obj_class = "enemy_carry_nuts"
@@ -3564,13 +2479,7 @@ vars = Dictionary[String, Variant]({
 "移動オフセット": "55.000000"
 })
 
-[node name="Label" type="Label" parent="enemy_carry_nuts3"]
-modulate = Color(0, 1, 1, 1)
-text = "enemy_carry_nuts"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="enemy_carry_nuts4" type="Node2D" parent="."]
+[node name="enemy_carry_nuts4" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-260, -60)
 script = ExtResource("3_epypp")
 obj_class = "enemy_carry_nuts"
@@ -3584,13 +2493,7 @@ vars = Dictionary[String, Variant]({
 "移動オフセット": "90.000000"
 })
 
-[node name="Label" type="Label" parent="enemy_carry_nuts4"]
-modulate = Color(0, 1, 1, 1)
-text = "enemy_carry_nuts"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="stopper_treasure" type="Node2D" parent="."]
+[node name="stopper_treasure" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1160, -400)
 script = ExtResource("3_epypp")
 obj_class = "stopper_treasure"
@@ -3600,13 +2503,7 @@ vars = Dictionary[String, Variant]({
 "id": "-1"
 })
 
-[node name="Label" type="Label" parent="stopper_treasure"]
-modulate = Color(0, 1, 1, 1)
-text = "stopper_treasure"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="stopper_treasure2" type="Node2D" parent="."]
+[node name="stopper_treasure2" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-2125, -90)
 script = ExtResource("3_epypp")
 obj_class = "stopper_treasure"
@@ -3616,13 +2513,7 @@ vars = Dictionary[String, Variant]({
 "id": "-1"
 })
 
-[node name="Label" type="Label" parent="stopper_treasure2"]
-modulate = Color(0, 1, 1, 1)
-text = "stopper_treasure"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="camera_restricted3" type="Node2D" parent="."]
+[node name="camera_restricted3" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-2320, -90)
 script = ExtResource("3_epypp")
 obj_class = "camera_restricted"
@@ -3633,13 +2524,7 @@ vars = Dictionary[String, Variant]({
 "width": "60.000000"
 })
 
-[node name="Label" type="Label" parent="camera_restricted3"]
-modulate = Color(0, 1, 1, 1)
-text = "camera_restricted"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="camera_restricted4" type="Node2D" parent="."]
+[node name="camera_restricted4" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-2485, -375)
 script = ExtResource("3_epypp")
 obj_class = "camera_restricted"
@@ -3650,13 +2535,7 @@ vars = Dictionary[String, Variant]({
 "width": "200.000000"
 })
 
-[node name="Label" type="Label" parent="camera_restricted4"]
-modulate = Color(0, 1, 1, 1)
-text = "camera_restricted"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="camera_restricted5" type="Node2D" parent="."]
+[node name="camera_restricted5" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-900, -40)
 script = ExtResource("3_epypp")
 obj_class = "camera_restricted"
@@ -3667,13 +2546,7 @@ vars = Dictionary[String, Variant]({
 "width": "60.000000"
 })
 
-[node name="Label" type="Label" parent="camera_restricted5"]
-modulate = Color(0, 1, 1, 1)
-text = "camera_restricted"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="camera_restricted6" type="Node2D" parent="."]
+[node name="camera_restricted6" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1195, -140)
 script = ExtResource("3_epypp")
 obj_class = "camera_restricted"
@@ -3684,13 +2557,7 @@ vars = Dictionary[String, Variant]({
 "width": "60.000000"
 })
 
-[node name="Label" type="Label" parent="camera_restricted6"]
-modulate = Color(0, 1, 1, 1)
-text = "camera_restricted"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="camera_restricted7" type="Node2D" parent="."]
+[node name="camera_restricted7" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1085, 1880)
 script = ExtResource("3_epypp")
 obj_class = "camera_restricted"
@@ -3701,13 +2568,7 @@ vars = Dictionary[String, Variant]({
 "width": "60.000000"
 })
 
-[node name="Label" type="Label" parent="camera_restricted7"]
-modulate = Color(0, 1, 1, 1)
-text = "camera_restricted"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="camera_restricted8" type="Node2D" parent="."]
+[node name="camera_restricted8" type="Node2D" parent="." instance=ExtResource("2_epypp")]
 position = Vector2(-1405, 1880)
 script = ExtResource("3_epypp")
 obj_class = "camera_restricted"
@@ -3717,9 +2578,3 @@ vars = Dictionary[String, Variant]({
 "hv": "horizontal",
 "width": "60.000000"
 })
-
-[node name="Label" type="Label" parent="camera_restricted8"]
-modulate = Color(0, 1, 1, 1)
-text = "camera_restricted"
-horizontal_alignment = 1
-vertical_alignment = 1

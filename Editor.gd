@@ -69,8 +69,7 @@ func import_objects():
 			if cur_obj != null:
 				add_child(cur_obj,true)
 				cur_obj.set_owner(get_tree().edited_scene_root)
-			var s = Node2D.new()
-			s.set_script(LevelObject)
+			var s = preload("res://Exportable/LevelObject.tscn").instantiate()
 			s.script_changed.emit()
 			cur_obj = s
 			var split = cur.split(",")
@@ -95,6 +94,7 @@ func import_path():
 		var cur = lines.pop_front()
 		if "start" in cur:
 			var l2 = Line2D.new()
+			l2.name = "Path"
 			l2.set_script(PikminPath)
 			line = l2
 			line.s =l2

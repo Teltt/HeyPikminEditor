@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuvcmf8vqmj4e"]
+
+[ext_resource type="Script" uid="uid://c2hok6v3vcf60" path="res://Exportable/LevelObject.gd" id="1_tainy"]
+
+[node name="LevelObject" type="Node2D"]
+script = ExtResource("1_tainy")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -50.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 13.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
