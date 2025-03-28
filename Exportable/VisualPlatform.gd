@@ -7,7 +7,8 @@ var s:Polygon2D
 func _ready() -> void:
 	var g= self
 	s = g
-
+func _process(delta: float) -> void:
+	global_position = Vector2.ZERO
 func export_collision(out):
 	return out
 func export_model(out:ArrayMesh)->Variant:

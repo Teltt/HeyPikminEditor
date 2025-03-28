@@ -41,7 +41,7 @@ func export_model(out:ArrayMesh)->Variant:
 			last_point = s.points[po-1]
 			var p = s.points[po]
 			lengths+= [lengths[po-1]+last_point.distance_to(p)]
-		if po > 1:
+		if po > 2 and po < s.points.size()-1:
 			var init_normal =normal[normal.size()-1]
 			var next_normal = (s.points[po-2].direction_to(s.points[po-1]))
 			if next_normal.dot(init_normal) <0:
@@ -62,15 +62,25 @@ func export_model(out:ArrayMesh)->Variant:
 		vertices.push_back(p3d)
 		verts2d.push_back(Vector2(p3d.x,p3d.y))
 		uvs.push_back(Vector2(lengths[po]/s.width,0.0))
-		p3d = -(base+perp*0.5)
-		vertices = PackedVector3Array([p3d])+ vertices
-		verts2d =PackedVector2Array([Vector2(p3d.x,p3d.y)])+verts2d
-		uvs=PackedVector2Array([(Vector2(lengths[po]/s.width,1.0))])+uvs
+		p3d = -(base+perp*s.width*0.5)
+		vertices.push_back(p3d)
+		verts2d.push_back(Vector2(p3d.x,p3d.y))
+		uvs.push_back(Vector2(lengths[po]/s.width,1.0))
 	arr.resize(Mesh.ARRAY_MAX)
 	arr[Mesh.ARRAY_VERTEX] = vertices
 	arr[Mesh.ARRAY_TEX_UV] = uvs
-	print(verts2d)
-	var ind:PackedInt32Array = Geometry2D.triangulate_polygon(verts2d)
+	var ind:PackedInt32Array
+	for i in s.points.size():
+		var i0 = i * 2
+		var i1 = i * 2 + 1
+		var i2 = i * 2 + 2
+		var i3 = i * 2 + 3
+		ind.push_back(i0)
+		ind.push_back(i1)
+		ind.push_back(i2)
+		ind.push_back(i2)
+		ind.push_back(i1)
+		ind.push_back(i3)
 	arr[Mesh.ARRAY_INDEX] = ind
 	out.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,arr)
 	out.surface_set_material(out.get_surface_count()-1,material_3d)

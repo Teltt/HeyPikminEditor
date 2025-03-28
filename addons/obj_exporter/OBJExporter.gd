@@ -109,7 +109,7 @@ func save_mesh_to_files(mesh: Mesh, file_path: String, object_name: String):
 	var file_obj = FileAccess.open(obj_file, FileAccess.WRITE)
 	file_obj.store_string(output)
 	
-	var mat_file := file_path + object_name + ".mtl"
+	var mat_file := obj_file.get_base_dir()+"/"+object_name + ".mtl"
 	var file_mtl = FileAccess.open(mat_file, FileAccess.WRITE)
 	file_mtl.store_string(mat_output)
 	

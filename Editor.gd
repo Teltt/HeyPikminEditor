@@ -16,6 +16,7 @@ func export_model():
 	iterate(self,func(node,out):
 		return node.export_model(out),out
 		)
+	print("res://Export/mod.mesh.obj")
 	OBJExporter.save_mesh_to_files(out,"res://Export/mod.mesh","level")
 func export_path():
 	
@@ -46,8 +47,7 @@ func import_collision():
 		var arr = lines.slice(0,end+1)
 		for a in arr.size():
 			lines.remove_at(0)
-		var line = Line2D.new()
-		line.set_script(CollisionLine)
+		var line = preload("res://Exportable/CollisionLine.tscn").instantiate()
 		add_child(line,true)
 		line.set_owner(get_tree().edited_scene_root)
 		for st:String in arr:
@@ -77,10 +77,15 @@ func import_objects():
 			cur_obj.name = cur_obj.obj_class
 			s.global_position = -Vector2(str_to_var(split[1]),str_to_var(split[2]))
 		else:
-			cur_obj.vars[cur.split(",")[1]]=cur.split(",")[2]
+			cur_obj.vars[cur.split(",")[1]]=string_to_var2( cur.split(",")[2])
 	if cur_obj != null:
 		add_child(cur_obj,true)
 		cur_obj.set_owner(get_tree().edited_scene_root)
+func string_to_var2(variant):
+	var ret = str_to_var(variant)
+	if ret == null and variant != "null":
+		return variant
+	return ret
 var contains:String
 func find_contains(string):
 	return contains in string
@@ -93,9 +98,7 @@ func import_path():
 	while l < lines.size():
 		var cur = lines.pop_front()
 		if "start" in cur:
-			var l2 = Line2D.new()
-			l2.name = "Path"
-			l2.set_script(PikminPath)
+			var l2 = preload("res://Exportable/Path.tscn").instantiate()
 			line = l2
 			line.s =l2
 		if "id" in cur:

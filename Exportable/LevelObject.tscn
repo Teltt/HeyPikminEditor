@@ -6,6 +6,7 @@
 script = ExtResource("1_tainy")
 
 [node name="Label" type="Label" parent="."]
+modulate = Color(0, 1, 1, 1)
 offset_left = -50.0
 offset_top = -10.0
 offset_right = 10.0
@@ -14,4 +15,3 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Icon" type="Sprite2D" parent="."]
-scale = Vector2(1.5, 1.5)

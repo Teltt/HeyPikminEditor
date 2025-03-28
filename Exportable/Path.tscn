@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7bow3ksnc12d"]
+
+[ext_resource type="Script" uid="uid://o4blitakmdw7" path="res://Exportable/Path.gd" id="1_3thbu"]
+
+[node name="Path" type="Line2D"]
+width = 2.0
+script = ExtResource("1_3thbu")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+modulate = Color(0, 1, 1, 1)
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1

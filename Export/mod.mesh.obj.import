@@ -4,14 +4,11 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://ixklorgj1yxs"
-path="res://.godot/imported/mod.mesh.obj-0c857d971f3f72aaf586e825dd809f93.mesh"
+valid=false
 
 [deps]
 
-files=["res://.godot/imported/mod.mesh.obj-0c857d971f3f72aaf586e825dd809f93.mesh"]
-
 source_file="res://Export/mod.mesh.obj"
-dest_files=["res://.godot/imported/mod.mesh.obj-0c857d971f3f72aaf586e825dd809f93.mesh", "res://.godot/imported/mod.mesh.obj-0c857d971f3f72aaf586e825dd809f93.mesh"]
 
 [params]
 

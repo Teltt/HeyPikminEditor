@@ -3,21 +3,20 @@ extends Exportable
 class_name PikminPath
 var s:Line2D
 @export var id:int
+@onready var label = $Label
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var g = self
 	s = g
-	if not has_node("Label"):
-		var l = Label.new()
-		add_child(l,true)
-		l.owner = get_tree().edited_scene_root
+	if label:
+		var l = label
 		l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		l.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 		l.name= "Label"
 
 func _process(delta: float) -> void:
-	if has_node("Label"):
-		var l:Label = get_node("Label")
+	if label:
+		var l:Label = label
 		l.text = var_to_str(id)
 		l.modulate = Color.AQUA
 
