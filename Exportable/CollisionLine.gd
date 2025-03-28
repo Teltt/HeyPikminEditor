@@ -9,8 +9,8 @@ func _ready() -> void:
 	var g= self
 	s = g
 func _process(delta: float) -> void:
-	if seg_attr.size() != s.points.size()-2:
-		seg_attr.resize(s.points.size()-2)
+	if seg_attr.size() != s.points.size()-1:
+		seg_attr.resize(s.points.size()-1)
 		for seg in seg_attr.size():
 			var s = seg_attr[seg]
 			if s == null or s == "":
@@ -23,7 +23,7 @@ func export_collision(out):
 	for p in s.points.size():
 		out+= "node,"+var_to_str(-s.points[p].x)+","+var_to_str(-s.points[p].y)+"\n"
 		if p >= 1 and p < s.points.size()-1:
-			out+="seg_attr,"+seg_attr[p-2]+"\n"
+			out+="seg_attr,"+seg_attr[p-1]+"\n"
 	out+="end"
 	return out
 func export_model(out:ArrayMesh)->Variant:
