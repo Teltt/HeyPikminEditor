@@ -19,6 +19,7 @@ func _process(delta: float) -> void:
 		var l:Label = label
 		l.text = var_to_str(id)
 		l.modulate = Color.AQUA
+	self_modulate =Color.SADDLE_BROWN
 
 func export_path(out)->Variant:
 	out+="start\n"

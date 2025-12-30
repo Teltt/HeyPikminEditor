@@ -53,7 +53,7 @@ func import_collision():
 		for st:String in arr:
 			if "node," in st:
 				var split = st.split(",")
-				line.add_point(Vector2(-str_to_var(split[1]),-str_to_var(split[2])))
+				line.add_point(Vector2(str_to_var(split[1]),-str_to_var(split[2])))
 			if "seg_attr" in st:
 				line.seg_attr.append(st.split(",")[1])
 		pass
@@ -75,7 +75,7 @@ func import_objects():
 			var split = cur.split(",")
 			cur_obj.obj_class = split[0]
 			cur_obj.name = cur_obj.obj_class
-			s.global_position = -Vector2(str_to_var(split[1]),str_to_var(split[2]))
+			s.global_position = -Vector2(-str_to_var(split[1]),str_to_var(split[2]))
 		else:
 			cur_obj.vars[cur.split(",")[1]]=string_to_var2( cur.split(",")[2])
 	if cur_obj != null:
@@ -106,7 +106,7 @@ func import_path():
 			line.id = str_to_var(csplit[1])
 		if "node" in cur:
 			var csplit = cur.split(",")
-			line.add_point(Vector2(-str_to_var(csplit[1]),-str_to_var(csplit[2])))
+			line.add_point(Vector2(str_to_var(csplit[1]),-str_to_var(csplit[2])))
 		if "end" in cur:
 			add_child(line,true)
 			line.owner = self

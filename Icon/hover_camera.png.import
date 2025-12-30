@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baayxcdciyucq"
-path="res://.godot/imported/onion.png-26c2c38be04ea4aff7870e332fc8f648.ctex"
+uid="uid://mn7ei5542jfq"
+path="res://.godot/imported/hover_camera.png-4f475853b8bddd31ad2903d81a46d6c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Icon/onion.png"
-dest_files=["res://.godot/imported/onion.png-26c2c38be04ea4aff7870e332fc8f648.ctex"]
+source_file="res://Icon/hover_camera.png"
+dest_files=["res://.godot/imported/hover_camera.png-4f475853b8bddd31ad2903d81a46d6c9.ctex"]
 
 [params]
 
