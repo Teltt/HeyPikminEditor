@@ -13,6 +13,7 @@ func _ready() -> void:
 		l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		l.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 		l.name= "Label"
+	add_to_group("paths")
 
 func _process(delta: float) -> void:
 	if label:

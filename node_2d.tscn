@@ -1,9 +1,2504 @@
-[gd_scene load_steps=2 format=3 uid="uid://hpj4m8ldxplb"]
+[gd_scene load_steps=6 format=3 uid="uid://hpj4m8ldxplb"]
 
 [ext_resource type="Script" uid="uid://c4a1imlia3dob" path="res://Editor.gd" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://dkmbgqovqx6h4" path="res://Exportable/CollisionLine.tscn" id="2_d21ai"]
+[ext_resource type="PackedScene" uid="uid://cuvcmf8vqmj4e" path="res://Exportable/LevelObject.tscn" id="2_q6r6c"]
+[ext_resource type="PackedScene" uid="uid://c7bow3ksnc12d" path="res://Exportable/Path.tscn" id="4_4d7sh"]
+
+[sub_resource type="SystemFont" id="SystemFont_tainy"]
+subpixel_positioning = 0
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_wtcfe")
 collision = "uid://bwh827yoh8xgb"
 path = "uid://c6rjr2owgkryj"
 objects = "uid://cmr05w6ytcxhj"
+
+[node name="CollisionLine" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(-260, -280, -260, -210, -290, -180, -330, -160, -370, -160, -390, -180, -440, -180, -440, -200, -390, -200, -390, -240, -370, -280, -330, -320, -330, -340, -350, -380, -350, -440)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine2" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(-10, -400, -10, -330, 20, -300, 20, -240, 40, -200, 40, -150, 0, -110, -30, -110, -50, -90, -80, -90, -80, -160, -110, -190, -170, -190, -190, -210, -190, -280, -200, -300, -210, -310, -240, -310, -250, -290, -260, -280)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine3" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(-660, -390, -660, -340, -640, -320, -640, -300, -630, -280, -630, -240, -650, -220, -650, -190, -630, -150, -630, -120, -600, -120, -580, -130, -520, -130)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine4" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(-520, -130, -500, -120, -470, -120, -450, -110, -390, -110, -370, -120, -330, -120, -310, -110, -230, -110, -140, -110, -140, -80, -160, -60, -160, -10)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine5" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(-140, -110, -80, -110)
+seg_attr = Array[String](["wood"])
+
+[node name="CollisionLine6" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(-160, -10, -70, -10, -50, -20, 20, -20, 20, -30, 90, -30, 110, -20, 360, -20, 360, -80, 400, -80, 440, -100, 460, -100, 460, 20)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine7" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(270, -80, 360, -80)
+seg_attr = Array[String](["wood"])
+
+[node name="CollisionLine8" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(600, 20, 600, -50, 850, -50, 850, -40, 980, -40, 980, -100, 960, -120, 910, -120, 890, -100)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine9" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1440, -400, 1510, -330, 1510, -300, 1490, -280, 1490, -210, 1510, -190, 1510, -160, 1470, -140, 1470, -100, 1440, -70, 1440, -40, 1420, 0, 1390, 30, 1360, 30, 1340, 10, 1310, 10, 1290, 30, 1290, 60, 1280, 70, 1240, 70, 1230, 60, 1230, -70, 1210, -90, 1180, -90, 1160, -70, 1160, 100)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine10" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(890, -100, 890, -80, 850, -80, 850, -130, 820, -160, 820, -210, 850, -240, 870, -280, 870, -400)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine11" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(160, -400, 160, -325, 180, -280, 180, -240, 200, -220, 240, -220, 260, -240, 280, -250, 320, -250, 340, -270, 340, -320, 360, -360, 360, -400)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine12" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(730, -420, 730, -340, 710, -300, 670, -260, 670, -220, 700, -190, 700, -130, 670, -130, 630, -110, 600, -80, 560, -80, 560, -110, 580, -130, 580, -160, 560, -180, 560, -220, 540, -240, 510, -240, 470, -200, 470, -170, 490, -150, 490, -130, 470, -130, 450, -140, 420, -140)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine13" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(420, -140, 400, -130, 380, -130, 380, -170, 360, -190, 280, -190, 260, -170, 260, -150, 240, -130, 200, -130, 180, -170, 160, -190, 120, -210, 120, -280, 100, -320, 100, -400)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine14" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1160, 100, 1420, 100, 1440, 110, 1500, 110, 1500, 40, 1580, 40, 1580, 20, 1560, 0, 1560, -20, 1670, -20, 1670, -80)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine15" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1440, 40, 1500, 40)
+seg_attr = Array[String](["wood"])
+
+[node name="CollisionLine16" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1350, 1970, 1370, 1980, 1480, 1980, 1480, 1970, 1530, 1970, 1530, 2040, 1440, 2040, 1420, 2050, 1360, 2050, 1340, 2070, 1340, 2100, 1430, 2100, 1450, 2090, 1530, 2090, 1530, 2130)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine17" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1650, 1960, 1740, 1960, 1740, 2010, 1720, 2030, 1650, 2030, 1650, 1960)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine18" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1630, 1930, 1630, 1900, 1620, 1880, 1620, 1860, 1630, 1840, 1650, 1840, 1650, 1930, 1630, 1930)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine19" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1740, 1960, 1820, 1960)
+seg_attr = Array[String](["wood"])
+
+[node name="CollisionLine20" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1890, 1880, 1840, 1880, 1800, 1860, 1770, 1830, 1750, 1790, 1750, 1740, 1770, 1700, 1800, 1670, 1830, 1670)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine21" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1650, 2130, 1650, 2050, 1820, 2050, 1820, 1960)
+seg_attr = Array[String](["ground", "ground", "ground"])
+
+[node name="CollisionLine22" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1820, 1960, 1820, 1940, 1800, 1920, 1730, 1920, 1710, 1930, 1690, 1930, 1690, 1800, 1670, 1780, 1650, 1780, 1630, 1770, 1600, 1770, 1590, 1790, 1580, 1790)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine23" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1580, 1790, 1560, 1810, 1560, 1880, 1540, 1900, 1490, 1900, 1470, 1920, 1440, 1920, 1440, 1900, 1420, 1880, 1400, 1880, 1400, 1850, 1380, 1830, 1380, 1790, 1450, 1790, 1450, 1680)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine24" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1340, 1900, 1380, 1900)
+seg_attr = Array[String](["wood"])
+
+[node name="CollisionLine25" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1515, -20, 1560, -20)
+seg_attr = Array[String](["wood"])
+
+[node name="CollisionLine26" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1600, -80, 1670, -80)
+seg_attr = Array[String](["wood"])
+
+[node name="CollisionLine27" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(910, 1880, 890, 1900, 890, 1960, 970, 1960, 990, 1950, 1040, 1950, 1040, 1960, 1060, 1960, 1170, 1960, 1170, 1970, 1350, 1970)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine28" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(2230, -140, 2230, -100, 2200, -100, 2200, -130, 2180, -150, 2050, -150, 2020, -120, 2020, -50, 2250, -50, 2280, -80, 2470, -80, 2470, -120, 2450, -140, 2450, -220, 2470, -240, 2470, -365)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine29" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(2770, -450, 2770, -320, 2790, -280, 2790, -240, 2750, -200, 2750, -70, 2730, -70, 2710, -90, 2670, -110, 2610, -110, 2590, -90, 2590, -60, 2670, -60, 2710, -40, 2750, -40, 2750, 110)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine30" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(2535, -160, 2590, -160, 2610, -140, 2640, -140, 2660, -160, 2690, -160, 2710, -180, 2710, -220, 2680, -250, 2680, -280, 2640, -320, 2610, -320, 2580, -290, 2530, -290)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine31" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(2890, 110, 2890, -140, 3110, -140, 3110, -190, 3100, -210, 3080, -220, 3070, -240, 3070, -260, 3080, -280, 3080, -340, 3100, -360, 3170, -360)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine32" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1270, 1710, 1240, 1710, 1220, 1690, 1180, 1690, 1140, 1710, 1110, 1710, 1090, 1700, 1070, 1700, 1050, 1720, 1050, 1760, 1040, 1780, 1040, 1840)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine33" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1040, 1840, 1020, 1860, 980, 1880, 910, 1880)
+seg_attr = Array[String](["ground", "ground", "ground"])
+
+[node name="CollisionLine34" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1130, 1810, 1170, 1810)
+seg_attr = Array[String](["wood"])
+
+[node name="CollisionLine35" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(810, 1890, 840, 1890, 880, 1850, 920, 1830, 950, 1830, 980, 1800, 980, 1760, 950, 1730, 910, 1710, 880, 1710, 840, 1690, 790, 1690)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine36" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1070, 1790, 1090, 1770, 1110, 1760, 1130, 1760, 1130, 1820, 1110, 1840, 1110, 1880, 1090, 1880, 1070, 1860, 1070, 1790)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine37" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1670, -80, 1740, -80, 1780, -60, 1880, -60)
+seg_attr = Array[String](["ground", "ground", "ground"])
+
+[node name="CollisionLine38" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1350, 1680, 1350, 1720, 1320, 1750, 1320, 1800, 1340, 1820, 1340, 1910, 1290, 1910, 1290, 1870, 1270, 1850, 1250, 1850, 1250, 1820, 1300, 1820, 1300, 1740, 1290, 1720, 1270, 1710)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine39" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1880, -60, 1880, -110, 1840, -150, 1840, -170, 1930, -170, 1930, -230, 2020, -230, 2020, -240, 2220, -240)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine40" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(2220, -240, 2220, -330, 2200, -350, 2160, -370, 2160, -410, 2190, -440, 2190, -480, 2220, -480, 2250, -450, 2250, -380, 2280, -350, 2280, -230, 2250, -200, 2250, -160, 2230, -140)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine41" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1720, -430, 1780, -430, 1780, -400)
+seg_attr = Array[String](["ground", "ground"])
+
+[node name="CollisionLine42" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1780, -170, 1840, -170)
+seg_attr = Array[String](["wood"])
+
+[node name="CollisionLine43" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1740, -310, 1805, -310)
+seg_attr = Array[String](["wood"])
+
+[node name="CollisionLine44" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1860, -350, 1930, -350)
+seg_attr = Array[String](["wood"])
+
+[node name="CollisionLine45" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(2080, -295, 2165, -295)
+seg_attr = Array[String](["wood"])
+
+[node name="CollisionLine46" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(2060, -500, 2060, -430, 2080, -410, 2080, -290, 2050, -260, 2020, -260, 2020, -290, 2000, -310, 1930, -310, 1930, -360, 1910, -400, 1910, -440, 1970, -500, 2060, -500)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine47" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1780, -400, 1740, -360, 1740, -270, 1720, -250, 1720, -170, 1780, -170, 1780, -150, 1760, -130, 1740, -120, 1700, -120, 1660, -140, 1660, -190, 1640, -210, 1640, -280, 1670, -310, 1670, -380, 1720, -430)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine48" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(2370, 1435, 2370, 1580, 2330, 1620, 2330, 1670, 2310, 1690, 2280, 1690, 2280, 1620, 2250, 1590, 2210, 1570, 2130, 1570, 2090, 1590, 2060, 1620, 2060, 1670, 2040, 1690, 1960, 1690, 1930, 1720, 1930, 1770, 2070, 1770, 2090, 1780, 2130, 1780, 2150, 1790, 2200, 1790, 2220, 1780, 2260, 1780, 2260, 1770, 2350, 1770, 2350, 1790, 2320, 1790, 2320, 1850, 2300, 1860, 2240, 1860, 2220, 1870, 2200, 1870, 2180, 1880, 2180, 1900, 2170, 1910, 2130, 1910, 2120, 1900, 2120, 1880, 2100, 1860, 2040, 1860, 2020, 1880, 2020, 1950, 2120, 1950, 2130, 1940, 2250, 1940, 2250, 1930, 2320, 1930, 2320, 1965, 2320, 2000)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine49" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(2460, 2000, 2460, 1930, 2560, 1930, 2560, 1940, 2680, 1940, 2680, 1900, 2660, 1880, 2610, 1880, 2590, 1860, 2550, 1840, 2500, 1840, 2460, 1820, 2460, 1760, 2480, 1740, 2480, 1700, 2460, 1680, 2460, 1610, 2480, 1570, 2480, 1435)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine50" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(2110, 1640, 2240, 1640, 2240, 1660, 2220, 1680, 2200, 1690, 2150, 1690, 2130, 1680, 2110, 1660, 2110, 1640)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="CollisionLine51" parent="." instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(1830, 1360, 1830, 1440, 1810, 1480, 1810, 1520, 1830, 1560, 1860, 1590, 1900, 1610, 1920, 1630, 1960, 1650, 2000, 1650, 2020, 1630, 2020, 1590, 2000, 1570, 2000, 1530, 1980, 1490, 1980, 1410)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="Path" parent="." instance=ExtResource("4_4d7sh")]
+self_modulate = Color(0.54509807, 0.27058825, 0.07450981, 1)
+points = PackedVector2Array(460, -100, 460, -70)
+id = 1
+
+[node name="Path2" parent="." instance=ExtResource("4_4d7sh")]
+self_modulate = Color(0.54509807, 0.27058825, 0.07450981, 1)
+points = PackedVector2Array(1530, 1970, 1530, 2090)
+id = 2
+
+[node name="Path3" parent="." instance=ExtResource("4_4d7sh")]
+self_modulate = Color(0.54509807, 0.27058825, 0.07450981, 1)
+points = PackedVector2Array(2300, 1790, 2300, 1930)
+id = 3
+
+[node name="Path4" parent="." instance=ExtResource("4_4d7sh")]
+self_modulate = Color(0.54509807, 0.27058825, 0.07450981, 1)
+points = PackedVector2Array(2730, 20, 2730, -140)
+id = 4
+
+[node name="bush_manager" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-305, -55)
+obj_class = "bush_manager"
+vars = Dictionary[String, Variant]({
+"リソース": "AKI_HUYU"
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_y_chase" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-305, -90)
+obj_class = "camera_y_chase"
+vars = Dictionary[String, Variant]({
+"ofs": 35.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="bush01a" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-415, -205)
+obj_class = "bush01a"
+vars = Dictionary[String, Variant]({
+"force": false,
+"resource": "default",
+"type": "yellow",
+"ピクミン生成数": 0,
+"保障": 0,
+"範囲offsetX": 0,
+"範囲offsetY": 0,
+"範囲サイズX": 10,
+"範囲サイズY": 10,
+"範囲指定": false,
+"角度": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="bush01a2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(300, -25)
+obj_class = "bush01a"
+vars = Dictionary[String, Variant]({
+"force": false,
+"resource": "default",
+"type": "yellow",
+"ピクミン生成数": 0,
+"保障": 0,
+"範囲offsetX": 0,
+"範囲offsetY": 0,
+"範囲サイズX": 10,
+"範囲サイズY": 10,
+"範囲指定": false,
+"角度": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="bush01a3" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1015, 1945)
+obj_class = "bush01a"
+vars = Dictionary[String, Variant]({
+"force": false,
+"resource": "default",
+"type": "yellow",
+"ピクミン生成数": 0,
+"保障": 0,
+"範囲offsetX": 0,
+"範囲offsetY": 0,
+"範囲サイズX": 10,
+"範囲サイズY": 10,
+"範囲指定": false,
+"角度": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="bush01a4" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1505, 1965)
+obj_class = "bush01a"
+vars = Dictionary[String, Variant]({
+"force": false,
+"resource": "default",
+"type": "yellow",
+"ピクミン生成数": 4,
+"保障": 0,
+"範囲offsetX": 0,
+"範囲offsetY": 0,
+"範囲サイズX": 10,
+"範囲サイズY": 10,
+"範囲指定": false,
+"角度": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="bush01a5" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1325, 95)
+obj_class = "bush01a"
+vars = Dictionary[String, Variant]({
+"force": false,
+"resource": "default",
+"type": "yellow",
+"ピクミン生成数": 0,
+"保障": 0,
+"範囲offsetX": 0,
+"範囲offsetY": 0,
+"範囲サイズX": 10,
+"範囲サイズY": 10,
+"範囲指定": false,
+"角度": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="bush01a6" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1850, -65)
+obj_class = "bush01a"
+vars = Dictionary[String, Variant]({
+"force": false,
+"resource": "default",
+"type": "yellow",
+"ピクミン生成数": 4,
+"保障": 0,
+"範囲offsetX": 0,
+"範囲offsetY": 0,
+"範囲サイズX": 10,
+"範囲サイズY": 10,
+"範囲指定": false,
+"角度": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="bush01a7" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2045, 1765)
+obj_class = "bush01a"
+vars = Dictionary[String, Variant]({
+"force": false,
+"resource": "default",
+"type": "yellow",
+"ピクミン生成数": 0,
+"保障": 0,
+"範囲offsetX": 0,
+"範囲offsetY": 0,
+"範囲サイズX": 10,
+"範囲サイズY": 10,
+"範囲指定": false,
+"角度": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="bush01a8" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2290, 1765)
+obj_class = "bush01a"
+vars = Dictionary[String, Variant]({
+"force": false,
+"resource": "default",
+"type": "yellow",
+"ピクミン生成数": 0,
+"保障": 0,
+"範囲offsetX": 0,
+"範囲offsetY": 0,
+"範囲サイズX": 10,
+"範囲サイズY": 10,
+"範囲指定": false,
+"角度": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-225, -160)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-225, -180)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a3" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-225, -200)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a4" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-225, -235)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a5" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-225, -260)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 1
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a6" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1395, 1910)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a7" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1425, 1910)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a8" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1410, 1900)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 1
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a9" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1195, -65)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 1
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a10" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1180, -40)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 1
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a11" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1210, -40)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 1
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a12" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1175, 10)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a13" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1175, 30)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a14" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1175, 50)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a15" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1195, 50)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a16" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1215, 50)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a17" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1195, 30)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a18" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1215, 30)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a19" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1195, 10)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a20" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1215, 10)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a21" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2175, 1710)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 1
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a22" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2155, 1715)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a23" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2140, 1710)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a24" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2130, 1700)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a25" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2195, 1715)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a26" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2210, 1710)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a27" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2220, 1700)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a28" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2765, -35)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 1
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a29" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2770, -15)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a30" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2775, 0)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="kinomi01a31" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2780, 15)
+obj_class = "kinomi01a"
+vars = Dictionary[String, Variant]({
+"グループID": -1,
+"フラグ起動時間": 0.0,
+"見た目": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="crushblock" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-350, -140)
+obj_class = "crushblock"
+vars = Dictionary[String, Variant]({
+"sleep_check": false,
+"suicide": -1,
+"タイプ": 4,
+"フラグ変更ID": -1,
+"フラグ変更タイプ": "on",
+"揺れ": false,
+"木の実生成数": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="crushblock2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1210, 1830)
+obj_class = "crushblock"
+vars = Dictionary[String, Variant]({
+"sleep_check": false,
+"suicide": -1,
+"タイプ": 8,
+"フラグ変更ID": -1,
+"フラグ変更タイプ": "on",
+"揺れ": false,
+"木の実生成数": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="crushblock3" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1690, 2040)
+obj_class = "crushblock"
+vars = Dictionary[String, Variant]({
+"sleep_check": false,
+"suicide": -1,
+"タイプ": 8,
+"フラグ変更ID": -1,
+"フラグ変更タイプ": "on",
+"揺れ": false,
+"木の実生成数": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="crushblock4" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2120, -380)
+obj_class = "crushblock"
+vars = Dictionary[String, Variant]({
+"sleep_check": false,
+"suicide": -1,
+"タイプ": 8,
+"フラグ変更ID": -1,
+"フラグ変更タイプ": "on",
+"揺れ": false,
+"木の実生成数": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="crushblock5" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2120, -400)
+obj_class = "crushblock"
+vars = Dictionary[String, Variant]({
+"sleep_check": false,
+"suicide": -1,
+"タイプ": 8,
+"フラグ変更ID": -1,
+"フラグ変更タイプ": "on",
+"揺れ": false,
+"木の実生成数": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="enemy" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1265, 1820)
+obj_class = "enemy"
+vars = Dictionary[String, Variant]({
+"たからもの表示順": 0,
+"オリマーの方を向く": false,
+"初期右向き": false,
+"初期状態": "wait",
+"感知オフセットX": 0.0,
+"感知オフセットY": -100.0,
+"感知範囲幅": 450.0,
+"感知範囲高": 320.0,
+"死亡時に落とすもの": "nuts",
+"死亡時のたからもの": 1,
+"運搬停止:トンネル": true,
+"運搬停止:トンネルID": -1,
+"運搬停止ブロック:オリマー": 100,
+"運搬停止ブロック:出現位置": 100
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="enemy2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2510, 1930)
+obj_class = "enemy"
+vars = Dictionary[String, Variant]({
+"たからもの表示順": 0,
+"オリマーの方を向く": false,
+"初期右向き": false,
+"初期状態": "wait",
+"感知オフセットX": 0.0,
+"感知オフセットY": -100.0,
+"感知範囲幅": 350.0,
+"感知範囲高": 320.0,
+"死亡時に落とすもの": "nuts",
+"死亡時のたからもの": 1,
+"運搬停止:トンネル": true,
+"運搬停止:トンネルID": -1,
+"運搬停止ブロック:オリマー": 100,
+"運搬停止ブロック:出現位置": 100
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="enemy3" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1100, 1960)
+obj_class = "enemy"
+vars = Dictionary[String, Variant]({
+"たからもの表示順": 0,
+"オリマーの方を向く": false,
+"初期右向き": true,
+"初期状態": "sleep",
+"感知オフセットX": 0.0,
+"感知オフセットY": -30.0,
+"感知範囲幅": 430.0,
+"感知範囲高": 320.0,
+"死亡時に落とすもの": "nuts",
+"死亡時のたからもの": 1,
+"運搬停止:トンネル": true,
+"運搬停止:トンネルID": -1,
+"運搬停止ブロック:オリマー": 100,
+"運搬停止ブロック:出現位置": 100
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="enemy_bomber" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(320, -150)
+obj_class = "enemy_bomber"
+vars = Dictionary[String, Variant]({
+"初期右向き": true,
+"左右移動幅": 65.0,
+"左右移動速度": 20.0,
+"感知範囲オフセット": -85.0,
+"感知範囲幅": 340.0,
+"感知範囲高": 260.0,
+"投下箇所": 3,
+"接地死亡": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="enemy_bomber2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(760, -175)
+obj_class = "enemy_bomber"
+vars = Dictionary[String, Variant]({
+"初期右向き": true,
+"左右移動幅": 75.0,
+"左右移動速度": 20.0,
+"感知範囲オフセット": -85.0,
+"感知範囲幅": 340.0,
+"感知範囲高": 260.0,
+"投下箇所": 3,
+"接地死亡": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="enemy_bomber3" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1505, -40)
+obj_class = "enemy_bomber"
+vars = Dictionary[String, Variant]({
+"初期右向き": true,
+"左右移動幅": 84.5,
+"左右移動速度": 20.0,
+"感知範囲オフセット": -85.0,
+"感知範囲幅": 340.0,
+"感知範囲高": 490.0,
+"投下箇所": 3,
+"接地死亡": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="enemy_bomber4" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1545, -85)
+obj_class = "enemy_bomber"
+vars = Dictionary[String, Variant]({
+"初期右向き": false,
+"左右移動幅": 84.5,
+"左右移動速度": 20.0,
+"感知範囲オフセット": -85.0,
+"感知範囲幅": 420.0,
+"感知範囲高": 360.0,
+"投下箇所": 3,
+"接地死亡": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="enemy_bomber5" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1580, -225)
+obj_class = "enemy_bomber"
+vars = Dictionary[String, Variant]({
+"初期右向き": true,
+"左右移動幅": 84.5,
+"左右移動速度": 20.0,
+"感知範囲オフセット": -85.0,
+"感知範囲幅": 500.0,
+"感知範囲高": 525.0,
+"投下箇所": 3,
+"接地死亡": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="enemy_bomber6" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1780, -240)
+obj_class = "enemy_bomber"
+vars = Dictionary[String, Variant]({
+"初期右向き": false,
+"左右移動幅": 60.0,
+"左右移動速度": 20.0,
+"感知範囲オフセット": -85.0,
+"感知範囲幅": 340.0,
+"感知範囲高": 260.0,
+"投下箇所": 2,
+"接地死亡": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="enemy_bomber7" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1885, -300)
+obj_class = "enemy_bomber"
+vars = Dictionary[String, Variant]({
+"初期右向き": true,
+"左右移動幅": 60.0,
+"左右移動速度": 20.0,
+"感知範囲オフセット": -85.0,
+"感知範囲幅": 340.0,
+"感知範囲高": 260.0,
+"投下箇所": 2,
+"接地死亡": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="Target" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2120, -410)
+obj_class = "Target"
+vars = Dictionary[String, Variant]({
+"event": false,
+"prio": 0,
+"タイプ": 39,
+"基本速度": 2.5,
+"壁登り": 10.0,
+"最大速度": 10.0,
+"止:オ:距離x10": 30,
+"止:扉ID": -1,
+"止:条件:オリマー距離": true,
+"止:条件:トンネルに入る": true,
+"止:条件:生成位置距離": false,
+"止:生:距離x10": 100
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="Target2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1150, 1810)
+obj_class = "Target"
+vars = Dictionary[String, Variant]({
+"event": false,
+"prio": 3,
+"タイプ": 30,
+"基本速度": 2.5,
+"壁登り": 10.0,
+"最大速度": 10.0,
+"止:オ:距離x10": 30,
+"止:扉ID": -1,
+"止:条件:オリマー距離": true,
+"止:条件:トンネルに入る": true,
+"止:条件:生成位置距離": false,
+"止:生:距離x10": 100
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="Target3" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1790, 2050)
+obj_class = "Target"
+vars = Dictionary[String, Variant]({
+"event": false,
+"prio": 2,
+"タイプ": 13,
+"基本速度": 2.5,
+"壁登り": 10.0,
+"最大速度": 10.0,
+"止:オ:距離x10": 30,
+"止:扉ID": -1,
+"止:条件:オリマー距離": true,
+"止:条件:トンネルに入る": true,
+"止:条件:生成位置距離": false,
+"止:生:距離x10": 100
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="onion" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(3015, -140)
+obj_class = "onion"
+vars = Dictionary[String, Variant]({
+"id": 0,
+"カメラY補正グリッド": -2.5,
+"右ワープ座標オフセットX": 50.0,
+"右ワープ座標オフセットY": 0.0,
+"左ワープ座標オフセットX": -100.0,
+"左ワープ座標オフセットY": 10.0,
+"強制ゴール方向": "non",
+"感知オフセットX": 0.0,
+"感知オフセットY": 0.0,
+"感知範囲幅": 40.0,
+"感知範囲高": 50.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="onion2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2370, -80)
+obj_class = "onion"
+vars = Dictionary[String, Variant]({
+"id": 1,
+"カメラY補正グリッド": -2.5,
+"右ワープ座標オフセットX": 50.0,
+"右ワープ座標オフセットY": 0.0,
+"左ワープ座標オフセットX": -110.0,
+"左ワープ座標オフセットY": 20.0,
+"強制ゴール方向": "non",
+"感知オフセットX": 0.0,
+"感知オフセットY": 0.0,
+"感知範囲幅": 24.0,
+"感知範囲高": 50.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="model" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-120, -110)
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "halfblock_under_8a",
+"rotY": 0,
+"rotZ": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="model2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(295, -80)
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "halfblock_under_5a",
+"rotY": 0,
+"rotZ": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="model3" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(345, -80)
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "halfblock_under_5b",
+"rotY": 0,
+"rotZ": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="model4" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1355, 1900)
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "halfblock_under_5b",
+"rotY": 0,
+"rotZ": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="model5" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1755, 1960)
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "halfblock_under_5a",
+"rotY": 0,
+"rotZ": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="model6" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1805, 1960)
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "halfblock_under_5b",
+"rotY": 0,
+"rotZ": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="model7" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1640, -80)
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "halfblock_under_8a",
+"rotY": 0,
+"rotZ": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="model8" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2140, -295)
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "halfblock_under_5b",
+"rotY": 0,
+"rotZ": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="model9" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2090, -295)
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "halfblock_under_5a",
+"rotY": 0,
+"rotZ": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="model10" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1475, 40)
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "halfblock_under_7a",
+"rotY": 0,
+"rotZ": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="model11" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1810, -170)
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "halfblock_under_7a",
+"rotY": 0,
+"rotZ": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="model12" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1765, -310)
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "halfblock_under_8a",
+"rotY": 0,
+"rotZ": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="model13" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1900, -350)
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "halfblock_under_8a",
+"rotY": 0,
+"rotZ": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="model14" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1145, 1810)
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "halfblock_under_5b",
+"rotY": 0,
+"rotZ": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="model15" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1550, -20)
+obj_class = "model"
+vars = Dictionary[String, Variant]({
+"model": "halfblock_under_7a",
+"rotY": 0,
+"rotZ": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="mole" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2170, -50)
+obj_class = "mole"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"sleep_check": true,
+"コリジョン幅": 60.0,
+"数": 16
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="mole2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(830, -50)
+obj_class = "mole"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"sleep_check": false,
+"コリジョン幅": 40.0,
+"数": 4
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="mole3" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1670, 1960)
+obj_class = "mole"
+vars = Dictionary[String, Variant]({
+"flag": 61,
+"sleep_check": false,
+"コリジョン幅": 40.0,
+"数": 4
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="tunnel" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(935, -45)
+obj_class = "tunnel"
+vars = Dictionary[String, Variant]({
+"dir": "left",
+"event": 0,
+"event_type": "NONE",
+"exitWidthRateL": 1.0,
+"exitWidthRateR": 1.0,
+"flag": 51,
+"flag_type": "off",
+"id": 0,
+"minimum": 0,
+"model_type": "NONE",
+"modelz": -70.0,
+"piku_type": false,
+"time": 0.0,
+"↑範囲：位置Ｘ": 0.0,
+"↑範囲：位置Ｙ": 0.0,
+"↑範囲：幅": 80.0,
+"↑範囲：高さ": 80.0,
+"隊列外ピクミンの吸い込み範囲指定": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="tunnel2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(935, 1955)
+obj_class = "tunnel"
+vars = Dictionary[String, Variant]({
+"dir": "right",
+"event": 0,
+"event_type": "NONE",
+"exitWidthRateL": 1.0,
+"exitWidthRateR": 1.0,
+"flag": 51,
+"flag_type": "off",
+"id": 0,
+"minimum": 0,
+"model_type": "NONE",
+"modelz": -70.0,
+"piku_type": false,
+"time": 0.0,
+"↑範囲：位置Ｘ": 0.0,
+"↑範囲：位置Ｙ": 0.0,
+"↑範囲：幅": 80.0,
+"↑範囲：高さ": 80.0,
+"隊列外ピクミンの吸い込み範囲指定": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="tunnel3" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1385, 2095)
+obj_class = "tunnel"
+vars = Dictionary[String, Variant]({
+"dir": "right",
+"event": 0,
+"event_type": "NONE",
+"exitWidthRateL": 1.0,
+"exitWidthRateR": 1.0,
+"flag": 51,
+"flag_type": "off",
+"id": 1,
+"minimum": 0,
+"model_type": "NONE",
+"modelz": -70.0,
+"piku_type": false,
+"time": 0.0,
+"↑範囲：位置Ｘ": 0.0,
+"↑範囲：位置Ｙ": 0.0,
+"↑範囲：幅": 80.0,
+"↑範囲：高さ": 80.0,
+"隊列外ピクミンの吸い込み範囲指定": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="tunnel4" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1385, 95)
+obj_class = "tunnel"
+vars = Dictionary[String, Variant]({
+"dir": "right",
+"event": 0,
+"event_type": "NONE",
+"exitWidthRateL": 1.0,
+"exitWidthRateR": 1.0,
+"flag": 51,
+"flag_type": "off",
+"id": 1,
+"minimum": 0,
+"model_type": "NONE",
+"modelz": -70.0,
+"piku_type": false,
+"time": 0.0,
+"↑範囲：位置Ｘ": 0.0,
+"↑範囲：位置Ｙ": 0.0,
+"↑範囲：幅": 80.0,
+"↑範囲：高さ": 80.0,
+"隊列外ピクミンの吸い込み範囲指定": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="tunnel5" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1980, -235)
+obj_class = "tunnel"
+vars = Dictionary[String, Variant]({
+"dir": "left",
+"event": 0,
+"event_type": "NONE",
+"exitWidthRateL": 1.0,
+"exitWidthRateR": 1.0,
+"flag": 51,
+"flag_type": "off",
+"id": 2,
+"minimum": 0,
+"model_type": "NONE",
+"modelz": -70.0,
+"piku_type": false,
+"time": 0.0,
+"↑範囲：位置Ｘ": 0.0,
+"↑範囲：位置Ｙ": 30.0,
+"↑範囲：幅": 112.0,
+"↑範囲：高さ": 100.0,
+"隊列外ピクミンの吸い込み範囲指定": true
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="tunnel6" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1980, 1765)
+obj_class = "tunnel"
+vars = Dictionary[String, Variant]({
+"dir": "right",
+"event": 0,
+"event_type": "NONE",
+"exitWidthRateL": 1.0,
+"exitWidthRateR": 1.0,
+"flag": 51,
+"flag_type": "off",
+"id": 2,
+"minimum": 0,
+"model_type": "NONE",
+"modelz": -70.0,
+"piku_type": false,
+"time": 0.0,
+"↑範囲：位置Ｘ": 0.0,
+"↑範囲：位置Ｙ": 0.0,
+"↑範囲：幅": 80.0,
+"↑範囲：高さ": 80.0,
+"隊列外ピクミンの吸い込み範囲指定": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="tunnel7" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2635, 1935)
+obj_class = "tunnel"
+vars = Dictionary[String, Variant]({
+"dir": "left",
+"event": 0,
+"event_type": "NONE",
+"exitWidthRateL": 1.0,
+"exitWidthRateR": 1.0,
+"flag": 51,
+"flag_type": "off",
+"id": 3,
+"minimum": 0,
+"model_type": "NONE",
+"modelz": -70.0,
+"piku_type": false,
+"time": 0.0,
+"↑範囲：位置Ｘ": 0.0,
+"↑範囲：位置Ｙ": 0.0,
+"↑範囲：幅": 80.0,
+"↑範囲：高さ": 80.0,
+"隊列外ピクミンの吸い込み範囲指定": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="tunnel8" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2635, -65)
+obj_class = "tunnel"
+vars = Dictionary[String, Variant]({
+"dir": "right",
+"event": 0,
+"event_type": "NONE",
+"exitWidthRateL": 1.0,
+"exitWidthRateR": 1.0,
+"flag": 51,
+"flag_type": "off",
+"id": 3,
+"minimum": 4,
+"model_type": "NONE",
+"modelz": -70.0,
+"piku_type": false,
+"time": 0.0,
+"↑範囲：位置Ｘ": 0.0,
+"↑範囲：位置Ｙ": 0.0,
+"↑範囲：幅": 80.0,
+"↑範囲：高さ": 80.0,
+"隊列外ピクミンの吸い込み範囲指定": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="tunnel9" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2070, 1945)
+obj_class = "tunnel"
+vars = Dictionary[String, Variant]({
+"dir": "right",
+"event": 0,
+"event_type": "NONE",
+"exitWidthRateL": 1.0,
+"exitWidthRateR": 1.0,
+"flag": 51,
+"flag_type": "off",
+"id": 4,
+"minimum": 4,
+"model_type": "NONE",
+"modelz": -70.0,
+"piku_type": false,
+"time": 0.0,
+"↑範囲：位置Ｘ": 0.0,
+"↑範囲：位置Ｙ": 0.0,
+"↑範囲：幅": 80.0,
+"↑範囲：高さ": 80.0,
+"隊列外ピクミンの吸い込み範囲指定": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="tunnel10" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2075, -55)
+obj_class = "tunnel"
+vars = Dictionary[String, Variant]({
+"dir": "right",
+"event": 0,
+"event_type": "NONE",
+"exitWidthRateL": 1.0,
+"exitWidthRateR": 1.0,
+"flag": 51,
+"flag_type": "off",
+"id": 4,
+"minimum": 4,
+"model_type": "NONE",
+"modelz": -70.0,
+"piku_type": false,
+"time": 0.0,
+"↑範囲：位置Ｘ": 0.0,
+"↑範囲：位置Ｙ": 0.0,
+"↑範囲：幅": 80.0,
+"↑範囲：高さ": 80.0,
+"隊列外ピクミンの吸い込み範囲指定": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-715, -280)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"height": 360.0,
+"hv": "horizontal",
+"width": 60.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-255, -15)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"height": 60.0,
+"hv": "horizontal",
+"width": 60.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted3" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1050, -160)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"height": 360.0,
+"hv": "horizontal",
+"width": 60.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted4" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1285, 2090)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"height": 60.0,
+"hv": "horizontal",
+"width": 60.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted5" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1090, -10)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"height": 360.0,
+"hv": "horizontal",
+"width": 60.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted6" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2525, -125)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"height": 360.0,
+"hv": "horizontal",
+"width": 50.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted7" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2815, 80)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"height": 60.0,
+"hv": "vertical",
+"width": 250.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted8" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2295, -455)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"height": 110.0,
+"hv": "horizontal",
+"width": 50.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted9" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2560, 1570)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"height": 110.0,
+"hv": "horizontal",
+"width": 50.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted10" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1855, 1520)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"height": 260.0,
+"hv": "horizontal",
+"width": 60.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted11" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1890, 2025)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"height": 210.0,
+"hv": "horizontal",
+"width": 60.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted12" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1950, 1985)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"height": 210.0,
+"hv": "horizontal",
+"width": 60.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted13" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2760, 1850)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"height": 360.0,
+"hv": "horizontal",
+"width": 60.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted14" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(810, 1840)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"height": 360.0,
+"hv": "horizontal",
+"width": 60.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted15" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1745, 1915)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": 91,
+"height": 360.0,
+"hv": "horizontal",
+"width": 60.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted16" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(3165, -190)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"height": 710.0,
+"hv": "horizontal",
+"width": 70.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted17" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2925, -20)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": 65,
+"height": 110.0,
+"hv": "vertical",
+"width": 365.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted18" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1470, 1870)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": 90,
+"height": 360.0,
+"hv": "horizontal",
+"width": 60.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="camera_restricted19" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2100, -455)
+obj_class = "camera_restricted"
+vars = Dictionary[String, Variant]({
+"flag": 92,
+"height": 110.0,
+"hv": "horizontal",
+"width": 60.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="orima" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-550, -130)
+obj_class = "orima"
+font = SubResource("SystemFont_tainy")
+
+[node name="kusudama_stem_expandable" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(485, -245)
+obj_class = "kusudama_stem_expandable"
+vars = Dictionary[String, Variant]({
+"length": 8
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="hatena_rock_nuts" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(525, -230)
+obj_class = "hatena_rock_nuts"
+vars = Dictionary[String, Variant]({
+"角度": 0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="onionStart" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-550, -130)
+obj_class = "onionStart"
+vars = Dictionary[String, Variant]({
+"オリマー左向き": false,
+"操作フラグID": -1
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="floating_island" parent="." instance=ExtResource("2_q6r6c")]
+modulate = Color(0.9607843, 0.87058824, 0.7019608, 1)
+position = Vector2(460, -100)
+obj_class = "floating_island"
+vars = Dictionary[String, Variant]({
+"awake": true,
+"escape": false,
+"flag": 60,
+"float": false,
+"id": "map_0003move0000",
+"path": 1,
+"shake": false,
+"shakeCycle": 1.0,
+"shakeX": 1.0,
+"shakeZ": 0.75,
+"speed": 80.0,
+"tilt": true,
+"wait": -0.125
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="CollisionLine" parent="floating_island" instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(0, 0, 30, 0, 30, 20, 140, 20, 140, 120, 0, 120, 0, 0)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="floating_island2" parent="." instance=ExtResource("2_q6r6c")]
+modulate = Color(0.9607843, 0.87058824, 0.7019608, 1)
+position = Vector2(1530, 1970)
+obj_class = "floating_island"
+vars = Dictionary[String, Variant]({
+"awake": true,
+"escape": false,
+"flag": 61,
+"float": false,
+"id": "map_0003move0002",
+"path": 2,
+"shake": false,
+"shakeCycle": 1.0,
+"shakeX": 1.0,
+"shakeZ": 0.75,
+"speed": 80.0,
+"tilt": true,
+"wait": -0.125
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="CollisionLine" parent="floating_island2" instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(0, 120, 0, 0, 80, 0, 100, -10, 120, -10, 120, 120, 0, 120)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="floating_island3" parent="." instance=ExtResource("2_q6r6c")]
+modulate = Color(0.9607843, 0.87058824, 0.7019608, 1)
+position = Vector2(2300, 1790)
+obj_class = "floating_island"
+vars = Dictionary[String, Variant]({
+"awake": true,
+"escape": false,
+"flag": 62,
+"float": false,
+"id": "map_0003move0001",
+"path": 3,
+"shake": false,
+"shakeCycle": 1.0,
+"shakeX": 1.0,
+"shakeZ": 0.75,
+"speed": 80.0,
+"tilt": true,
+"wait": -0.125
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="CollisionLine" parent="floating_island3" instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(20, 0, 60, 0, 120, 0, 160, 0, 160, 120, 20, 120, 20, 0)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="floating_island4" parent="." instance=ExtResource("2_q6r6c")]
+modulate = Color(0.9607843, 0.87058824, 0.7019608, 1)
+position = Vector2(2730, 20)
+obj_class = "floating_island"
+vars = Dictionary[String, Variant]({
+"awake": true,
+"escape": false,
+"flag": 64,
+"float": false,
+"id": "map_0003move0001",
+"path": 4,
+"shake": false,
+"shakeCycle": 1.0,
+"shakeX": 1.0,
+"shakeZ": 0.75,
+"speed": 67.5,
+"tilt": true,
+"wait": -0.125
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="CollisionLine" parent="floating_island4" instance=ExtResource("2_d21ai")]
+points = PackedVector2Array(20, 0, 60, 0, 120, 0, 160, 0, 160, 120, 20, 120, 20, 0)
+seg_attr = Array[String](["ground", "ground", "ground", "ground", "ground", "ground"])
+
+[node name="area_flag" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-425, -140)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 120,
+"ONETIME": false,
+"タイプ": "on",
+"トリガー": "whistle",
+"幅": 168.75,
+"高さ": 110.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(65, -40)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 121,
+"ONETIME": false,
+"タイプ": "on",
+"トリガー": "orima",
+"幅": 28.75,
+"高さ": 65.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag3" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(525, -65)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 60,
+"ONETIME": false,
+"タイプ": "on",
+"トリガー": "orima",
+"幅": 130.0,
+"高さ": 40.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag4" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1605, 1955)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 90,
+"ONETIME": false,
+"タイプ": "on",
+"トリガー": "orima",
+"幅": 81.25,
+"高さ": 50.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag5" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1505, 1960)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 90,
+"ONETIME": false,
+"タイプ": "off",
+"トリガー": "orima",
+"幅": 81.25,
+"高さ": 50.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag6" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1570, 2065)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 90,
+"ONETIME": false,
+"タイプ": "off",
+"トリガー": "orima",
+"幅": 165.0,
+"高さ": 50.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag7" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1315, 1945)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 91,
+"ONETIME": false,
+"タイプ": "on",
+"トリガー": "orima",
+"幅": 43.75,
+"高さ": 80.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag8" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1690, 2025)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 91,
+"ONETIME": false,
+"タイプ": "off",
+"トリガー": "orima",
+"幅": 43.75,
+"高さ": 80.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag9" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1710, 1945)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 91,
+"ONETIME": false,
+"タイプ": "off",
+"トリガー": "orima",
+"幅": 81.25,
+"高さ": 80.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag10" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1605, 1980)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 91,
+"ONETIME": false,
+"タイプ": "on",
+"トリガー": "orima",
+"幅": 90.0,
+"高さ": 18.75
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag11" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1470, 75)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 92,
+"ONETIME": false,
+"タイプ": "on",
+"トリガー": "orima",
+"幅": 43.75,
+"高さ": 80.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag12" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2060, -260)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 92,
+"ONETIME": false,
+"タイプ": "off",
+"トリガー": "orima",
+"幅": 43.75,
+"高さ": 80.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag13" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2075, -80)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 92,
+"ONETIME": false,
+"タイプ": "off",
+"トリガー": "orima",
+"幅": 43.75,
+"高さ": 80.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag14" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2385, 1805)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 62,
+"ONETIME": false,
+"タイプ": "on",
+"トリガー": "orima",
+"幅": 163.75,
+"高さ": 40.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag15" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2400, 1770)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 93,
+"ONETIME": false,
+"タイプ": "on",
+"トリガー": "orima",
+"幅": 127.5,
+"高さ": 40.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag16" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2150, 1920)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 94,
+"ONETIME": false,
+"タイプ": "within",
+"トリガー": "orima",
+"幅": 71.25,
+"高さ": 93.75
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag17" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1260, 60)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 95,
+"ONETIME": false,
+"タイプ": "within",
+"トリガー": "orima",
+"幅": 71.25,
+"高さ": 93.75
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag18" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2815, 30)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 63,
+"ONETIME": false,
+"タイプ": "on",
+"トリガー": "orima",
+"幅": 163.75,
+"高さ": 40.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag19" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2820, -150)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 65,
+"ONETIME": false,
+"タイプ": "on",
+"トリガー": "orima",
+"幅": 163.75,
+"高さ": 40.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="area_flag20" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2055, 1735)
+obj_class = "area_flag"
+vars = Dictionary[String, Variant]({
+"ID": 122,
+"ONETIME": false,
+"タイプ": "on",
+"トリガー": "orima",
+"幅": 38.75,
+"高さ": 111.25
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="enemy_walker" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(25, -30)
+obj_class = "enemy_walker"
+vars = Dictionary[String, Variant]({
+"初期右向き": false,
+"感知オフセットX": -80.0,
+"感知オフセットY": -180.0,
+"感知フラグID": -1,
+"感知幅": 220.0,
+"感知高": 380.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="enemy_walker2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1395, 1790)
+obj_class = "enemy_walker"
+vars = Dictionary[String, Variant]({
+"初期右向き": false,
+"感知オフセットX": -40.0,
+"感知オフセットY": -150.0,
+"感知フラグID": -1,
+"感知幅": 240.0,
+"感知高": 90.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="enemy_walker3" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1455, 1980)
+obj_class = "enemy_walker"
+vars = Dictionary[String, Variant]({
+"初期右向き": false,
+"感知オフセットX": -80.0,
+"感知オフセットY": 20.0,
+"感知フラグID": -1,
+"感知幅": 280.0,
+"感知高": 90.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="enemy_walker4" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2265, 1770)
+obj_class = "enemy_walker"
+vars = Dictionary[String, Variant]({
+"初期右向き": false,
+"感知オフセットX": -80.0,
+"感知オフセットY": 20.0,
+"感知フラグID": -1,
+"感知幅": 230.0,
+"感知高": 90.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="enemy_walker5" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2305, 1770)
+obj_class = "enemy_walker"
+vars = Dictionary[String, Variant]({
+"初期右向き": false,
+"感知オフセットX": -120.0,
+"感知オフセットY": 20.0,
+"感知フラグID": -1,
+"感知幅": 230.0,
+"感知高": 90.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="enemy_walker6" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2260, 1930)
+obj_class = "enemy_walker"
+vars = Dictionary[String, Variant]({
+"初期右向き": true,
+"感知オフセットX": 140.0,
+"感知オフセットY": 0.0,
+"感知フラグID": -1,
+"感知幅": 310.0,
+"感知高": 30.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="ivy" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-115, -110)
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": true,
+"dir": "none",
+"length": 10,
+"wide": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="ivy2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(320, -80)
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": true,
+"dir": "none",
+"length": 6,
+"wide": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="ivy3" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1470, 40)
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": true,
+"dir": "none",
+"length": 7,
+"wide": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="ivy4" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1545, -20)
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": true,
+"dir": "none",
+"length": 6,
+"wide": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="ivy5" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1630, -80)
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": true,
+"dir": "none",
+"length": 6,
+"wide": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="ivy6" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1810, -170)
+obj_class = "ivy"
+vars = Dictionary[String, Variant]({
+"climb": true,
+"dir": "none",
+"length": 11,
+"wide": false
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="tunnel_manager" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-665, -95)
+obj_class = "tunnel_manager"
+vars = Dictionary[String, Variant]({
+"モデルタイプ": "CAVE"
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="flake_from" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1790, -310)
+obj_class = "flake_from"
+vars = Dictionary[String, Variant]({
+"dir": "none",
+"id": 0,
+"num": 1,
+"type": "white"
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="flake_from2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1760, -310)
+obj_class = "flake_from"
+vars = Dictionary[String, Variant]({
+"dir": "none",
+"id": 0,
+"num": 2,
+"type": "white"
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="flake_from3" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1885, -350)
+obj_class = "flake_from"
+vars = Dictionary[String, Variant]({
+"dir": "none",
+"id": 0,
+"num": 2,
+"type": "white"
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="flake_stairs" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1860, -170)
+obj_class = "flake_stairs"
+vars = Dictionary[String, Variant]({
+"flag": -1,
+"id": 0,
+"left": 0,
+"num": 5,
+"type": "white"
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="eventobj" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-420, -200)
+obj_class = "eventobj"
+vars = Dictionary[String, Variant]({
+"bgm_stop": false,
+"endflag": -1,
+"event": "ingame_event912",
+"event_set": -1,
+"fadeout": 0.0,
+"group": 120,
+"height": 1.5,
+"minimum": -1,
+"pan": 0.0,
+"reaction": true,
+"se_stop": false,
+"type": false,
+"wait": false,
+"whistle": false,
+"width": 1.5
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="eventobj2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(175, -20)
+obj_class = "eventobj"
+vars = Dictionary[String, Variant]({
+"bgm_stop": false,
+"endflag": -1,
+"event": "ingame_event437",
+"event_set": -1,
+"fadeout": 0.0,
+"group": 121,
+"height": 1.5,
+"minimum": -1,
+"pan": 0.0,
+"reaction": true,
+"se_stop": false,
+"type": false,
+"wait": false,
+"whistle": false,
+"width": 1.5
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="eventobj3" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2165, 1640)
+obj_class = "eventobj"
+vars = Dictionary[String, Variant]({
+"bgm_stop": false,
+"endflag": -1,
+"event": "ingame_event442",
+"event_set": -1,
+"fadeout": 0.0,
+"group": 122,
+"height": 1.5,
+"minimum": -1,
+"pan": 0.0,
+"reaction": true,
+"se_stop": false,
+"type": false,
+"wait": false,
+"whistle": false,
+"width": 1.5
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="stopper_treasure" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2520, -70)
+obj_class = "stopper_treasure"
+vars = Dictionary[String, Variant]({
+"awakeHeight": 10.0,
+"awakeWidth": 0.0,
+"id": -1
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="stumble_space" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-230, -110)
+obj_class = "stumble_space"
+vars = Dictionary[String, Variant]({
+"width": 16
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="stumble_space2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(250, -20)
+obj_class = "stumble_space"
+vars = Dictionary[String, Variant]({
+"width": 10
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="heart" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(555, -145)
+obj_class = "heart"
+vars = Dictionary[String, Variant]({
+"size": "small"
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="heart2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1265, 1885)
+obj_class = "heart"
+vars = Dictionary[String, Variant]({
+"size": "small"
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="heart3" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1850, -110)
+obj_class = "heart"
+vars = Dictionary[String, Variant]({
+"size": "small"
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="heart4" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1325, 35)
+obj_class = "heart"
+vars = Dictionary[String, Variant]({
+"size": "small"
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="model_detail" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1735, -165)
+obj_class = "model_detail"
+vars = Dictionary[String, Variant]({
+"model": "YunomiA",
+"posZ": -150.0,
+"rotX": -32,
+"rotY": 9,
+"rotZ": -49,
+"scaleX": 1.5,
+"scaleY": 1.5,
+"scaleZ": 1.5
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="model_detail2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1780, -65)
+obj_class = "model_detail"
+vars = Dictionary[String, Variant]({
+"model": "YunomiA",
+"posZ": -150.0,
+"rotX": 148,
+"rotY": -180,
+"rotZ": -128,
+"scaleX": 1.5,
+"scaleY": 1.5,
+"scaleZ": 1.5
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="hide_hover" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2155, 2000)
+obj_class = "hide_hover"
+vars = Dictionary[String, Variant]({
+"flag": 94
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="hide_hover2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1260, 125)
+obj_class = "hide_hover"
+vars = Dictionary[String, Variant]({
+"flag": 95
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="oneway" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2750, -30)
+obj_class = "oneway"
+vars = Dictionary[String, Variant]({
+"dir": "right",
+"flag": 63,
+"height": 40.0
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="stopper_treasure2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2080, -240)
+obj_class = "stopper_treasure"
+vars = Dictionary[String, Variant]({
+"awakeHeight": 10.0,
+"awakeWidth": 0.0,
+"id": -1
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="safety_death" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(-835, 325)
+obj_class = "safety_death"
+vars = Dictionary[String, Variant]({
+"face": "front"
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="safety_death2" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(715, 2275)
+obj_class = "safety_death"
+vars = Dictionary[String, Variant]({
+"face": "back"
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="timer_flag" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2660, 5)
+obj_class = "timer_flag"
+vars = Dictionary[String, Variant]({
+"flag": 64,
+"time": 0.5,
+"type": "onetime",
+"watch": 63
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="hover_camera" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(2715, 40)
+obj_class = "hover_camera"
+vars = Dictionary[String, Variant]({
+"flag": 63
+})
+font = SubResource("SystemFont_tainy")
+
+[node name="stopper_treasure3" parent="." instance=ExtResource("2_q6r6c")]
+position = Vector2(1175, 1820)
+obj_class = "stopper_treasure"
+vars = Dictionary[String, Variant]({
+"awakeHeight": 10.0,
+"awakeWidth": 0.0,
+"id": -1
+})
+font = SubResource("SystemFont_tainy")

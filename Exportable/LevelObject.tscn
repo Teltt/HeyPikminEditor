@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c2hok6v3vcf60" path="res://Exportable/LevelObject.gd" id="1_tainy"]
 
 [sub_resource type="SystemFont" id="SystemFont_tainy"]
+subpixel_positioning = 0
 
 [node name="LevelObject" type="Node2D"]
 script = ExtResource("1_tainy")

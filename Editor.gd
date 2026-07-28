@@ -3,15 +3,29 @@ extends Node
 @export_file("*.csv") var collision:String
 @export_file("*.csv") var path:String
 @export_file("*.csv") var objects:String
+@export_tool_button("export") var export_button = export
+@export_tool_button("import") var import_button = import
+@export_tool_button("clear") var clear_button = clear
+@export_tool_button("export model") var model_export_button = export_model
+@export_group("fine import export")
 @export_tool_button("import collision") var collision_import_button = import_collision
 @export_tool_button("import path") var path_import_button = import_path
 @export_tool_button("import objects") var object_import_button = import_objects
 @export_tool_button("export collision") var collision_export_button = export_collision
-@export_tool_button("export model") var model_export_button = export_model
 @export_tool_button("export objects") var objec_export_button = export_objects
 @export_tool_button("export path") var objec_path_button = export_path
+func import():
+	import_collision()
+	import_path()
+	import_objects()
+func export():
+	export_collision()
+	export_objects()
+	export_path()
+func clear():
+	for c in get_children():
+		c.queue_free()
 func export_model():
-	
 	var out:ArrayMesh = ArrayMesh.new()
 	iterate(self,func(node,out):
 		return node.export_model(out),out
@@ -19,7 +33,6 @@ func export_model():
 	print("res://Export/mod.mesh.obj")
 	OBJExporter.save_mesh_to_files(out,"res://Export/mod.mesh","level")
 func export_path():
-	
 	var out2:String = ""
 	iterate(self,func(node,out):
 		return node.export_path(out),out2
@@ -57,6 +70,7 @@ func import_collision():
 			if "seg_attr" in st:
 				line.seg_attr.append(st.split(",")[1])
 		pass
+signal post_import
 func import_objects():
 	var lines_packed = TextReader.read_file(objects)
 	var lines:Array = lines_packed
@@ -68,6 +82,7 @@ func import_objects():
 		if !cur.begins_with(','):
 			if cur_obj != null:
 				add_child(cur_obj,true)
+				post_import.connect(cur_obj.import)
 				cur_obj.set_owner(get_tree().edited_scene_root)
 			var s = preload("res://Exportable/LevelObject.tscn").instantiate()
 			s.script_changed.emit()
@@ -80,7 +95,11 @@ func import_objects():
 			cur_obj.vars[cur.split(",")[1]]=string_to_var2( cur.split(",")[2])
 	if cur_obj != null:
 		add_child(cur_obj,true)
+		post_import.connect(cur_obj.import)
 		cur_obj.set_owner(get_tree().edited_scene_root)
+	post_import.emit()
+	for p in post_import.get_connections():
+		post_import.disconnect(p.callable)
 func string_to_var2(variant):
 	var ret = str_to_var(variant)
 	if ret == null and variant != "null":
@@ -108,6 +127,7 @@ func import_path():
 			var csplit = cur.split(",")
 			line.add_point(Vector2(str_to_var(csplit[1]),-str_to_var(csplit[2])))
 		if "end" in cur:
+			line.add_to_group("paths")
 			add_child(line,true)
 			line.owner = self
 func iterate(node:Node,method:Callable,out):
