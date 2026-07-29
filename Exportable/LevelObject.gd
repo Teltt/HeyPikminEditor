@@ -44,7 +44,14 @@ func import():
 		var id =  vars["id"]
 		import_collision("res://Dump/00040000001AFA00/stage/"+id+".colli.csv")
 		modulate = Color.WHEAT
-
+	if obj_class == "area_flag":
+		var width = vars['幅']
+		var height = vars['高さ']
+		var sel = self
+		if sel is CollisionShape2D:
+			sel.shape = RectangleShape2D.new()
+			sel.shape.size.x = width
+			sel.shape.size.y = height
 	pass
 func _process(delta: float) -> void:
 	if label:
@@ -76,14 +83,12 @@ func draw_flake_stairs():
 			origin+= dir.normalized()*(dir.length()+1)
 func draw_area_flag():
 	if obj_class == "area_flag":
-		var width = vars['幅']
-		var height = vars['高さ']
-		var xy = Vector2(width,height)*0.5
-	
-		draw_dashed_line(xy,xy*inv,DARK_BLUE,2.0)
-		draw_dashed_line(xy,xy*inv*-1,DARK_BLUE,2.0)
-		draw_dashed_line(xy*-1,xy*inv*-1,DARK_BLUE,2.0)
-		draw_dashed_line(xy*-1,xy*inv,DARK_BLUE,2.0)
+		var sel = self
+		if sel is CollisionShape2D:
+			var width = sel.shape.size.x
+			var height = sel.shape.size.y
+			vars['幅'] = width
+			vars['高さ'] = height
 func draw_timer_flag():
 	if obj_class == "timer_flag":
 		var time = vars['time']

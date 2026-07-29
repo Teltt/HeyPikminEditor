@@ -1,15 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuvcmf8vqmj4e"]
+[gd_scene format=3 uid="uid://cuvcmf8vqmj4e"]
 
 [ext_resource type="Script" uid="uid://c2hok6v3vcf60" path="res://Exportable/LevelObject.gd" id="1_tainy"]
 
 [sub_resource type="SystemFont" id="SystemFont_tainy"]
 subpixel_positioning = 0
 
-[node name="LevelObject" type="Node2D"]
+[node name="LevelObject" type="CollisionShape2D" unique_id=749823627]
 script = ExtResource("1_tainy")
 font = SubResource("SystemFont_tainy")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=761378724]
 modulate = Color(0, 1, 1, 1)
 offset_left = -50.0
 offset_top = -10.0
@@ -18,4 +18,4 @@ offset_bottom = 13.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Icon" type="Sprite2D" parent="."]
+[node name="Icon" type="Sprite2D" parent="." unique_id=1057121851]
